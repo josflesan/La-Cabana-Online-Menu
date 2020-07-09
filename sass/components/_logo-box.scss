@@ -1,0 +1,15 @@
+.logo-box {
+    position: fixed;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    left: 10%;
+    top: 5%;
+
+    background-color: $color-number_bg;
+
+    -webkit-clip-path: circle(4rem at 50%);
+    clip-path: circle(4rem at 50%);
+
+    z-index: 1;
+}

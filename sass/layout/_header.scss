@@ -1,0 +1,47 @@
+.header {
+    margin: 2rem;  // 20px margin
+    position: absolute;
+    width: calc(100vw - 4rem);
+    height: 40vh;
+    opacity: 80%;
+    background-color: $color-primary;
+    z-index: -1;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+}
+
+
+/* @media screen and (min-width: 400px) and (max-width: 600px) {
+    .header{
+        &__main-title {
+            left: 12%;
+            bottom: 47%;
+        }
+    }
+} */
+
+/* @media screen and(max-width: 450px) and (min-height: 800px) {
+    .header {
+        &__main-title {
+            transform: rotate(-20deg);
+        }
+    }
+} */
+
+/* @media screen and(max-width: 350px) {
+    .header {
+        &__main-title {
+            left: 10%;
+            font-size: 2rem;;
+        }
+    }
+}
+ */
+/* @media screen and(max-width: 375px) and (min-height: 800px) {
+    .header {
+        &__main-title {
+            transform: rotate(-21deg);
+        }
+    }
+} */

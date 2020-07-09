@@ -1,0 +1,103 @@
+.menu-item {
+
+    &:first-child {
+        margin-top: 12rem;
+    }
+
+    margin-bottom: 3rem;
+
+    &__title {
+        text-align: center;
+
+        h2 {
+            text-transform: uppercase;
+            color: $color-number_bg;
+            padding-bottom: 5px;
+            text-decoration: overline underline;
+            text-shadow: 2px 2px 2px $color-white;
+            letter-spacing: 2px;
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    &__items {
+        padding: 0 1rem 0 1rem;
+    }
+
+    &__item-list {
+        list-style: none;
+    }
+
+    &__dish {
+        display: block;
+        position: relative;
+        height: 5rem;
+        background-color: $color-tertiary;
+        margin: 2.2rem 0 2.2rem 0;
+
+        &--number {
+            display: inline-block;
+            position: absolute;
+            z-index: 1;
+            
+            top: 20%;
+            left: -5%;
+            height: 3rem;
+            width: 3rem;
+            line-height: 2.8rem;
+            text-align: center;
+
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.8rem;
+            color: $color-primary;
+
+            background-color: $color-number_bg;
+            -webkit-border-radius: 1.5rem;
+            border-radius: 1.5rem;
+        }
+
+        &--title {
+            display: inline-block;
+            line-height: 4.8rem;
+            margin: 0 1rem 0 2rem;
+
+            font-family: 'Rubik', sans-serif;
+            font-size: 2rem;
+            color: $color-black;
+        }
+
+        &--price {
+            display: inline-block;
+            position: absolute;
+            right: 40%;
+            line-height: 4.8rem;
+            margin: 0 2rem 0 2rem;
+
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.5rem;
+            color: $color-black;
+
+        }
+
+        &--photo {
+            display: inline-block;
+            position: absolute;
+            z-index: 0;
+            width: 6rem;
+            height: 6rem;
+
+            right: -10%;
+            top: -15%;
+
+            background-color: blue;
+
+            -webkit-border-radius: 3rem;
+            border-radius: 3rem;
+        }
+    }
+}

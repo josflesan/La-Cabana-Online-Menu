@@ -1,0 +1,19 @@
+.main {
+    position: absolute;
+    top: 14%;
+    width: 100vw;
+    height: auto;
+    // height: 150%;
+    min-height: 150%;
+    padding: 5rem 4rem 15rem 4rem;
+
+    background-image: linear-gradient(to right top, $color-black-extra-transparent, $color-black-extra-transparent),
+                      url(../img/main_bg.png);
+
+    background-size: cover;
+    background-position: center;
+
+    -webkit-clip-path: polygon(0 8.8%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 8.8%, 100% 0, 100% 100%, 0 100%);
+
+}
