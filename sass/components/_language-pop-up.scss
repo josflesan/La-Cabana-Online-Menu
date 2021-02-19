@@ -1,0 +1,130 @@
+.language-pop-up.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.language-pop-up {
+    position: fixed;
+    display: block;
+    //opacity: 0;
+    top: 50vh;
+    left: 50vw;
+    height: 45vh;
+    width: 85%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: $color-tertiary;
+    
+    border-radius: 1rem;
+    border: medium solid $color-brown-dark;
+    padding: 2rem;
+    
+    z-index: 5;
+
+
+    &__header {
+        height: 2rem;
+        margin-bottom: 1.75rem;
+
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-brown-dark;
+            padding-bottom: 2px;
+            letter-spacing: 2px;
+            font-family: 'Anton', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+        }
+
+        &--close {
+            position: absolute;
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            top: 2%; 
+            right: 4%;
+            color: $color-brown-dark;
+            background-color: &color-tertiary;
+            border: none;
+            // cursor: pointer;
+            font-size: 3rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+        width: 100%;
+        height: 85%;
+        overflow-y: scroll;
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        height: 7rem;
+        width: 100%;
+
+        background-color: $color-brown-light;
+        border: none;
+
+        &:first-child {
+            margin-top: 3rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        align-items: center;
+        justify-content: center;
+
+        img {
+            position: absolute;
+            display: inline-block;
+            height: 5.5rem;
+            left: 15%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            -webkit-clip-path: circle(2.75rem at 50%);
+            clip-path: circle(2.75rem at 50%);
+        }
+
+        &--text {
+            position: relative;
+            margin-left: 10%;
+
+            text-transform: uppercase;
+            text-align: center;
+            -webkit-line-clamp: 3;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: $color-brown-dark;
+        }
+
+    }
+
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

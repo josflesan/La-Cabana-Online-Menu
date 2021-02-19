@@ -1,47 +1,83 @@
+.header-container {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: calc(30vh + 2rem);
+
+    background-image: url(../img/main_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 43%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 43%, 0 95%);
+
+    z-index: -2;
+}
+
+
 .header {
     margin: 2rem;  // 20px margin
     position: absolute;
     width: calc(100vw - 4rem);
-    height: 40vh;
-    opacity: 80%;
+    height: 30vh;
     background-color: $color-primary;
     z-index: -1;
 
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
-    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 38%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 38%, 0 100%);
+
+    &__restaurant-name {
+        display: block;
+        background-color: red;
+
+        margin: 5% 0 0 30%;
+
+        width: 60%;
+        height: 20%;
+    }
+
+    &__restaurant-slogan {
+        display: inline-block;
+        background-color: blue;
+
+        margin: 0 0 0 29.7%;
+
+        width: 60%;
+        height: 10%;
+    }
+
+}
+
+@media screen and (max-width: 400px) and (min-width: 300px) {
+    .header-container {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+    }
+
+    .header {
+        &__restaurant-name {
+            margin-left: 33%;
+        }
+
+        &__restaurant-slogan {
+            margin-left: 32.7%;
+        }
+    }
 }
 
 
-/* @media screen and (min-width: 400px) and (max-width: 600px) {
-    .header{
-        &__main-title {
-            left: 12%;
-            bottom: 47%;
-        }
-    }
-} */
-
-/* @media screen and(max-width: 450px) and (min-height: 800px) {
+// Galaxy Fold
+@media screen and(max-width: 300px) {
     .header {
-        &__main-title {
-            transform: rotate(-20deg);
+        &__restaurant-name {
+            width: 50%;
+            margin-left: 40%;
         }
-    }
-} */
 
-/* @media screen and(max-width: 350px) {
-    .header {
-        &__main-title {
-            left: 10%;
-            font-size: 2rem;;
+        &__restaurant-slogan {
+            width: 50%;
+            margin-left: 39.7%;
         }
+
     }
 }
- */
-/* @media screen and(max-width: 375px) and (min-height: 800px) {
-    .header {
-        &__main-title {
-            transform: rotate(-21deg);
-        }
-    }
-} */

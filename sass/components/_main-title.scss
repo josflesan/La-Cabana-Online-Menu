@@ -1,20 +1,41 @@
 .main-title {
         position: absolute;
         display: block;
-        bottom: 30%;
+        top: 22.5%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
+        transform: translate(-50%, -50%) skewY(-15deg);
+        z-index: 1;
 
         font-size: 3rem;
         text-transform: uppercase;
-        font-family: 'Rubik', sans-serif;
-        
+        color: $color-white;
+        font-family: 'Anton', sans-serif;
 
-        background: url(../img/title_bg.jpg);
-        background-size: cover;
-        background-position: bottom;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
+        -webkit-text-stroke: 0.5px $color-black;
+}
+
+@media screen and(min-width: 360px) and(min-height: 800px) {
+        .main-title {
+                top: 20.5%;
+        }
+}
+
+@media screen and(max-width: 450px) and(min-height: 700px) {
+        .main-title {
+                top: 21.7%;
+        }
+}
+
+@media screen and(max-width: 400px) and(min-height: 750px) {
+    .main-title {
+        top: 22.5%;
+        transform: translate(-50%, -50%) skewY(-18deg);
+    }
+}
+
+// Galaxy Fold
+@media screen and(max-width: 300px) {
+        .main-title {
+                transform: translate(-50%, -50%) skewY(-20deg);
+        }
 }

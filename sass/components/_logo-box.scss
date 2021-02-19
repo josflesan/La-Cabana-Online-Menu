@@ -2,14 +2,115 @@
     position: fixed;
     display: block;
     width: 8rem;
-    height: 8rem;
     left: 10%;
+    background-color: $color-brown-light;
+}
+
+.logo-box-large {
     top: 5%;
+    height: 16rem;
+    z-index: -1;
+}
 
-    background-color: $color-number_bg;
+.logo-box-small {
+    top: 0;
+    left: 6rem;
+    height: 8rem;
+    border-radius: 4rem;
+    transform: scale(0.7);
+    z-index: 3;
+}
 
-    -webkit-clip-path: circle(4rem at 50%);
-    clip-path: circle(4rem at 50%);
+.logo-box-nav {
+    position: fixed;
+    display: block;
+    width: 8rem;
+    left: 5%;
+    background-color: $color-brown-light;
+    top: 0;
+    height: 8rem;
+    border-radius: 4rem;
+    transform: scale(0.7);
+    z-index: 3;
+}
 
-    z-index: 1;
+@media screen and(min-width: 400px) and(min-height: 800px) {
+    .logo-box-small {
+        left: 6rem;
+    }
+}
+
+@media screen and(max-width: 400px) and(min-width: 300px) {
+    .logo-box-small {
+        top: -1%;
+        left: 5rem;
+        transform: scale(0.6);
+    }
+
+    .logo-box-nav {
+        top: -1%;
+        transform: scale(0.6);
+    }
+}
+
+@media screen and(max-width: 380px) and(min-height: 800px) {
+    .logo-box-small {
+        top: 0.4%;
+        left: 5rem;
+    }
+}
+
+@media screen and (max-width: 350px) and (max-height: 580px) {
+    .logo-box-large {
+        top: 6%;
+    }
+
+    .logo-box-nav {
+        top: -1.5%;
+        transform: scale(0.6);
+    }
+
+    .logo-box-small {
+        left: 4rem;
+    }
+}
+
+@media screen and(max-width: 380px) and(min-height: 800px) {
+    .logo-box-nav {
+        top: 0%;
+    }
+}
+
+// Surface Duo
+@media screen and(min-width: 450px) and(min-height: 600px) {
+    .logo-box-nav {
+        top: -1%;
+        transform: scale(0.5);
+    }
+
+    .logo-box-small {
+        left: 6rem;
+    }
+}
+
+// Galaxy Fold
+@media screen and(max-width: 300px) {
+
+    .logo-box-large {
+        top: 4.7%;
+        margin-left: 1.7%;
+    }
+
+    .logo-box-small {
+        top: 1.7%;
+        left: 4rem;
+        height: 6rem;   
+        width: 6rem;    
+        border-radius: 3rem;
+    }
+
+    .logo-box-nav {
+        top: -1%;
+        transform: scale(0.6);
+    }
 }

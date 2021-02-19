@@ -7,16 +7,67 @@
 
     background-color: transparent;
 
-    z-index: 1;
+    z-index: 2;
+
+    &__restaurant_name {
+        /* position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: 'Satisfy', sans-serif;
+        font-size: 2.4rem;
+        color:  $color-white; */
+
+        position: absolute;
+        display: inline-block;
+        width: 30%;
+        height: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+    }
+
+    &__nav-drawer-open.active {
+        visibility: visible;
+    }
+
+    &__nav-drawer-open {
+        position: absolute;
+        visibility: hidden;
+        cursor: pointer;
+        border: none;
+        top: 30%;
+        left: 4%;
+        background: url('../img/bars.svg');
+        background-size: cover;
+        background-position: center;
+        outline: inherit;
+        padding: none;
+        fill: $color-white;
+        width: 3rem;
+        height: 3rem;
+    }
+
 }
 
-.restaurant_name {
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: 'Satisfy', sans-serif;
-    font-size: 2.4rem;
+// Surface Duo
+@media screen and(min-width: 450px) and(min-height: 600px) {
+    .banner {
+        height: 13%;
+    }
 }
+
+// Galaxy Fold
+@media screen and(max-width: 300px) {
+    .banner {
+        height: 12%;
+
+        &__restaurant-name {
+            left: 40%;
+        }
+    }
+}
+

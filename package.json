@@ -4,7 +4,7 @@
   "description": "COVID-19 Online Menu for \"La Cabaña\" Restaurant, Pto. Rico (35130), Mogán, Spain",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss public/css/main.css -w"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
   }
 }
