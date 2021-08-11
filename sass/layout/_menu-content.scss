@@ -25,12 +25,6 @@
         overflow: scroll;
         overflow-y: hidden;
 
-        &::before {
-            content: '';
-            background-color: $cadet-blue;
-            width: 40vw;
-        }
-
         &::after {
             content: '';
             width: 5px;
@@ -52,15 +46,10 @@
         grid-template-rows: minmax(150px, 1fr);
 
         overflow: scroll;
+        overflow-y: hidden;
 
         &::before {
             content: '';
-        }
-
-        &::after {
-            content: '';
-            background-color: $cadet-blue;
-            width: 40vw;
         }
 
         &-title {
