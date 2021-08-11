@@ -23,6 +23,7 @@
         grid-template-rows: minmax(150px, 1fr);
 
         overflow: scroll;
+        overflow-y: hidden;
 
         &::before {
             content: '';
