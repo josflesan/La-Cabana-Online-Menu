@@ -24,6 +24,7 @@
         &__picture {
             position: absolute;
             display: block;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
             top: -12%;
             left: 50%;
             transform: translateX(-50%);
