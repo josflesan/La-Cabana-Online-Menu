@@ -1,22 +1,6 @@
-let languageSelector;
-let openLanguagePopUpBtn;
+let languageButtons;
 
-window.onload = () => {
-    languageSelector = document.querySelector('.language-selector');
-    closeLanguagePopUpBtn = document.querySelector('.language-pop-up__header--close');
-
-    languageSelector.addEventListener('click', () => {
-        const modal = document.querySelector('.language-pop-up');
-        openModal(modal);
-    });
-
-    closeLanguagePopUpBtn.addEventListener('click', () => {
-        const modal = document.querySelector('.language-pop-up');
-        closeModal(modal);
-    });
-}
-
-function openModal(modal) {
+export function openModal(modal) {
     if (modal == null) return;
 
     modal.classList.add('active');
@@ -47,7 +31,7 @@ function openModal(modal) {
 }
 
 
-function closeModal(modal) {
+export function closeModal(modal) {
     if (modal == null) return;
 
     modal.classList.remove('active')

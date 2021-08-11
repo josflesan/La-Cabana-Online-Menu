@@ -10,21 +10,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <script src="../script/languageModal.js"></script>
+    <script type="module" src="../script/script.js"></script>
 
     <title>La Cabaña</title>
 </head>
 <body class="body-bg">
 
     <div id="overlay"></div>
+    <div class="language-selector"></div>
 
-    <header class="app-bar">
+    <header class="app-bar app-bar-inactive">
+
+        <div class="app-bar__nav-button"></button>
         
     </header>
 
+    
+    <div class="nav-drawer">
+        <div class="nav-drawer__header">
+        </div>
+
+        <div class="nav-drawer__body">
+            <button class="nav-drawer__button--left"><h3>Main</h3></button>
+            <button class="nav-drawer__button--right"><h3>Breakfast</h3></button>
+            <button class="nav-drawer__button--left"><h3>Drinks</h3></button>
+            <button class="nav-drawer__button--right"><h3>Pasta</h3></button>
+            <button class="nav-drawer__button--left"><h3>Mexican</h3></button>
+            <button class="nav-drawer__button--right"><h3>Pizzas</h3></button>
+            <button class="nav-drawer__button--left"><h3>Children</h3></button>
+            <button class="nav-drawer__button--right"><h3>Desserts</h3></button>
+        </div>
+    </div>
+
     <div class="logo-area">
         <div class="logo-container">
-            
+
         </div>
     </div>
 
@@ -134,8 +154,6 @@
 
 
     </div>
-
-    <div class="language-selector"></div>
 
     <div class="language-pop-up">
         <div class="language-pop-up__header"><h3>Change Language</h3><span class="language-pop-up__header--close">&#10006;</span></div>
