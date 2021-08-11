@@ -711,14 +711,13 @@ body {
   .menu-content__row-right {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 40vw;
+    grid-template-columns: 1fr;
     grid-auto-flow: column;
     grid-auto-columns: calc(50% - var(--gutter) * 2);
     grid-template-rows: minmax(150px, 1fr);
     overflow: scroll; }
     .menu-content__row-right::before {
-      content: '';
-      width: 5px; }
+      content: ''; }
     .menu-content__row-right::after {
       content: '';
       background-color: #5C9EAD;

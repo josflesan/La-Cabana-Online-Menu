@@ -45,7 +45,7 @@
     &__row-right {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: 1fr 40vw;
+        grid-template-columns: 1fr;
         grid-auto-flow: column;
         grid-auto-columns: calc(50% - var(--gutter) * 2);
         grid-template-rows: minmax(150px, 1fr);
@@ -54,7 +54,6 @@
 
         &::before {
             content: '';
-            width: 5px;
         }
 
         &::after {
