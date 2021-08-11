@@ -22,8 +22,9 @@
     z-index: 12;
 
     &__header {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-items: center;
         align-items: center;
         height: 100%;
         width: 80%;
@@ -31,8 +32,24 @@
         padding: 10px;
         border-bottom: medium solid $cadet-blue;
 
-        @include bg-image-center(url('../../public/img/placeholder_logo_nav.png'));
-        background-size: contain;
+        &--logo {
+            width: 100%;
+            height: 100%;
+            @include bg-image-center(url('../../public/img/logo.svg'));
+            background-size: contain;   
+        }
+
+        &--text {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            text-transform: lowercase;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: $white;
+            font-weight: 300;
+        }
 
     }
 
@@ -79,8 +96,8 @@
         text-transform: lowercase;
         text-align: left;
         font-family: 'Poppins', sans-serif;
-        font-weight: 100;
-        font-size: 3rem;
+        font-weight: 200;
+        font-size: 3.5rem;
         color: $color-white;
 
         border-left: 15px solid $cadet-blue;
@@ -107,8 +124,8 @@
         text-transform: lowercase;
         text-align: right;
         font-family: 'Poppins', sans-serif;
-        font-weight: 100;
-        font-size: 3rem;
+        font-weight: 200;
+        font-size: 3.5rem;
         color: $color-white;
 
         border-right: 15px solid $cadet-blue;

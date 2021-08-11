@@ -1,6 +1,7 @@
 @import '../utilities/mixins';
 
 .logo-area {
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +15,6 @@
     display: block;
     width: 50%;
     height: 80%;
-    @include bg-image-center(url('../../public/img/placeholder_logo.png'));
+    @include bg-image-center(url('../../public/img/logo.svg'));
     background-size: contain;
 }
