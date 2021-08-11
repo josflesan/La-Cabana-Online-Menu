@@ -755,13 +755,23 @@ body {
 .menu-content > .full {
   grid-column: 1 / -1; }
 
-.logo-container {
-  display: block;
+.logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 30vh;
   width: 100vw;
   padding: 10px;
-  background-color: #E2DADB;
   margin-bottom: 20px; }
+
+.logo-container {
+  display: block;
+  width: 50%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../public/img/placeholder_logo.png"); }
 
 .sticky {
   position: fixed;
