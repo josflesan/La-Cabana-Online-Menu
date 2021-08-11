@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    list-style: none;
 }
 
 html {
@@ -13,4 +14,8 @@ html {
 body {
     box-sizing: border-box; 
     background-color: $color-primary;
+}
+
+.body-bg {
+    background-color: $light-grey;
 }

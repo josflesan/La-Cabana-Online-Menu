@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path'); 
 const bodyParser = require('body-parser');
+const router = express.Router();
 
 // Init App
 const app = express();
@@ -35,7 +36,7 @@ var page = 'MAIN';  // by default, open main menu
 var flag_path = 'img/uk.png';
 
 // Change Language
-app.post('/changeLang', function(req, res) {
+router.post('/changeLang', function(req, res) {
   console.log(req.body.lang);
 
   switch(req.body.lang) {
@@ -94,14 +95,19 @@ app.post('/changeLang', function(req, res) {
 });
 
 // Change Page
-app.post('/changePage', function (req, res) {
+router.post('/changePage', function (req, res) {
     console.log(req.body.selected);
     page = req.body.selected;
 });
 
+router.get('/test', (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/pages/test.html"));
+});
+
+
 
 // Home Route
-app.get('/', function (req, res) {
+router.get('/', function (req, res) {
 
   // JSON output
   var output = [];
@@ -155,6 +161,8 @@ app.get('/', function (req, res) {
     }
   );
 });  
+
+app.use(express.static(path.join(__dirname, '/')), router)
 
 app.listen(5500, function() {
     console.log('Web app listening on port 5500');

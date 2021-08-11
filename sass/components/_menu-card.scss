@@ -1,0 +1,27 @@
+@import '../utilities/mixins';
+
+.row-container {
+    position: relative;
+    padding: 10px;
+    height: 350px;
+}
+
+.menu-card {
+
+    display: inline-block;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $jet-black;
+
+    &__picture {
+        overflow: hidden;
+        width: 90%;
+        height: 60%;
+        @include bg-image-center(url('../../public/img/dishes/main/13.jpg'));
+    }
+
+}
