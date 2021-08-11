@@ -15,4 +15,5 @@
     width: 50%;
     height: 80%;
     @include bg-image-center(url('../../public/img/placeholder_logo.png'));
+    background-size: contain;
 }
