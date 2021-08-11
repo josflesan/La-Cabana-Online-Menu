@@ -37,7 +37,6 @@ var flag_path = 'img/uk.png';
 
 // Change Language
 router.post('/changeLang', function(req, res) {
-  console.log(req.body.lang);
 
   switch(req.body.lang) {
 

@@ -18,4 +18,6 @@ body {
 
 .body-bg {
     background-color: $light-grey;
+
+    z-index: -10;
 }

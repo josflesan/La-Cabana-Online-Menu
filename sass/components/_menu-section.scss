@@ -1,7 +1,9 @@
 .menu-section-left {
-    position: relative;
+    position: sticky;
+    width: 100%;
     padding-top: 10px;
     background-color: $cadet-blue;
+    z-index: -1;
     
     &__title {
         transform-origin: top left;
