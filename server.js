@@ -164,67 +164,7 @@ router.post('/changePage', function (req, res) {
   page = req.body.selected;
 });
 
-router.get('/test', (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/pages/test.html"));
-});
-
-// Home Route
-router.get('/', function (req, res) {
-
-  // JSON output
-  var output = [];
-
-  // Callback Count
-  var callbackNum = 0;
-
-  // Connect to db
-  MongoClient.connect(
-    dburl,
-    { useNewUrlParser: true },
-    (err, client) => {
-
-      if (err) {
-        console.log(err);
-        res.sendStatus(500);
-        return;
-      }
-
-      // Get db
-      const db = client.db(dbname);
-
-      // Cycle through all of the collections
-      for (col = 0; col < collnames[page].length; col++) {
-        // Get collection
-        const collection = db.collection(collnames[page][col]);
-
-        // Array to hold each collection data temporarily
-        var collectionData = []
-
-        // Find all documents in the collection        
-        collection.find({}).forEach(function (doc, err) {
-          if (!err) {
-            collectionData.push(doc)
-          }
-        }, function () {
-          callbackNum++;
-          output.push(collectionData);
-          collectionData = [];  // reset collectionData
-
-          if (callbackNum == collnames[page].length) {
-            // send output in template
-            res.render("index.pug", { dishes: output, lg: language, flag: flag_path });
-          }
-        });
-      }
-
-      // close client
-      client.close();
-    }
-  );
-});
-
 app.get('/main', (req, res) => {
-  console.log(language)
   res.render("main.pug", { dishes: output, lg: language, flagPath: flag_path });
 });
 

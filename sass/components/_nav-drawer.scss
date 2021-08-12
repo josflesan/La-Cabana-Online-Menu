@@ -6,7 +6,7 @@
 .nav-drawer {
     position: fixed;
     display: grid;
-    grid-template-rows: 12% 82% 6%;
+    grid-template-rows: 15% 80% 5%;
     grid-template-columns: 1fr;
     grid-gap: 25px;
     justify-items: center;
@@ -55,6 +55,7 @@
 
     &__body {
         overflow-y: scroll;
+        overflow-x: hidden;
         display: grid;
         grid-row-gap: 10px;
         grid-auto-flow: row;
@@ -98,7 +99,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 200;
         font-size: 3.5rem;
-        color: $color-white;
+        color: $white;
 
         border-left: 15px solid $cadet-blue;
     }
@@ -126,7 +127,7 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 200;
         font-size: 3.5rem;
-        color: $color-white;
+        color: $white;
 
         border-right: 15px solid $cadet-blue;
     }
