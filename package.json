@@ -17,8 +17,10 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "fitty": "^2.3.5",
     "mongodb": "^3.5.9",
     "nodemon": "^2.0.4",
-    "pug": "^3.0.1"
+    "pug": "^3.0.1",
+    "textfit": "^2.4.0"
   }
 }

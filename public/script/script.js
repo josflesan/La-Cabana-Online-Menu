@@ -29,6 +29,11 @@ window.onload = () => {
         openDrawer(navDrawer);
     })
 
+    let rightAlignedRows = Array.from(document.getElementsByClassName('menu-content__row-right'))
+    rightAlignedRows.forEach((label) => {
+        label.scrollLeft = label.scrollWidth;
+    })
+
 }
 
 window.addEventListener('scroll', function() {

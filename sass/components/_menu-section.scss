@@ -1,19 +1,22 @@
 .menu-section-left {
     position: sticky;
     width: 100%;
-    padding-top: 10px;
     background-color: $cadet-blue;
     z-index: -1;
     
     &__title {
-        transform-origin: top left;
-        transform: rotate(90deg) translate(0, -100%);
+        transform-origin: left top 0;
+        float: left;
         position: absolute;
-        white-space: nowrap;
+        padding: 0 10px 0 5px;
+        left: 100%;
+        transform: rotate(90deg);
+
+        width: calc(60vh - var(--top));
+        height: 40vw;
         
         font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
+        font-weight: 700;
         color: $white;        
     }
 
@@ -25,15 +28,19 @@
     background-color: $cadet-blue;
 
     &__title {
-        transform-origin: top left;
-        transform: rotate(-90deg) translate(-100%);
+        transform-origin: right top 0;
+        float: right;
         position: absolute;
-        white-space: nowrap;
+        padding: 5px 0 0 20px;
+        right: 100%;
+        transform: rotate(-90deg);
+
+        width: calc(60vh - var(--top));
+        height: 40vw;
         
         font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
-        color: $white;               
+        font-weight: 700;
+        color: $white;             
     }
 
 }

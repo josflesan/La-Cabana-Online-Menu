@@ -27,23 +27,23 @@
         height: 100%;
 
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: baseline;
 
         h3 {
             display: inline-block;
+            padding-left: 5%;
             text-align: left;
             text-transform: uppercase;
             color: $white;
             font-family: 'Poppins', sans-serif;
-            font-size: 2.4rem;
+            font-size: 5vw;
             font-weight: 500;
         }
 
         &--close {
             display: inline-block;
-            height: 2rem;
-            width: 2rem;
+            height: 100%;
             color: $cadet-blue;
             cursor: pointer;
             font-size: 3rem;
@@ -61,7 +61,6 @@
         position: relative;
         display: grid;
         grid-template-columns: 40% 60%;
-        height: 8rem;
         width: 100%;
 
         background-color: $light-grey;
@@ -95,7 +94,7 @@
             text-transform: lowercase;
             color: $white;
             font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
+            font-size: 5vw;
             font-weight: 300;
         }
 

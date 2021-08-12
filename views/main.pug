@@ -49,6 +49,7 @@ body.body-bg
 
     .logo-area
         .logo-container
+
     .menu-content
 
         - var i = 1
@@ -97,3 +98,16 @@ body.body-bg
             .language-pop-up__button
                 img.language-pop-up__button__flag(src='../img/france.png')
                 span.language-pop-up__button__text Fran&ccedil;ais
+
+
+    script(src='../script/fittext.js')
+    script.
+        let leftLabels = Array.from(document.getElementsByClassName('menu-section-left__title'))
+        leftLabels.forEach((el) => {
+            fitText(el, 0.8)
+        });
+
+        let rightLabels = Array.from(document.getElementsByClassName('menu-section-right__title'))
+        rightLabels.forEach((el) => {
+            fitText(el, 0.8)
+        });

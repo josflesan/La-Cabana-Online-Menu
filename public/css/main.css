@@ -19,8 +19,8 @@ body {
 .language-selector {
   display: block;
   position: fixed;
-  width: 8rem;
-  height: 8rem;
+  width: 20vw;
+  height: 20vw;
   bottom: 5%;
   right: 5%;
   background-position: center;
@@ -52,20 +52,20 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline; }
     .language-pop-up__header h3 {
       display: inline-block;
+      padding-left: 5%;
       text-align: left;
       text-transform: uppercase;
       color: #FFFFFF;
       font-family: 'Poppins', sans-serif;
-      font-size: 2.4rem;
+      font-size: 5vw;
       font-weight: 500; }
     .language-pop-up__header--close {
       display: inline-block;
-      height: 2rem;
-      width: 2rem;
+      height: 100%;
       color: #5C9EAD;
       cursor: pointer;
       font-size: 3rem; }
@@ -78,7 +78,6 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
-    height: 8rem;
     width: 100%;
     background-color: #414343;
     border: none;
@@ -105,7 +104,7 @@ body {
       text-transform: lowercase;
       color: #FFFFFF;
       font-family: 'Poppins', sans-serif;
-      font-size: 2rem;
+      font-size: 5vw;
       font-weight: 300; }
 
 #overlay {
@@ -191,17 +190,19 @@ body {
 .menu-section-left {
   position: sticky;
   width: 100%;
-  padding-top: 10px;
   background-color: #5C9EAD;
   z-index: -1; }
   .menu-section-left__title {
-    transform-origin: top left;
-    transform: rotate(90deg) translate(0, -100%);
+    transform-origin: left top 0;
+    float: left;
     position: absolute;
-    white-space: nowrap;
+    padding: 0 10px 0 5px;
+    left: 100%;
+    transform: rotate(90deg);
+    width: calc(60vh - var(--top));
+    height: 40vw;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
+    font-weight: 700;
     color: #FFFFFF; }
 
 .menu-section-right {
@@ -209,13 +210,16 @@ body {
   padding: 10px;
   background-color: #5C9EAD; }
   .menu-section-right__title {
-    transform-origin: top left;
-    transform: rotate(-90deg) translate(-100%);
+    transform-origin: right top 0;
+    float: right;
     position: absolute;
-    white-space: nowrap;
+    padding: 5px 0 0 20px;
+    right: 100%;
+    transform: rotate(-90deg);
+    width: calc(60vh - var(--top));
+    height: 40vw;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
+    font-weight: 700;
     color: #FFFFFF; }
 
 .nav-drawer.active {
@@ -368,7 +372,7 @@ body {
   height: 100vh;
   z-index: 5;
   display: grid;
-  grid-row-gap: 40px;
+  grid-row-gap: 50px;
   grid-auto-flow: row;
   grid-auto-rows: calc(60vh - var(--top));
   grid-template-columns: minmax(300px, 1fr); }

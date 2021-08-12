@@ -5,7 +5,7 @@ mixin img-bg(className, src)
 mixin menu-content__row-left(dishes, lg)
   ul.menu-content__row-left.full 
     .menu-section-left
-      span.menu-section-left__title=dishes[0].section_title[lg]
+      div.menu-section-left__title=dishes[0].section_title[lg]
     - for (var i = 1; i < dishes.length; i++) {
       - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
       - var priceEuro = parseInt(dishes[i].price).toString()
@@ -41,4 +41,4 @@ mixin menu-content__row-right(dishes, lg)
               span.menu-option__card__price-cents=priceCents
     - }
     .menu-section-right
-      span.menu-section-right__title=dishes[0].section_title[lg]
+      .menu-section-right__title=dishes[0].section_title[lg]
