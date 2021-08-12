@@ -133,7 +133,7 @@ function openModal(modal) {
                 body: JSON.stringify(language)
             });
 
-            window.location.reload(true);
+            window.location.reload();
         });
     });
 

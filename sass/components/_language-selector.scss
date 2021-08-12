@@ -9,7 +9,10 @@
     bottom: 5%;
     right: 5%;
 
-    @include bg-image-center(url('../../public/img/uk.png'));
+    //@include bg-image-center(url('../../public/img/uk.png'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 100%;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
 

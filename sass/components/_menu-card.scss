@@ -31,7 +31,9 @@
             overflow: visible;
             width: 90%;
             height: 60%;
-            @include bg-image-center(url('../../public/img/dishes/main/20.jpg'));
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &__title {

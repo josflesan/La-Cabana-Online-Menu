@@ -11,8 +11,8 @@ export function openModal(modal) {
     languageButtons.forEach(button => {
         button.addEventListener('click', () => {
 
-            language = {
-                lang: button.innerText
+            let language = {
+                lang: button.innerText.toUpperCase()
             }
 
             fetch('/changeLang', {
