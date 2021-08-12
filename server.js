@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const fs = require('fs');
 
 // Init App
 const app = express();
@@ -38,11 +39,17 @@ let page = 'MAIN';  // by default, open main menu
 let flag_path = 'img/uk.png';
 
 async function main() {
+
+  mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
+    if (err) throw err
+    return data
+  });
+
   /**
    * Connection URI. 
    * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
    */
-  const uri = "mongodb+srv://joflesan:anjomima0@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  const uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
   const client = new MongoClient(uri);
 
   try {
