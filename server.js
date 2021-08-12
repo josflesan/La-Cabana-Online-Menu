@@ -1,7 +1,7 @@
 // Import express
 const express = require('express');
-const path = require('path'); 
-const bodyParser = require('body-parser');
+const path = require('path');
+const router = express.Router();
 
 // Init App
 const app = express();
@@ -12,35 +12,100 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, "/public/")));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Get MongoClient
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require('mongodb');
 
-// db url, collection name and db name
-const dburl = "mongodb+srv://joflesan:anjomima0@lccluster.8z8vl.mongodb.net/test";
-const dbname = "lcOnlineMenu";
-const collnames = { "MAIN": ["starters_soups", "pasta_and_eggs", "fish", "meat", "specialties_and_flambes"],
-                    "BREAKFAST": ["breakfast", "breakfast_extras"],
-                    "DRINKS": [],
-                    "PASTA": [],
-                    "MEXICAN": [],
-                    "PIZZAS": [],
-                    "CHILDREN": [],
-                    "DESSERTS": [] };
+// JSON database output
+let output = [];
 
-var language = 'en';  // by default, language is english
-var page = 'MAIN';  // by default, open main menu
-var flag_path = 'img/uk.png';
+const dbname = 'lcOnlineMenu';
+const collnames = {
+  "MAIN": ["starters_soups", "pasta_and_eggs", "fish", "meat", "specialties_and_flambes"],
+  "BREAKFAST": ["breakfast", "breakfast_extras"],
+  "DRINKS": [],
+  "PASTA": [],
+  "MEXICAN": [],
+  "PIZZAS": [],
+  "CHILDREN": [],
+  "DESSERTS": []
+};
+
+let language = 'en';  // by default, language is english
+let page = 'MAIN';  // by default, open main menu
+let flag_path = 'img/uk.png';
+
+async function main() {
+  /**
+   * Connection URI. 
+   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+   */
+  const uri = "mongodb+srv://joflesan:anjomima0@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  const client = new MongoClient(uri);
+
+  try {
+    // Connect to MongoDB cluster
+    await client.connect();
+
+    // Callback Count
+    let callbackNum = 0;
+
+    // Connect to db
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true },
+      (err, client) => {
+
+        if (err) {
+          console.log(err);
+          res.sendStatus(500);
+          return;
+        }
+
+        // Get db
+        const db = client.db(dbname);
+
+        // Cycle through all of the collections
+        for (col = 0; col < collnames[page].length; col++) {
+          // Get collection
+          const collection = db.collection(collnames[page][col]);
+
+          // Array to hold each collection data temporarily
+          let collectionData = []
+
+          // Find all documents in the collection  
+          collection.find().forEach(function (doc, err) {
+
+            if (doc.hasOwnProperty('section_title')) {
+              collectionData.unshift(doc)
+            } else if (!err) {
+              collectionData.push(doc)
+            }
+          }, function () {
+            callbackNum++;
+            output.push(collectionData);
+            collectionData = [];  // reset collectionData
+          });
+        }
+      }
+    );
+
+  } catch (e) {
+    console.error(e);
+  } finally {
+    client.close();
+  }
+
+}
 
 // Change Language
-app.post('/changeLang', function(req, res) {
-  console.log(req.body.lang);
+router.post('/changeLang', function (req, res) {
 
-  switch(req.body.lang) {
+  switch (req.body.lang) {
 
-    case 'ENGLISH': 
+    case 'ENGLISH':
       language = 'en';
       flag_path = 'img/uk.png';
       break;
@@ -94,69 +159,19 @@ app.post('/changeLang', function(req, res) {
 });
 
 // Change Page
-app.post('/changePage', function (req, res) {
-    console.log(req.body.selected);
-    page = req.body.selected;
+router.post('/changePage', function (req, res) {
+  console.log(req.body.selected);
+  page = req.body.selected;
 });
 
+app.get('/main', (req, res) => {
+  res.render("main.pug", { dishes: output, lg: language, flagPath: flag_path });
+});
 
-// Home Route
-app.get('/', function (req, res) {
+app.use(express.static(path.join(__dirname, '/')), router)
 
-  // JSON output
-  var output = [];
-
-  // Callback Count
-  var callbackNum = 0;
-
-  // Connect to db
-  MongoClient.connect(
-    dburl,
-    {useNewUrlParser: true},
-    (err, client) => {
-
-      if (err) {
-        console.log(err);
-        res.sendStatus(500);
-        return;
-      }
-
-      // Get db
-      const db = client.db(dbname);
-
-      // Cycle through all of the collections
-      for(col = 0; col < collnames[page].length; col++) {
-        // Get collection
-        const collection = db.collection(collnames[page][col]);
-
-        // Array to hold each collection data temporarily
-        var collectionData = []
-
-        // Find all documents in the collection        
-        collection.find({}).forEach(function(doc, err) {
-          if (!err) {
-            collectionData.push(doc)
-          } 
-        }, function() {
-          callbackNum++;
-          output.push(collectionData);
-          collectionData = [];  // reset collectionData
-
-          if (callbackNum == collnames[page].length) {
-            // send output in template
-            console.log(output);
-            res.render("index.pug", { dishes: output, lg: language, flag: flag_path });
-          } 
-        });
-      }
-
-      // close client
-      client.close();
-    }
-  );
-});  
-
-app.listen(5500, function() {
-    console.log('Web app listening on port 5500');
+app.listen(5500, function () {
+  console.log('Web app listening on port 5500');
+  main();
 });
 

@@ -1,0 +1,46 @@
+@import '../utilities/mixins';
+
+.app-bar {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 25% 50% 25%;
+
+    z-index: 10;
+
+    &__nav-button {
+        position: relative;  
+        height: 50%;
+        width: auto;
+        @include bg-image-center(url('../../public/img/bars.svg'));
+        background-size: contain;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 90%;
+
+        visibility: hidden;
+        @include bg-image-center(url('../../public/img/logo.svg'));
+        background-size: contain;
+
+        &::after {
+            content: '';
+            width: 100%;
+        }
+    }
+
+}
+
+.app-bar-active {
+    background-color: $jet-black;
+}
+
+.app-bar-inactive {
+    background-color: transparent;
+}

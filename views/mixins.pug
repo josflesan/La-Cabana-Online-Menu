@@ -1,0 +1,44 @@
+// MIXINS
+mixin img-bg(className, src)
+  div(class=className, style=`background-image: url('${src}')`)
+
+mixin menu-content__row-left(dishes, lg)
+  ul.menu-content__row-left.full 
+    .menu-section-left
+      span.menu-section-left__title=dishes[0].section_title[lg]
+    - for (var i = 1; i < dishes.length; i++) {
+      - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
+      - var priceEuro = parseInt(dishes[i].price).toString()
+      - var priceCents = (parseFloat(dishes[i].price) - parseInt(dishes[i].price)).toFixed(2).replace('0', '') + ' €'
+      if dish
+        li.menu-option
+          .menu-option__card 
+            +img-bg(
+              "menu-option__card__picture",
+              dishes[i].photo_url
+            )
+            .menu-option__card__title=dishes[i].name[lg]
+            .menu-option__card__price=priceEuro
+              span.menu-option__card__price-cents=priceCents
+    - }
+
+
+mixin menu-content__row-right(dishes, lg)
+  ul.menu-content__row-right.full
+    - for (var i = 1; i < dishes.length; i++) {
+      - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
+      - var priceEuro = parseInt(dishes[i].price).toString()
+      - var priceCents = (parseFloat(dishes[i].price) - parseInt(dishes[i].price)).toFixed(2).replace('0', '') + ' €'
+      if dish
+        li.menu-option
+          .menu-option__card 
+            +img-bg(
+              "menu-option__card__picture",
+              dishes[i].photo_url
+            )
+            .menu-option__card__title=dishes[i].name[lg]
+            .menu-option__card__price=priceEuro
+              span.menu-option__card__price-cents=priceCents
+    - }
+    .menu-section-right
+      span.menu-section-right__title=dishes[0].section_title[lg]

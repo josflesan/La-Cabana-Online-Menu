@@ -1,100 +1,21 @@
+@import '../utilities/mixins';
+
 .language-selector {
-    display: flex;
-    align-items: center;
-    overflow: auto;
-    width: 10rem;
-    height: 10rem;
-    right: 4%;
-
-    z-index: 2;
-
-    &__button {
-        display: inline-block;
-        margin-left: -13%;
-        color: transparent;
-        border-color: transparent;
-        background-color: transparent;
-    }
-
-    
-    &__flag-box {
-        display: inline-block;
-        width: 9rem;
-        height: 7rem;
-        margin-right: 3px;
-        overflow: hidden;
-
-        -webkit-clip-path: circle(3.5rem at 50%);
-        clip-path: circle(3.5rem at 50%); 
-    }
-
-}
-
-.language-selector-large {
-    position: absolute;
-    top: 20%;
-}
-
-.language-selector-small {
+    display: block;
     position: fixed;
-    top: -1.5%;
-    transform: scale(0.7);
-}
+    width: 8rem;
+    height: 8rem;
+    
+    bottom: 5%;
+    right: 5%;
 
+    //@include bg-image-center(url('../../public/img/uk.png'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
 
-@media screen and(max-width: 400px) and(min-width: 300px) {
-    .language-selector {
-        width: 9rem;
-        height: 9rem;
+    z-index: 10;
 
-        &__flag-box {
-            width: 6rem;
-            height: 6rem;
-
-            -webkit-clip-path: circle(3rem at 50%);
-            clip-path: circle(3rem at 50%);
-
-        }   
-    }
-}
-
-@media screen and(min-height: 800px) {
-    .language-selector-small {
-        top: -1%;
-    }
-}
-
-@media screen and(min-height: 800px) and(max-width: 400px) {
-    .language-selector-small {
-        top: -0.2%;
-    }
-}
-
-// Galaxy Fold
-@media screen and(max-width: 300px) {
-
-    .language-selector {
-        width: 8rem;
-        height: 8rem;
-        
-        &__flag-box {
-            width: 5rem;
-            height: 5rem;
-            margin-right: 1rem;
-
-            -webkit-clip-path: circle(2.5rem at 50%);
-            clip-path: circle(2.5rem at 50%);
-        }
-    }
-
-    .language-selector-large {
-        top: 25%;
-        right: 5%;
-    }
-
-
-    .language-selector-small {
-        top: 0;
-        right: 2%;
-    }
 }

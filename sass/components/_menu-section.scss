@@ -1,0 +1,40 @@
+.menu-section-left {
+    position: sticky;
+    width: 100%;
+    padding-top: 10px;
+    background-color: $cadet-blue;
+    z-index: -1;
+    
+    &__title {
+        transform-origin: top left;
+        transform: rotate(90deg) translate(0, -100%);
+        position: absolute;
+        white-space: nowrap;
+        
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
+        color: $white;        
+    }
+
+}
+
+.menu-section-right {
+    position: relative;
+    padding: 10px;
+    background-color: $cadet-blue;
+
+    &__title {
+        transform-origin: top left;
+        transform: rotate(-90deg) translate(-100%);
+        position: absolute;
+        white-space: nowrap;
+        
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: clamp(15px, calc((60vh - 150px) * 0.19), 120px);
+        color: $white;               
+    }
+
+}
+
