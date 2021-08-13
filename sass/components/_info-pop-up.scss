@@ -9,7 +9,7 @@
     left: 50vw;
     height: 45vh;
     width: 85%;
-    grid-template-rows: 15% 50% 35%;
+    grid-template-rows: 15% 70% 15%;
 
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
@@ -17,4 +17,51 @@
 
     background-color: $jet-black;
     border: 2px solid $cadet-blue;
+
+    &__header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        padding: 10px 10px 0 10px;
+
+        h3 {
+            display: inline-block;
+            padding-left: 5%;
+            text-align: left;
+            text-transform: uppercase;
+            color: $white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 5vw;
+            font-weight: 500;
+        }
+
+        &--close {
+            display: inline-block;
+            height: 100%;
+            color: $cadet-blue;
+            cursor: pointer;
+            font-size: 3rem;
+        }
+
+    }
+
+    &__body {
+        padding: 30px;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .info-pop-up {
+        &__header {
+            padding: 20px 20px 0 20px;
+
+            &--close {
+                font-size: 6vw;
+            }
+        }
+    }
 }
