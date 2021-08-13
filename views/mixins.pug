@@ -18,8 +18,11 @@ mixin menu-content__row-left(dishes, lg)
               dishes[i].photo_url
             )
             .menu-option__card__title=dishes[i].name[lg]
-            .menu-option__card__price=priceEuro
-              span.menu-option__card__price-cents=priceCents
+            .menu-option__card__footer
+              .menu-option__card__price=priceEuro
+                span.menu-option__card__price-cents=priceCents
+              button.info-btn
+                i.fa.fa-info
     - }
 
 
@@ -37,8 +40,11 @@ mixin menu-content__row-right(dishes, lg)
               dishes[i].photo_url
             )
             .menu-option__card__title=dishes[i].name[lg]
-            .menu-option__card__price=priceEuro
-              span.menu-option__card__price-cents=priceCents
+            .menu-option__card__footer
+              .menu-option__card__price=priceEuro
+                span.menu-option__card__price-cents=priceCents
+              button.info-btn
+                i.fa.fa-info
     - }
     .menu-section-right
       .menu-section-right__title=dishes[0].section_title[lg]
