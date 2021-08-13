@@ -291,7 +291,7 @@ body {
       height: 100%;
       text-transform: lowercase;
       font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
+      font-size: 6vw;
       color: #FFFFFF;
       font-weight: 300; }
   .nav-drawer__body {
@@ -328,7 +328,7 @@ body {
     text-align: left;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 3.5rem;
+    font-size: 10vw;
     color: #FFFFFF;
     border-left: 15px solid #5C9EAD; }
   .nav-drawer__button--right {
@@ -348,7 +348,7 @@ body {
     text-align: right;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 3.5rem;
+    font-size: 10vw;
     color: #FFFFFF;
     border-right: 15px solid #5C9EAD; }
 
