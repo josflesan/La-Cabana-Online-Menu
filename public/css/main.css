@@ -36,6 +36,23 @@ body {
   .info-btn {
     margin: 0 20px 20px 0; } }
 
+.info-pop-up.active {
+  transform: translate(-50%, -50%) scale(1); }
+
+.info-pop-up {
+  position: fixed;
+  display: grid;
+  top: 50vh;
+  left: 50vw;
+  height: 45vh;
+  width: 85%;
+  grid-template-rows: 15% 50% 35%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 12;
+  background-color: #292929;
+  border: 2px solid #5C9EAD; }
+
 .language-selector {
   display: block;
   position: fixed;
