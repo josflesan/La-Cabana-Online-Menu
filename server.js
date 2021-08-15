@@ -25,13 +25,14 @@ let output = [];
 const dbname = 'lcOnlineMenu';
 const collnames = {
   "MAIN": ["starters_soups", "pasta_and_eggs", "fish", "meat", "specialties_and_flambes"],
-  "BREAKFAST": ["breakfast", "breakfast_extras"],
-  "DRINKS": [],
-  "PASTA": [],
-  "MEXICAN": [],
-  "PIZZAS": [],
-  "CHILDREN": [],
-  "DESSERTS": []
+  "BREAKFAST": ["breakfast", "breakfast_brunch", "breakfast_drinks"],
+  "DRINKS": ["drinks_beer", "drinks_soda", "drinks_water", "drinks_coffee", "drinks_wine", "drinks_mix", "drinks_spirits", "drinks_liqueurs", "drinks_milkshakes"],
+  "PASTA": ["pasta", "pasta_other"],
+  "SPANISH": ["spanish_starters", "spanish_tortilla", "spanish_paella"],
+  "MEXICAN": ["mexican"],
+  "PIZZAS": ["pizza_classic", "pizza_special"],
+  "CHILDREN": ["children"],
+  "DESSERTS": ["dessert_ice_cream", "dessert_milkshakes", "dessert_warm"]
 };
 
 let language = 'en';  // by default, language is english
