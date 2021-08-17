@@ -24,7 +24,7 @@ let output = [];
 
 const dbname = 'lcOnlineMenu';
 const collnames = {
-  "MAIN": ["starters_soups", "pasta_and_eggs", "fish", "meat", "specialties_and_flambes"],
+  "MAIN": ["main_starters", "main_pasta", "main_fish", "main_pork", "main_beef", "main_lamb", "main_chicken", "main_specialties"],
   "BREAKFAST": ["breakfast", "breakfast_brunch", "breakfast_drinks"],
   "DRINKS": ["drinks_beer", "drinks_soda", "drinks_water", "drinks_coffee", "drinks_wine", "drinks_mix", "drinks_spirits", "drinks_liqueurs", "drinks_milkshakes"],
   "PASTA": ["pasta", "pasta_other"],
