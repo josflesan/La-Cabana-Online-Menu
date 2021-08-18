@@ -8,7 +8,6 @@ mixin menu-content__row-left(dishes, lg)
       div.menu-section-left__title=dishes[0].section_title[lg].toUpperCase()
     - for (var i = 1; i < dishes.length; i++) {
       - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
-      - console.log(dishes[i])
       - var price = parseFloat(dishes[i].prices[0])
       - var priceEuro = parseInt(price).toString()
       - var priceCents = (price - parseInt(price)).toFixed(2).replace('0', '') + ' €'

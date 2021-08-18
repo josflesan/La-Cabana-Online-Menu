@@ -1,27 +1,11 @@
-// Import express
+// Import modules
 const express = require('express');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs');
+const MongoClient = require('mongodb').MongoClient;
 
-// Init App
-const app = express();
-
-// Set View Engine
-app.engine('pug', require('pug').__express);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
-app.use(express.static(path.join(__dirname, "/public/")));
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-// Get MongoClient
-const { MongoClient } = require('mongodb');
-
-// JSON database output
-let output = [];
-
+// Constants
 const dbname = 'lcOnlineMenu';
 const collnames = {
   "MAIN": ["main_starters", "main_pasta", "main_fish", "main_pork", "main_beef", "main_lamb", "main_chicken", "main_specialties"],
@@ -35,80 +19,74 @@ const collnames = {
   "DESSERTS": ["dessert_ice_cream", "dessert_milkshakes", "dessert_warm"]
 };
 
+// Variables
 let language = 'en';  // by default, language is english
-let page = 'MAIN';  // by default, open main menu
+let page = 'MAIN'
 let flag_path = 'img/uk.png';
 
-async function main() {
+// Init App and Database
+const app = express();
+let db
 
-  mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
-    if (err) throw err
-    return data
-  });
+let mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
+  if (err) throw err
+  return data
+});
 
-  /**
-   * Connection URI. 
-   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-   */
-  const uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-  const client = new MongoClient(uri);
+let uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
-  try {
-    // Connect to MongoDB cluster
-    await client.connect();
+// Set View Engine
+app.engine('pug', require('pug').__express);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
-    // Callback Count
-    let callbackNum = 0;
+app.use(express.static(path.join(__dirname, "/public/")));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-    // Connect to db
-    MongoClient.connect(
-      uri,
-      { useNewUrlParser: true },
-      (err, client) => {
 
-        if (err) {
-          console.log(err);
-          res.sendStatus(500);
-          return;
-        }
-
-        // Get db
-        const db = client.db(dbname);
-
-        // Cycle through all of the collections
-        for (col = 0; col < collnames[page].length; col++) {
-          // Get collection
-          const collection = db.collection(collnames[page][col]);
-
-          // Array to hold each collection data temporarily
-          let collectionData = []
-
-          // Find all documents in the collection  
-          collection.find().forEach(function (doc, err) {
-
-            if (doc.hasOwnProperty('section_title')) {
-              collectionData.unshift(doc)
-            } else if (!err) {
-              collectionData.push(doc)
-            }
-          }, function () {
-            callbackNum++;
-            output.push(collectionData);
-            collectionData = [];  // reset collectionData
-          });
-        }
-      }
-    );
-
-  } catch (e) {
-    console.error(e);
-  } finally {
-    client.close();
+function getMenuData(page_to_load) {
+  let menuData = []
+  for (let i = 0; i < collnames[page_to_load].length; i++) {
+    menuData.push(getSectionData(page_to_load, i))
   }
 
+  return Promise.all(menuData)
 }
 
-// Change Language
+function getSectionData(page_to_load, section_to_load) {
+
+  return new Promise((resolve, reject) => {
+
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      (err, db) => {
+        let dbo = db.db('lcOnlineMenu')
+        if (err) throw err
+
+        let collectionData = []
+
+        dbo.collection(collnames[page_to_load][section_to_load]).find({}).forEach((doc, err) => {
+
+          if (doc.hasOwnProperty('section_title')) {
+            collectionData.unshift(doc)
+          } else if (!err) {
+            collectionData.push(doc)
+          }
+
+        }, (err) => {
+          err ? reject(err) : resolve(collectionData)
+          db.close()
+        })
+
+      })
+
+  })
+}
+
+// POST routes
+
 router.post('/changeLang', function (req, res) {
 
   switch (req.body.lang) {
@@ -166,20 +144,63 @@ router.post('/changeLang', function (req, res) {
 
 });
 
-// Change Page
 router.post('/changePage', function (req, res) {
-  console.log(req.body.selected);
-  page = req.body.selected;
+  page = req.body.selected.toUpperCase();
 });
 
+// GET Routes
+
 app.get('/main', (req, res) => {
-  res.render("main.pug", { dishes: output, lg: language, flagPath: flag_path });
+  getMenuData("MAIN").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path });
+  })
+});
+
+app.get('/breakfast', async (req, res) => {
+  getMenuData("BREAKFAST").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+app.get('/drinks', async (req, res) => {
+  getMenuData("DRINKS").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+app.get('/pasta', async (req, res) => {
+  getMenuData("PASTA").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+app.get('/mexican', async (req, res) => {
+  getMenuData("MEXICAN").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+
+app.get('/pizzas', async (req, res) => {
+  getMenuData("PIZZAS").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+app.get('/children', async (req, res) => {
+  getMenuData("CHILDREN").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
+app.get('/desserts', async (req, res) => {
+  getMenuData("DESSERTS").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
 });
 
 app.use(express.static(path.join(__dirname, '/')), router)
 
 app.listen(5500, function () {
   console.log('Web app listening on port 5500');
-  main();
 });
-
