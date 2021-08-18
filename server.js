@@ -175,12 +175,17 @@ app.get('/pasta', async (req, res) => {
   })
 });
 
+app.get('/spanish', async (req, res) => {
+  getMenuData("SPANISH").then((menuData) => {
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+  })
+});
+
 app.get('/mexican', async (req, res) => {
   getMenuData("MEXICAN").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
-
 
 app.get('/pizzas', async (req, res) => {
   getMenuData("PIZZAS").then((menuData) => {
