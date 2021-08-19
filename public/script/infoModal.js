@@ -35,6 +35,7 @@ export function loadDescription(description) {
     let ingredientList = description.ingredients[description.active_lang]
     let optionList = description.options[description.active_lang]
     let labelList = description.labels
+    let priceList = description.prices
 
     let loadingAnim = document.querySelector('.loading-anim')
     loadingAnim.classList.remove('active')
@@ -45,12 +46,22 @@ export function loadDescription(description) {
 
     let optionsContainer = document.createElement('div')
     optionsContainer.classList.add('info-pop-up__content__options-container')
-    optionList.forEach((option) => {
+    for (let i = 0; i < optionList.length; i++) {
         let optionLabel = document.createElement('div')
         optionLabel.classList.add('info-pop-up__content__options-container--option')
-        optionLabel.innerHTML = option
+        
+        let optionName = document.createElement('p')
+        optionName.classList.add('info-pop-up__content__options-container--option-name')
+        optionName.innerText = optionList[i]
+        let optionPrice = document.createElement('p')
+        optionPrice.classList.add('info-pop-up__content__options-container--option-price')
+        optionPrice.innerText = priceList[i]
+
+        optionLabel.appendChild(optionName)
+        optionLabel.appendChild(optionPrice)
+
         optionsContainer.appendChild(optionLabel)
-    })
+    }
 
     if (optionsContainer.children.length == 0) {
         let noOptionsLabel = document.createElement('p')

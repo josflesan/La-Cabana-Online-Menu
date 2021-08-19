@@ -102,14 +102,23 @@
                 position: relative;
                 margin-bottom: 3vw;
                 width: 100%;
-                display: block;
-                padding: 3vw;
+                display: flex;
+                justify-content: space-between;
+                padding: 4vw;
                 background-color: $light-grey;
 
                 color: $white;
                 font-family: 'Poppins', sans-serif;
-                font-weight: 400;
                 font-size: 4vw;
+
+                &-name {
+                    font-weight: 400;
+                }
+
+                &-price {
+                    font-weight: 200;
+                }
+                
             }
 
             &--noOptions {

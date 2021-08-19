@@ -68,7 +68,7 @@ async function getDescriptionData(menu_id) {
             menuItemDesc = await dbo.collection(collnames[page][col]).findOne({ "_id": ObjectId(menu_id) })
             
             if (menuItemDesc) {
-              let retVal = { ingredients: menuItemDesc.ingredients, options: menuItemDesc.options, labels: menuItemDesc.labels }
+              let retVal = { ingredients: menuItemDesc.ingredients, options: menuItemDesc.options, labels: menuItemDesc.labels, prices: menuItemDesc.prices }
               resolve(retVal)
             } else {
               col++

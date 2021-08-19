@@ -116,13 +116,17 @@ body {
         position: relative;
         margin-bottom: 3vw;
         width: 100%;
-        display: block;
-        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 4vw;
         background-color: #414343;
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-weight: 400;
         font-size: 4vw; }
+        .info-pop-up__content__options-container--option-name {
+          font-weight: 400; }
+        .info-pop-up__content__options-container--option-price {
+          font-weight: 200; }
       .info-pop-up__content__options-container--noOptions {
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
