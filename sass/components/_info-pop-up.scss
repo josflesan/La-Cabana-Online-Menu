@@ -51,15 +51,16 @@
     }
 
     &__content {
+        display: grid;
+        grid-template-rows: 0.5fr 1fr;
+        align-items: flex-start;
+        justify-items: flex-start;
         padding: 4vw; 
         width: 100%;
         overflow-y: scroll;
 
         &__ingredients {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
+            text-align: start;
 
             margin-bottom: 5vw;
 
@@ -73,7 +74,7 @@
                 color: $cadet-blue;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 400;
-                margin-right: 5vw;
+                margin-right: 4vw;
             }
 
             color: $white;

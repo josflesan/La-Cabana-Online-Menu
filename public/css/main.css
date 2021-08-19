@@ -77,14 +77,15 @@ body {
       cursor: pointer;
       font-size: 2rem; }
   .info-pop-up__content {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    align-items: flex-start;
+    justify-items: flex-start;
     padding: 4vw;
     width: 100%;
     overflow-y: scroll; }
     .info-pop-up__content__ingredients {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      text-align: center;
+      text-align: start;
       margin-bottom: 5vw;
       font-family: 'Poppins', sans-serif;
       font-size: 3vw;
@@ -97,7 +98,7 @@ body {
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        margin-right: 5vw; }
+        margin-right: 4vw; }
     .info-pop-up__content__options-container {
       display: flex;
       width: 100%;
