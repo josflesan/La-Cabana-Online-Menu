@@ -3,7 +3,8 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const fs = require('fs');
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient
+let ObjectId = require('mongodb').ObjectId
 
 // Constants
 const dbname = 'lcOnlineMenu';
@@ -21,6 +22,7 @@ const collnames = {
 
 // Variables
 let language = 'en';  // by default, language is english
+let page = "MAIN"
 let flag_path = 'img/uk.png';
 
 // Init App and Database
@@ -43,6 +45,45 @@ app.use(express.static(path.join(__dirname, "/public/")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+
+async function getDescriptionData(menu_id) {
+
+  return new Promise((resolve, reject) => {
+
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      async (err, db) => {
+
+        try {
+          let dbo = db.db('lcOnlineMenu')
+          if (err) throw err
+
+          let foundMenuItem = false
+          let menuItemDesc = null
+          let col = 0
+
+          while (!foundMenuItem && col < collnames[page].length) {
+
+            menuItemDesc = await dbo.collection(collnames[page][col]).findOne({ "_id": ObjectId(menu_id) })
+            
+            if (menuItemDesc) {
+              let retVal = { ingredients: menuItemDesc.ingredients, options: menuItemDesc.options, labels: menuItemDesc.labels }
+              resolve(retVal)
+            } else {
+              col++
+            }
+          }
+
+          reject("Menu Item Not Found")
+          db.close()
+        } catch (e) { console.error(e) }
+      }
+    )
+
+  }).catch((e) => { console.error(e) })
+
+}
 
 function getMenuData(page_to_load) {
   let menuData = []
@@ -143,29 +184,38 @@ router.post('/changeLang', (req, res) => {
 
 });
 
-router.post('/getDesc', (req, res) => {
-  let menuItem = req.body.id
+router.post('/getDesc', async (req, res) => {
+  let menuItemId = req.body.id
 
-  // Send some data to the client
-  // Test commit
+  getDescriptionData(menuItemId).then((description) => {
+    description["active_lang"] = language
+
+    res.json({
+      status: "Success",
+      body: description
+    })
+  })
 
 })
 
 // GET Routes
 
 app.get('/main', (req, res) => {
+  page = "MAIN"
   getMenuData("MAIN").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path });
   })
 });
 
 app.get('/breakfast', async (req, res) => {
+  page = "BREAKFAST"
   getMenuData("BREAKFAST").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/drinks', async (req, res) => {
+  page = "DRINKS"
   getMenuData("DRINKS").then((menuData) => {
     console.log(menuData)
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
@@ -173,36 +223,42 @@ app.get('/drinks', async (req, res) => {
 });
 
 app.get('/pasta', async (req, res) => {
+  page = "PASTA"
   getMenuData("PASTA").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/spanish', async (req, res) => {
+  page = "SPANISH"
   getMenuData("SPANISH").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/mexican', async (req, res) => {
+  page = "MEXICAN"
   getMenuData("MEXICAN").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/pizzas', async (req, res) => {
+  page = "PIZZAS"
   getMenuData("PIZZAS").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/children', async (req, res) => {
+  page = "CHILDREN"
   getMenuData("CHILDREN").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })
 });
 
 app.get('/desserts', async (req, res) => {
+  page = "DESSERTS"
   getMenuData("DESSERTS").then((menuData) => {
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
   })

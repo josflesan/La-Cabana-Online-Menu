@@ -26,9 +26,25 @@ window.onload = () => {
     });
 
     infoBtns.forEach((btn) => {
-        btn.addEventListener('click', (_) => {
+        btn.addEventListener('click', async (_) => {
+            const menuID = btn.id
             const modal = document.querySelector('.info-pop-up');
-            openInfoModal(modal);
+            
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: menuID
+                })
+            }
+
+            openInfoModal(modal)
+            const response = await fetch('/getDesc', options)
+            const jsonRes = await response.json()
+            console.log(jsonRes)
+            
         })
     })
 
