@@ -21,7 +21,6 @@ const collnames = {
 
 // Variables
 let language = 'en';  // by default, language is english
-let page = 'MAIN'
 let flag_path = 'img/uk.png';
 
 // Init App and Database
@@ -87,7 +86,7 @@ function getSectionData(page_to_load, section_to_load) {
 
 // POST routes
 
-router.post('/changeLang', function (req, res) {
+router.post('/changeLang', (req, res) => {
 
   switch (req.body.lang) {
 
@@ -144,9 +143,12 @@ router.post('/changeLang', function (req, res) {
 
 });
 
-router.post('/changePage', function (req, res) {
-  page = req.body.selected.toUpperCase();
-});
+router.post('/getDesc', (req, res) => {
+  let menuItem = req.body.id
+
+  // Send some data to the client
+
+})
 
 // GET Routes
 
