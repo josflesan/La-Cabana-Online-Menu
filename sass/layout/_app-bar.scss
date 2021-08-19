@@ -39,8 +39,10 @@
 
 .app-bar-active {
     background-color: $jet-black;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .app-bar-inactive {
     background-color: transparent;
+    box-shadow: none;
 }

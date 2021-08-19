@@ -46,7 +46,7 @@
             height: 100%;
             text-transform: lowercase;
             font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
+            font-size: 6vw;
             color: $white;
             font-weight: 300;
         }
@@ -77,6 +77,13 @@
         }
     }
 
+    &__button-container {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     &__button--left {
         // remove styling
         border: none;
@@ -98,7 +105,7 @@
         text-align: left;
         font-family: 'Poppins', sans-serif;
         font-weight: 200;
-        font-size: 3.5rem;
+        font-size: 10vw;
         color: $white;
 
         border-left: 15px solid $cadet-blue;
@@ -126,7 +133,7 @@
         text-align: right;
         font-family: 'Poppins', sans-serif;
         font-weight: 200;
-        font-size: 3.5rem;
+        font-size: 10vw;
         color: $white;
 
         border-right: 15px solid $cadet-blue;

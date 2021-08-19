@@ -1,6 +1,6 @@
 let languageButtons;
 
-export function openModal(modal) {
+export function openLangModal(modal) {
     if (modal == null) return;
 
     modal.classList.add('active');
@@ -23,7 +23,7 @@ export function openModal(modal) {
                 body: JSON.stringify(language)
             });
 
-            window.location.reload(true);
+            window.location.reload();
         });
     });
 
@@ -31,7 +31,7 @@ export function openModal(modal) {
 }
 
 
-export function closeModal(modal) {
+export function closeLangModal(modal) {
     if (modal == null) return;
 
     modal.classList.remove('active')

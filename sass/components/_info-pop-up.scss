@@ -1,0 +1,180 @@
+.info-pop-up.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.info-pop-up {
+    position: fixed;
+    display: grid;
+    justify-items: center;
+    top: 50vh;
+    left: 50vw;
+    height: 45vh;
+    width: 85%;
+    grid-template-rows: 15% 65% 20%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 12;
+
+    background-color: $jet-black;
+    border: 2px solid $cadet-blue;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: solid 2px $cadet-blue;
+        height: 100%;
+        width: 90%;
+
+        padding: 10px 10px 0 10px;
+
+        h3 {
+            display: inline-block;
+            padding-left: 5%;
+            text-align: left;
+            text-transform: uppercase;
+            color: $white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 5vw;
+            font-weight: 500;
+        }
+
+        &--close {
+            display: inline-block;
+            align-self: flex-start;
+            color: $cadet-blue;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0.5fr 1fr;
+        align-items: flex-start;
+        justify-items: flex-start;
+        padding: 4vw; 
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+
+        &__ingredients {
+            text-align: start;
+
+            margin-bottom: 5vw;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 3vw;
+            font-weight: 100;
+
+            &::before {
+                content: "Ingredients: ";
+                font-size: 5vw;
+                color: $cadet-blue;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                margin-right: 4vw;
+            }
+
+            color: $white;
+            font-size: 5vw;
+        }
+
+        &__options-container {
+
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+
+            &::before {
+                content: "Options:";
+                font-size: 5vw;
+                display: block;
+                color: $cadet-blue;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                margin-bottom: 3vw;
+            }
+
+            &--option {
+                position: relative;
+                margin-bottom: 3vw;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 4vw;
+                background-color: $light-grey;
+
+                color: $white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 4vw;
+
+                &-name {
+                    font-weight: 400;
+                }
+
+                &-price {
+                    font-weight: 200;
+                }
+                
+            }
+
+            &--noOptions {
+                color: $white;
+                font-family: 'Poppins', sans-serif;
+                font-size: 4vw;
+                font-weight: 100;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+
+    }
+
+    &__footer {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 3vw;
+
+        &__labels-container {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            justify-items: center;
+            grid-auto-flow: column;
+            grid-auto-columns: calc(20% - 2vw);
+            grid-template-rows: 1fr;
+
+            &--label {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .info-pop-up {
+        &__header {
+            padding: 20px 20px 0 20px;
+
+            &--close {
+                font-size: 6vw;
+            }
+        }
+    }
+}

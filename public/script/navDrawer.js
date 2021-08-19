@@ -1,4 +1,4 @@
-let navDrawerButtons;
+let navDrawerButtonsLeft, navDrawerButtonsRight, page;
 
 export function openDrawer(drawer) {
     if (drawer == null) return;
@@ -14,9 +14,10 @@ export function openDrawer(drawer) {
     })
 
     // set up navigation buttons
-    navDrawerButtons = document.querySelectorAll('.nav-drawer__button');
+    navDrawerButtonsLeft = document.querySelectorAll('.nav-drawer__button--left');
+    navDrawerButtonsRight = document.querySelectorAll('.nav-drawer__button--right');
 
-    navDrawerButtons.forEach(button => {
+    navDrawerButtonsLeft.forEach(button => {
         button.addEventListener('click', () => {
             // update current page
             page = {
@@ -32,10 +33,49 @@ export function openDrawer(drawer) {
                 body: JSON.stringify(page)
             });
 
-            // update current page
-            window.location.reload(true);
+            // Go to appropriate page
+            fetch('/' + button.innerText, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                }
+            })
 
-            console.log(button.innerText);  // temporary debug code
+            // update current page
+            //window.location.reload();
+
+            // close navigation drawer
+            drawer.classList.remove('active');
+            overlay.classList.remove('active');
+        })
+    })
+
+    navDrawerButtonsRight.forEach(button => {
+        button.addEventListener('click', () => {
+            // update current page
+            page = {
+                selected: button.innerText
+            }
+
+            // change page
+            fetch('/changePage', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(page)
+            });
+
+            // Go to appropriate page
+            fetch('/' + button.innerText, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                }
+            })
+
+            // update current page
+            window.location.reload();
 
             // close navigation drawer
             drawer.classList.remove('active');

@@ -5,11 +5,12 @@ mixin img-bg(className, src)
 mixin menu-content__row-left(dishes, lg)
   ul.menu-content__row-left.full 
     .menu-section-left
-      div.menu-section-left__title=dishes[0].section_title[lg]
+      div.menu-section-left__title=dishes[0].section_title[lg].toUpperCase()
     - for (var i = 1; i < dishes.length; i++) {
       - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
-      - var priceEuro = parseInt(dishes[i].price).toString()
-      - var priceCents = (parseFloat(dishes[i].price) - parseInt(dishes[i].price)).toFixed(2).replace('0', '') + ' €'
+      - var price = parseFloat(dishes[i].prices[0])
+      - var priceEuro = parseInt(price).toString()
+      - var priceCents = (price - parseInt(price)).toFixed(2).replace('0', '') + ' €'
       if dish
         li.menu-option
           .menu-option__card 
@@ -18,8 +19,11 @@ mixin menu-content__row-left(dishes, lg)
               dishes[i].photo_url
             )
             .menu-option__card__title=dishes[i].name[lg]
-            .menu-option__card__price=priceEuro
-              span.menu-option__card__price-cents=priceCents
+            .menu-option__card__footer
+              .menu-option__card__price=priceEuro
+                span.menu-option__card__price-cents=priceCents
+              button(id=dishes[i]._id class='info-btn')
+                i.fa.fa-info
     - }
 
 
@@ -27,8 +31,9 @@ mixin menu-content__row-right(dishes, lg)
   ul.menu-content__row-right.full
     - for (var i = 1; i < dishes.length; i++) {
       - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
-      - var priceEuro = parseInt(dishes[i].price).toString()
-      - var priceCents = (parseFloat(dishes[i].price) - parseInt(dishes[i].price)).toFixed(2).replace('0', '') + ' €'
+      - var price = parseFloat(dishes[i].prices[0])
+      - var priceEuro = parseInt(price).toString()
+      - var priceCents = (price - parseInt(price)).toFixed(2).replace('0', '') + ' €'
       if dish
         li.menu-option
           .menu-option__card 
@@ -37,8 +42,11 @@ mixin menu-content__row-right(dishes, lg)
               dishes[i].photo_url
             )
             .menu-option__card__title=dishes[i].name[lg]
-            .menu-option__card__price=priceEuro
-              span.menu-option__card__price-cents=priceCents
+            .menu-option__card__footer
+              .menu-option__card__price=priceEuro
+                span.menu-option__card__price-cents=priceCents
+              button(id=dishes[i]._id class='info-btn')
+                i.fa.fa-info
     - }
     .menu-section-right
-      .menu-section-right__title=dishes[0].section_title[lg]
+      .menu-section-right__title=dishes[0].section_title[lg].toUpperCase()

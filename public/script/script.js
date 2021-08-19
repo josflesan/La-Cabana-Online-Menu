@@ -1,6 +1,7 @@
-let languageSelector, closeLanguagePopUpBtn, navDrawerButton, appBar, logoArea, mainBody;
+let languageSelector, closeLanguagePopUpBtn, closeInfoPopUpButton, navDrawerButton, appBar, logoArea, mainBody, infoBtns;
 
-import { openModal, closeModal } from './languageModal.js';
+import { openInfoModal, closeInfoModal, loadDescription } from './infoModal.js';
+import { openLangModal, closeLangModal } from './languageModal.js';
 import { openDrawer } from './navDrawer.js';
 import { parallax, resetDefaultStyling } from './parallax.js';
 
@@ -10,17 +11,47 @@ window.onload = () => {
     logoArea = document.querySelector('.logo-area');
     mainBody = document.querySelector('.menu-content');
     languageSelector = document.querySelector('.language-selector');
+    infoBtns = Array.from(document.querySelectorAll('.info-btn'));
+    closeInfoPopUpButton = document.querySelector('.info-pop-up__header--close');
     closeLanguagePopUpBtn = document.querySelector('.language-pop-up__header--close');
 
     languageSelector.addEventListener('click', () => {
         const modal = document.querySelector('.language-pop-up');
-        openModal(modal);
+        openLangModal(modal);
     });
 
     closeLanguagePopUpBtn.addEventListener('click', () => {
         const modal = document.querySelector('.language-pop-up');
-        closeModal(modal);
+        closeLangModal(modal);
     });
+
+    infoBtns.forEach((btn) => {
+        btn.addEventListener('click', async (_) => {
+            const menuID = btn.id
+            const modal = document.querySelector('.info-pop-up');
+            
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: menuID
+                })
+            }
+
+            openInfoModal(modal)
+            const response = await fetch('/getDesc', options)
+            const jsonRes = await response.json()
+            loadDescription(jsonRes.body)
+            
+        })
+    })
+
+    closeInfoPopUpButton.addEventListener('click', (_) => {
+        const modal = document.querySelector('.info-pop-up');
+        closeInfoModal(modal);
+    })  
 
     navDrawerButton = document.querySelector('.app-bar__nav-button');
 

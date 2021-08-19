@@ -1,0 +1,27 @@
+.info-btn {
+    width: calc(40vw * 0.2);
+    height: calc(40vw * 0.2);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    margin: 0 10px 10px 0;
+
+    background-color: $cadet-blue;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    i {
+        font-size: calc((60vh - var(--top)) * 0.25 * 0.25);
+        font-weight: 100;
+        color: $white;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .info-btn {
+        margin: 0 20px 20px 0;
+    }
+}
