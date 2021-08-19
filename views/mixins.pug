@@ -22,7 +22,7 @@ mixin menu-content__row-left(dishes, lg)
             .menu-option__card__footer
               .menu-option__card__price=priceEuro
                 span.menu-option__card__price-cents=priceCents
-              button.info-btn
+              button(id=dishes[i]._id class='info-btn')
                 i.fa.fa-info
     - }
 
