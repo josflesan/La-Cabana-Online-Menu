@@ -1,6 +1,6 @@
 let languageSelector, closeLanguagePopUpBtn, closeInfoPopUpButton, navDrawerButton, appBar, logoArea, mainBody, infoBtns;
 
-import { openInfoModal, closeInfoModal } from './infoModal.js';
+import { openInfoModal, closeInfoModal, loadDescription } from './infoModal.js';
 import { openLangModal, closeLangModal } from './languageModal.js';
 import { openDrawer } from './navDrawer.js';
 import { parallax, resetDefaultStyling } from './parallax.js';
@@ -43,7 +43,7 @@ window.onload = () => {
             openInfoModal(modal)
             const response = await fetch('/getDesc', options)
             const jsonRes = await response.json()
-            console.log(jsonRes)
+            loadDescription(jsonRes.body)
             
         })
     })

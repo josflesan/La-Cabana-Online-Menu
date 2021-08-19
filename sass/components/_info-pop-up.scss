@@ -9,7 +9,7 @@
     left: 50vw;
     height: 45vh;
     width: 85%;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 15% 85%;
 
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
@@ -48,8 +48,8 @@
 
     }
 
-    &__body {
-        padding: 30px;
+    &__content {
+        padding: 30px; 
     }
 
 }
