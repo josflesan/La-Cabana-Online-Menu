@@ -30,7 +30,7 @@
         grid-auto-columns: clamp(150px, calc(50% - var(--gutter)*2), 400px);
         grid-template-rows: minmax(150px, 1fr);
 
-        overflow: scroll;
+        overflow-x: scroll;
         overflow-y: hidden;
 
         scrollbar-width: none;
@@ -58,7 +58,7 @@
         grid-auto-columns: clamp(150px, calc(50% - var(--gutter) * 2), 400px);
         grid-template-rows: minmax(150px, 1fr);
 
-        overflow: scroll;
+        overflow-x: scroll;
         overflow-y: hidden;
 
         scrollbar-width: none;
@@ -86,4 +86,3 @@
 .menu-content > .full {
     grid-column: 1 / -1;
 }
-

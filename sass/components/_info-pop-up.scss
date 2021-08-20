@@ -166,6 +166,21 @@
 
 }
 
+// Scrollbar Styling
+.info-pop-up__content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.info-pop-up__content::-webkit-scrollbar-track {
+    background-color: $jet-black;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-pop-up__content::-webkit-scrollbar-thumb {
+    background-color: $cadet-blue;
+    border-radius: 20px;
+}
+
 @media only screen and (min-width: 700px) {
     .info-pop-up {
         &__header {

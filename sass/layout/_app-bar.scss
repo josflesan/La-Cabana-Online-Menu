@@ -12,6 +12,7 @@
 
     &__nav-button {
         position: relative;  
+        cursor: pointer;
         height: 50%;
         width: auto;
         @include bg-image-center(url('../../public/img/bars.svg'));
