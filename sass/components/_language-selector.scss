@@ -3,8 +3,9 @@
 .language-selector {
     display: block;
     position: fixed;
-    width: 20vw;
-    height: 20vw;
+    cursor: pointer;
+    width: clamp(50px, 20vw, 150px);
+    height: clamp(50px, 20vw, 150px);
     
     bottom: 5%;
     right: 5%;
@@ -16,5 +17,4 @@
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
 
     z-index: 10;
-
 }

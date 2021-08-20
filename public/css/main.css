@@ -17,8 +17,8 @@ body {
   z-index: -10; }
 
 .info-btn {
-  width: calc(40vw * 0.2);
-  height: calc(40vw * 0.2);
+  width: clamp(30px, calc(40vw * 0.2), 60px);
+  height: clamp(30px, calc(40vw * 0.2), 60px);
   display: grid;
   align-items: center;
   justify-items: center;
@@ -165,8 +165,9 @@ body {
 .language-selector {
   display: block;
   position: fixed;
-  width: 20vw;
-  height: 20vw;
+  cursor: pointer;
+  width: clamp(50px, 20vw, 150px);
+  height: clamp(50px, 20vw, 150px);
   bottom: 5%;
   right: 5%;
   background-position: center;
@@ -272,8 +273,9 @@ body {
 .loading-anim.active {
   position: absolute;
   display: inline-block;
-  align-self: center;
-  justify-self: center; }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .loading-anim {
   display: none;
@@ -312,7 +314,7 @@ body {
     display: grid;
     grid-template-rows: 50% 25% 25%;
     position: relative;
-    width: 100%;
+    width: clamp(150px, 100%, 400px);
     height: 90%;
     background-color: #292929; }
     .menu-option__card::before {
@@ -376,7 +378,7 @@ body {
 
 .menu-section-left {
   position: sticky;
-  width: 100%;
+  width: clamp(150px, 100%, 400px);
   background-color: #5C9EAD;
   z-index: -1; }
   .menu-section-left__title {
@@ -403,8 +405,7 @@ body {
     padding: 5px 0 0 20px;
     right: 100%;
     transform: rotate(-90deg);
-    width: calc(60vh - var(--top));
-    height: 40vw;
+    width: clamp(150px, calc(60vh - var(--top)), 400px);
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #FFFFFF; }
@@ -568,7 +569,7 @@ body {
   display: grid;
   grid-row-gap: 50px;
   grid-auto-flow: row;
-  grid-auto-rows: calc(60vh - var(--top));
+  grid-auto-rows: clamp(150px, calc(60vh - var(--top)), 450px);
   grid-template-columns: minmax(300px, 1fr); }
   .menu-content__row-container {
     position: relative;
@@ -577,9 +578,9 @@ body {
   .menu-content__row-left {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 40vw;
+    grid-template-columns: clamp(150px, 40vw, 400px);
     grid-auto-flow: column;
-    grid-auto-columns: calc(50% - var(--gutter)*2);
+    grid-auto-columns: clamp(150px, calc(50% - var(--gutter)*2), 400px);
     grid-template-rows: minmax(150px, 1fr);
     overflow: scroll;
     overflow-y: hidden;
@@ -598,7 +599,7 @@ body {
     grid-gap: 10px;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
-    grid-auto-columns: calc(50% - var(--gutter) * 2);
+    grid-auto-columns: clamp(150px, calc(50% - var(--gutter) * 2), 400px);
     grid-template-rows: minmax(150px, 1fr);
     overflow: scroll;
     overflow-y: hidden;
