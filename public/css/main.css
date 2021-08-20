@@ -101,12 +101,12 @@ body::-webkit-scrollbar-thumb {
       text-align: start;
       margin-bottom: 5vw;
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(15px, 4.5vw, 60px);
+      font-size: clamp(15px, 4.5vw, 40px);
       font-weight: 100;
       color: #FFFFFF; }
       .info-pop-up__content__ingredients::before {
         content: "Ingredients: ";
-        font-size: clamp(15px, 4.5vw, 60px);
+        font-size: clamp(15px, 4.5vw, 40px);
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb {
       justify-content: center; }
       .info-pop-up__content__options-container::before {
         content: "Options:";
-        font-size: clamp(15px, 4.5vw, 60px);
+        font-size: clamp(15px, 4.5vw, 40px);
         display: block;
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb {
       .info-pop-up__content__options-container--noOptions {
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(15px, 4.5vw, 60px);
+        font-size: clamp(15px, 4.5vw, 40px);
         font-weight: 100; }
       .info-pop-up__content__options-container:last-child {
         margin-bottom: 0; }

@@ -66,12 +66,12 @@
             margin-bottom: 5vw;
 
             font-family: 'Poppins', sans-serif;
-            font-size: clamp(15px, 4.5vw, 60px);
+            font-size: clamp(15px, 4.5vw, 40px);
             font-weight: 100;
 
             &::before {
                 content: "Ingredients: ";
-                font-size: clamp(15px, 4.5vw, 60px);
+                font-size: clamp(15px, 4.5vw, 40px);
                 color: $cadet-blue;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 400;
@@ -90,7 +90,7 @@
 
             &::before {
                 content: "Options:";
-                font-size: clamp(15px, 4.5vw, 60px);
+                font-size: clamp(15px, 4.5vw, 40px);
                 display: block;
                 color: $cadet-blue;
                 font-family: 'Poppins', sans-serif;
@@ -124,7 +124,7 @@
             &--noOptions {
                 color: $white;
                 font-family: 'Poppins', sans-serif;
-                font-size: clamp(15px, 4.5vw, 60px);
+                font-size: clamp(15px, 4.5vw, 40px);
                 font-weight: 100;
             }
 
