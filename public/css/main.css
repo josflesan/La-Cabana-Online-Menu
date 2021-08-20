@@ -46,8 +46,8 @@ body {
   justify-items: center;
   top: 50vh;
   left: 50vw;
-  height: 45vh;
-  width: 85%;
+  height: clamp(300px, 45vh, 500px);
+  width: clamp(100px, 85vw, 750px);
   grid-template-rows: 15% 65% 20%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
@@ -69,20 +69,20 @@ body {
       text-transform: uppercase;
       color: #FFFFFF;
       font-family: 'Poppins', sans-serif;
-      font-size: 5vw;
+      font-size: clamp(15px, 4.5vw, 60px);
       font-weight: 500; }
     .info-pop-up__header--close {
       display: inline-block;
       align-self: flex-start;
       color: #5C9EAD;
       cursor: pointer;
-      font-size: 2rem; }
+      font-size: clamp(15px, 2rem, 60px); }
   .info-pop-up__content {
     display: grid;
     grid-template-rows: 0.5fr 1fr;
     align-items: flex-start;
     justify-items: flex-start;
-    padding: 4vw;
+    padding: clamp(15px, 4vw, 40px);
     width: 100%;
     height: 100%;
     overflow-y: scroll; }
@@ -90,13 +90,12 @@ body {
       text-align: start;
       margin-bottom: 5vw;
       font-family: 'Poppins', sans-serif;
-      font-size: 3vw;
+      font-size: clamp(15px, 4.5vw, 60px);
       font-weight: 100;
-      color: #FFFFFF;
-      font-size: 5vw; }
+      color: #FFFFFF; }
       .info-pop-up__content__ingredients::before {
         content: "Ingredients: ";
-        font-size: 5vw;
+        font-size: clamp(15px, 4.5vw, 60px);
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
@@ -108,15 +107,15 @@ body {
       justify-content: center; }
       .info-pop-up__content__options-container::before {
         content: "Options:";
-        font-size: 5vw;
+        font-size: clamp(15px, 4.5vw, 60px);
         display: block;
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        margin-bottom: 3vw; }
+        margin-bottom: clamp(10px, 3vw, 20px); }
       .info-pop-up__content__options-container--option {
         position: relative;
-        margin-bottom: 3vw;
+        margin-bottom: clamp(10px, 3vw, 20px);
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -124,7 +123,7 @@ body {
         background-color: #414343;
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-size: 4vw; }
+        font-size: clamp(15px, 3vw, 50px); }
         .info-pop-up__content__options-container--option-name {
           font-weight: 400; }
         .info-pop-up__content__options-container--option-price {
@@ -132,7 +131,7 @@ body {
       .info-pop-up__content__options-container--noOptions {
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-size: 4vw;
+        font-size: clamp(15px, 4.5vw, 60px);
         font-weight: 100; }
       .info-pop-up__content__options-container:last-child {
         margin-bottom: 0; }
@@ -140,7 +139,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 3vw; }
+    padding: clamp(10px, 3vw, 20px); }
     .info-pop-up__footer__labels-container {
       display: block;
       width: 100%;
@@ -159,9 +158,9 @@ body {
 
 @media only screen and (min-width: 700px) {
   .info-pop-up__header {
-    padding: 20px 20px 0 20px; }
+    padding: 20px 20px 20px 20px; }
     .info-pop-up__header--close {
-      font-size: 6vw; } }
+      font-size: clamp(15px, 6vw, 30px); } }
 
 .language-selector {
   display: block;
