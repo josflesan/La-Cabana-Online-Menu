@@ -61,6 +61,7 @@
     &__button {
         position: relative;
         display: grid;
+        cursor: pointer;
         grid-template-columns: 40% 60%;
         width: 100%;
 
