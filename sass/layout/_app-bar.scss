@@ -12,6 +12,7 @@
 
     &__nav-button {
         position: relative;  
+        cursor: pointer;
         height: 50%;
         width: auto;
         @include bg-image-center(url('../../public/img/bars.svg'));
@@ -45,4 +46,12 @@
 .app-bar-inactive {
     background-color: transparent;
     box-shadow: none;
+}
+
+@media only screen and (min-width: 1100px) {
+    .app-bar {
+        &__nav-button {
+            width: 50%;
+        }
+    }
 }

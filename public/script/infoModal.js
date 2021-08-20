@@ -1,11 +1,15 @@
+const pageBody = document.querySelector('.body-bg')
+
 export function openInfoModal(modal) {
     if (modal == null) return;
 
     let loadingAnim = document.querySelector('.loading-anim')
     loadingAnim.classList.add('active')
 
-    modal.classList.add('active');
-    overlay.classList.add('active');
+    modal.classList.add('active')
+    overlay.classList.add('active')
+
+    pageBody.style.overflowY = "hidden"
 
 }
 
@@ -23,6 +27,8 @@ export function closeInfoModal(modal) {
 
     modal.classList.remove('active')
     overlay.classList.remove('active')
+
+    pageBody.style.overflowY = "scroll"
 
     modalBody.appendChild(loadingAnim)
 }

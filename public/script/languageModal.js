@@ -1,10 +1,13 @@
 let languageButtons;
+const pageBody = document.querySelector('.body-bg')
 
 export function openLangModal(modal) {
     if (modal == null) return;
 
     modal.classList.add('active');
     overlay.classList.add('active');
+
+    pageBody.style.overflowY = 'hidden'
 
     languageButtons = document.querySelectorAll('.language-pop-up__button');
 
@@ -36,4 +39,6 @@ export function closeLangModal(modal) {
 
     modal.classList.remove('active')
     overlay.classList.remove('active')
+
+    pageBody.style.overflowY = 'scroll'
 }

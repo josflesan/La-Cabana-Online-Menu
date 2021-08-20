@@ -1,6 +1,6 @@
 .menu-section-left {
     position: sticky;
-    width: 100%;
+    width: clamp(150px, 100%, 400px);
     background-color: $cadet-blue;
     z-index: -1;
     
@@ -36,7 +36,6 @@
         transform: rotate(-90deg);
 
         width: calc(60vh - var(--top));
-        height: 40vw;
         
         font-family: 'Poppins', sans-serif;
         font-weight: 700;

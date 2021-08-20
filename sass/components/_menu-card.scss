@@ -12,7 +12,7 @@
 
         position: relative;
 
-        width: 100%;
+        width: clamp(150px, 100%, 400px);
         height: 90%;
 
         background-color: $jet-black;
