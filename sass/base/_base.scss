@@ -17,6 +17,6 @@ body {
 
 .body-bg {
     background-color: $light-grey;
-
+    overflow-x: hidden;
     z-index: -10;
 }

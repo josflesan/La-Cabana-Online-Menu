@@ -35,8 +35,7 @@
         right: 100%;
         transform: rotate(-90deg);
 
-        width: clamp(150px, calc(60vh - var(--top)), 400px);
-        // height: 40vw;
+        width: calc(60vh - var(--top));
         
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
