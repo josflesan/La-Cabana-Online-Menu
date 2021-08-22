@@ -5,6 +5,8 @@
         display: grid;
         justify-items: center;
 
+        overflow-x: hidden;
+
         background-color: $light-grey;
         z-index: 5;
 
@@ -44,7 +46,7 @@
 
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(15px, calc((100vw - 150px)*0.04), 30px);
+        font-size: clamp(15px, calc((100vw - 150px)*0.04), 25px);
         color: #959999;
     }
 

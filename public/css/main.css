@@ -29,10 +29,34 @@ body::-webkit-scrollbar-thumb {
   z-index: -10; }
 
 .carousel-gallery {
-  height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: clamp(200px, 80vw, 400px);
   width: clamp(300px, 70vw, 500px);
-  background-color: #292929;
+  transform-style: preserve-3d;
   z-index: 5; }
+  .carousel-gallery img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%; }
+  .carousel-gallery__img {
+    position: absolute;
+    width: clamp(200px, 80vw, 400px);
+    height: clamp(200px, 80vw, 400px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    overflow-x: hidden; }
+  .carousel-gallery__img:nth-child(1) {
+    transform: translateX(0) translateZ(0);
+    background-color: lightblue; }
+  .carousel-gallery__img:nth-child(2) {
+    transform: translateX(-45%) translateZ(-50px) scale(0.8);
+    background: coral; }
+  .carousel-gallery__img:nth-child(3) {
+    transform: translateX(45%) translateZ(-50px) scale(0.8);
+    background: chartreuse; }
 
 .floating-reviews {
   height: 85%;
@@ -812,6 +836,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   display: grid;
   justify-items: center;
+  overflow-x: hidden;
   background-color: #414343;
   z-index: 5;
   grid-row-gap: 36px;
@@ -841,7 +866,7 @@ body::-webkit-scrollbar-thumb {
   border-top: 2px solid #5C9EAD;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(15px, calc((100vw - 150px)*0.04), 30px);
+  font-size: clamp(15px, calc((100vw - 150px)*0.04), 25px);
   color: #959999; }
 
 .sticky {

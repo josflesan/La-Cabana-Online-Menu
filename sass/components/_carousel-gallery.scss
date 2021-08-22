@@ -1,7 +1,43 @@
 .carousel-gallery {
-    height: 30vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: clamp(200px, 80vw, 400px);
     width: clamp(300px, 70vw, 500px);
-    background-color: $jet-black;
+
+    transform-style: preserve-3d;
+
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+    }
+
+    &__img {
+        position: absolute;
+        width: clamp(200px, 80vw, 400px);
+        height: clamp(200px, 80vw, 400px);
+        transform-style: preserve-3d;
+        transition: 1s;
+        overflow-x: hidden;
+    }
+
+    &__img:nth-child(1) {
+        transform: translateX(0) translateZ(0);
+        background-color: lightblue;
+    }
+
+    &__img:nth-child(2) {
+        transform: translateX(-45%) translateZ(-50px) scale(0.8);
+        background: coral;
+    }
+
+    &__img:nth-child(3) {
+        transform: translateX(45%) translateZ(-50px) scale(0.8);
+        background: chartreuse;
+        
+    }
 
     z-index: 5;
 }
