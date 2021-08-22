@@ -25,7 +25,8 @@
     display: block;
     font-family: 'Poppins', sans-serif;
     color: $white;
-    font-size: clamp(32px, calc((100vw - 150px)*0.07), 90px);
+    text-align: center;
+    font-size: clamp(32px, calc((100vw - 150px)*0.07), 60px);
 }
 
 .logo-subtitle {
@@ -33,5 +34,6 @@
     justify-self: flex-start;
     font-family: 'Poppins', sans-serif;
     color: $cadet-blue;
-    font-size: clamp(15px, calc((100vw - 150px)*0.03), 70px);
+    text-align: center;
+    font-size: clamp(15px, calc((100vw - 150px)*0.04), 30px);
 }
