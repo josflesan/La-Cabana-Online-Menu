@@ -2,18 +2,25 @@
 
 @import "base/base";
 
+@import "components/carousel-gallery";
+@import "components/floating-reviews";
 @import "components/info-button";
 @import "components/info-pop-up";
 @import "components/language-selector";
 @import "components/language-pop-up";
 @import "components/loading-anim";
+@import "components/location-maps";
+@import "components/menu-btn";
 @import "components/menu-card";
 @import "components/menu-section";
 @import "components/nav-drawer";
+@import "components/social-links";
 
 @import "layout/app-bar";
 @import "layout/menu-content";
 @import "layout/logo-container";
+
+@import "pages/home";
 
 @import "utilities/mixins";
 @import "utilities/sticky-div";

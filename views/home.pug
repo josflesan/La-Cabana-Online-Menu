@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon', href='../public/img/favicon.ico')
+  link(rel='stylesheet' href='css/main.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  script(type='module' src='../script/script.js')
+  title La Caba&ntilde;a
+
+body.body-bg
+
+    include mixins 
+    +img-bg(
+        "language-selector",
+        flagPath
+    )
+
+    .logo-area
+        .logo-container
+        .logo-title="la cabaña"
+        .logo-subtitle="est. 1986"
+
+    .home-content
+
+        section.home-section
+            
+            .carousel-gallery 
+            
+            a(href="/menu/main").menu-btn__container 
+                button.menu-btn
+                    .menu-btn__icon
+                    p.menu-btn__text="see menu"
+
+        .floating-reviews__container 
+            h3.home-section__subtitle="the experience"
+            .floating-reviews
+
+        section.home-section 
+
+            .location-maps__container 
+                h3.home-section__subtitle="the location"
+                .location-maps
+
+        section.home-section 
+
+            .social-links__container 
+                h3.home-section__subtitle="the bond"
+                .social-links
+
+        footer.home-footer="All rights reserved to Benempres S.L."
+
+
+    
+
+
+    .language-pop-up
+        .language-pop-up__header
+            h3 Change Language
+            span.language-pop-up__header--close &#x2716;
+        .language-pop-up__body
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/uk.png')
+                span.language-pop-up__button__text English
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/spain.png')
+                span.language-pop-up__button__text Espa&ntilde;ol
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/norway.png')
+                span.language-pop-up__button__text Norsk
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/germany.png')
+                span.language-pop-up__button__text Deutsch
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/sweden.png')
+                span.language-pop-up__button__text Svenska
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/finland.png')
+                span.language-pop-up__button__text Suomi
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/denmark.png')
+                span.language-pop-up__button__text Dansk
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/netherlands.png')
+                span.language-pop-up__button__text Nederlands
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/italy.png')
+                span.language-pop-up__button__text Italiano
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/france.png')
+                span.language-pop-up__button__text Fran&ccedil;ais
+

@@ -200,6 +200,11 @@ router.post('/getDesc', async (req, res) => {
 
 // GET Routes
 
+app.get('/', (req, res) => {
+  page = "HOME"
+  res.render("home.pug", {lg: language, flagPath: flag_path})
+})
+
 app.get('/main', (req, res) => {
   page = "MAIN"
   getMenuData("MAIN").then((menuData) => {

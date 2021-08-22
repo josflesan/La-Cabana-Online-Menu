@@ -1,0 +1,18 @@
+.floating-reviews {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 35vh;
+        width: clamp(300px, 70vw, 500px)
+    }
+
+    height: 85%;
+    width: 100%;
+    background-color: greenyellow;
+
+    z-index: 5;
+}
