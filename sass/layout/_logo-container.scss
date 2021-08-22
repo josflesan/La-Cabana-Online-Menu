@@ -19,6 +19,7 @@
     height: 80%;
     @include bg-image-center(url('../../public/img/logo.svg'));
     background-size: contain;
+    background-position: 49%;
 }
 
 .logo-title {

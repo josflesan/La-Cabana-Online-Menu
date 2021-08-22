@@ -626,19 +626,44 @@ body::-webkit-scrollbar-thumb {
   .nav-drawer {
     width: 50%; } }
 
-.social-links {
+.social-links__button--small {
+  width: 85%;
   height: 85%;
-  width: 100%;
-  background-color: orangered;
+  position: relative;
+  filter: brightness(0.8); }
+  .social-links__button--small:hover {
+    filter: brightness(1.1); }
+
+.social-links__container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px;
+  position: relative;
+  width: clamp(300px, 70vw, 500px);
   z-index: 5; }
-  .social-links__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 35vh;
-    width: clamp(300px, 70vw, 500px); }
+  .social-links__container--fb {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/img/facebook.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .social-links__container--google {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/img/google.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .social-links__container--tripadvisor {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/img/tripadvisor.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
 
 .app-bar {
   position: fixed;
@@ -765,7 +790,8 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../../public/img/logo.svg");
-  background-size: contain; }
+  background-size: contain;
+  background-position: 49%; }
 
 .logo-title {
   display: block;
