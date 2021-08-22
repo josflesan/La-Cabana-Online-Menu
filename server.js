@@ -34,6 +34,11 @@ let mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
   return data
 });
 
+let googleAPICred = fs.readFileSync("backend/mapsAPI.txt", (err, data) => {
+  if (err) throw err
+  return data
+})
+
 let uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 // Set View Engine
@@ -202,7 +207,7 @@ router.post('/getDesc', async (req, res) => {
 
 app.get('/', (req, res) => {
   page = "HOME"
-  res.render("home.pug", {lg: language, flagPath: flag_path})
+  res.render("home.pug", {apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path})
 })
 
 app.get('/main', (req, res) => {

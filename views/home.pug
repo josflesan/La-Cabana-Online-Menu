@@ -14,6 +14,26 @@ head
 
 body.body-bg
 
+    script(type="text/javascript").
+        function locationMap() {
+            const restaurantLocation = { lat: 27.7917796, lng: -15.7100691}
+
+            const mapProp = {
+                center: restaurantLocation,
+                zoom: 15,
+            }
+
+            const map = new google.maps.Map(document.getElementById("googleMap"), mapProp)
+
+            const marker = new google.maps.Marker({
+                position: restaurantLocation,
+                map: map,
+            })
+
+        }
+
+    script(src=`https://maps.googleapis.com/maps/api/js?v=3&key=${apiKey}&callback=locationMap` async)
+
     include mixins 
     +img-bg(
         "language-selector",
@@ -44,7 +64,7 @@ body.body-bg
 
             .location-maps__container 
                 h3.home-section__subtitle="the location"
-                .location-maps
+                #googleMap.location-maps
 
         section.home-section 
 
@@ -53,10 +73,6 @@ body.body-bg
                 .social-links
 
         footer.home-footer="All rights reserved to Benempres S.L."
-
-
-    
-
 
     .language-pop-up
         .language-pop-up__header
@@ -93,4 +109,4 @@ body.body-bg
             .language-pop-up__button
                 img.language-pop-up__button__flag(src='../img/france.png')
                 span.language-pop-up__button__text Fran&ccedil;ais
-
+        
