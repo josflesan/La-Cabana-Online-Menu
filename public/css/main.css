@@ -33,7 +33,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   height: clamp(200px, 80vw, 600px);
-  width: clamp(300px, 70vw, 800px);
+  width: clamp(300px, 70vw, 600px);
   transform-style: preserve-3d;
   z-index: 5; }
   .carousel-gallery img {
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
     height: 100%; }
   .carousel-gallery__img {
     position: absolute;
-    width: clamp(200px, 80vw, 800px);
+    width: clamp(200px, 80vw, 600px);
     height: clamp(200px, 80vw, 600px);
     transform-style: preserve-3d;
     transition: 1s;
@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     height: clamp(300px, 70vh, 800px);
-    width: clamp(300px, 70vw, 1500px); }
+    width: clamp(300px, 70vw, 1000px); }
   .floating-reviews--comment {
     display: flex;
     position: relative;
@@ -118,8 +118,8 @@ body::-webkit-scrollbar-thumb {
         border-radius: 100%;
         width: clamp(15px, 3vw, 30px);
         height: clamp(15px, 3vw, 30px);
-        background-color: green;
-        border: 3px solid green;
+        background-color: #00aa6c;
+        border: 3px solid #00aa6c;
         position: relative;
         box-sizing: border-box; }
     .floating-reviews--comment__title {
@@ -141,7 +141,7 @@ body::-webkit-scrollbar-thumb {
     .floating-reviews--comment__description::-webkit-scrollbar-track {
       background-color: transparent; }
     .floating-reviews--comment__description::-webkit-scrollbar-thumb {
-      background-color: green;
+      background-color: #00aa6c;
       border-radius: 20px; }
     .floating-reviews--comment:last-child .floating-reviews--comment__rating div:last-child {
       background-color: transparent; }
@@ -336,8 +336,8 @@ body::-webkit-scrollbar-thumb {
   display: block;
   position: fixed;
   cursor: pointer;
-  width: clamp(50px, 20vw, 150px);
-  height: clamp(50px, 20vw, 150px);
+  width: clamp(50px, 20vw, 100px);
+  height: clamp(50px, 20vw, 100px);
   bottom: 5%;
   right: 5%;
   background-position: center;
@@ -499,8 +499,8 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 35vh;
-    width: clamp(300px, 70vw, 500px); }
+    height: 40vh;
+    width: clamp(300px, 70vw, 800px); }
 
 .menu-btn {
   display: flex;
@@ -519,7 +519,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     text-decoration: none;
     height: clamp(50px, 7vh, 70px);
-    width: clamp(300px, 70vw, 500px); }
+    width: clamp(300px, 70vw, 600px); }
   .menu-btn:hover {
     filter: brightness(1.1); }
   .menu-btn__icon {
@@ -904,7 +904,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: clamp(50px, 60vw, 500px);
   width: 100vw;
   padding: 10px;
   margin-bottom: 20px; }
@@ -926,7 +926,7 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Poppins', sans-serif;
   color: #FFFFFF;
   text-align: center;
-  font-size: clamp(32px, calc((100vw - 150px)*0.07), 60px); }
+  font-size: clamp(32px, calc((100vw - 150px)*0.07), 80px); }
 
 .logo-subtitle {
   display: block;
@@ -934,7 +934,7 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Poppins', sans-serif;
   color: #5C9EAD;
   text-align: center;
-  font-size: clamp(15px, calc((100vw - 150px)*0.04), 30px); }
+  font-size: clamp(15px, calc((100vw - 150px)*0.04), 40px); }
 
 .home-content {
   position: relative;

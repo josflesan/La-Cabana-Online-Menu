@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     height: clamp(200px, 80vw, 600px);
-    width: clamp(300px, 70vw, 800px);
+    width: clamp(300px, 70vw, 600px);
 
     transform-style: preserve-3d;
 
@@ -16,7 +16,7 @@
 
     &__img {
         position: absolute;
-        width: clamp(200px, 80vw, 800px);
+        width: clamp(200px, 80vw, 600px);
         height: clamp(200px, 80vw, 600px);
         transform-style: preserve-3d;
         transition: 1s;

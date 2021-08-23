@@ -7,7 +7,7 @@
         grid-template-rows: repeat(3, 1fr);
 
         height: clamp(300px, 70vh, 800px);
-        width: clamp(300px, 70vw, 1500px);
+        width: clamp(300px, 70vw, 1000px);
     }
 
     &--comment {
@@ -83,9 +83,9 @@
                 border-radius: 100%;
                 width: clamp(15px, 3vw, 30px);
                 height: clamp(15px, 3vw, 30px);
-                background-color: green;
+                background-color: $tripadvisor-green;
 
-                border: 3px solid green;
+                border: 3px solid $tripadvisor-green;
                 position: relative;
                 box-sizing: border-box;
             }
@@ -121,7 +121,7 @@
         }
 
         &__description::-webkit-scrollbar-thumb {
-            background-color: green;
+            background-color: $tripadvisor-green;
             border-radius: 20px;
         }
 
