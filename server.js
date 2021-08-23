@@ -90,6 +90,35 @@ async function getDescriptionData(menu_id) {
 
 }
 
+async function getReviewData() {
+  return new Promise((resolve, reject) => {
+
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      async (err, db) => {
+        try {
+
+          let dbo = db.db('lcOnlineMenu')
+          if (err) throw err
+
+          reviewContents = await dbo.collection("reviews").find({}).toArray()
+
+          if (reviewContents) {
+            resolve(reviewContents)
+          } else {
+            reject("No Reviews Found")
+          }
+
+          db.close()
+
+        } catch (e) { console.error(e) }
+      }
+    )
+
+  }).catch((e) => { console.error(e) })
+}
+
 function getMenuData(page_to_load) {
   let menuData = []
   for (let i = 0; i < collnames[page_to_load].length; i++) {
@@ -207,7 +236,9 @@ router.post('/getDesc', async (req, res) => {
 
 app.get('/', (req, res) => {
   page = "HOME"
-  res.render("home.pug", {apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path})
+  getReviewData().then((reviews) => {
+    res.render("home.pug", {reviewList: reviews, apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path})
+  })
 })
 
 app.get('/main', (req, res) => {

@@ -6,13 +6,145 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 35vh;
-        width: clamp(300px, 70vw, 500px)
+        height: 70vh;
+        width: clamp(300px, 70vw, 650px)
     }
 
-    height: 85%;
+    height: 100%;
     width: 100%;
-    background-color: greenyellow;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    &--comment {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        &__id-container {
+            height: 100%;
+            width: 30%;
+            padding: 5% 0 5% 5%;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        &__content-container {
+            height: 100%;
+            width: 60%;
+            padding: 5% 5% 5% 0;
+
+            display: grid;
+            align-items: flex-end;
+            grid-template-rows: 25% 25% 50%;
+            grid-template-columns: 1fr;
+            justify-items: flex-start;
+        }  
+
+        &__picture {
+            width: 10vw;
+            height: 10vw;
+            border-radius: 100%;
+            
+            background-position: center center;
+            background-size: contain;
+        }
+
+        &__username {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(15px, 20vw*0.15, 20px);
+            color: $light-grey;
+        }
+
+        &__date {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(10px, 20vw*0.1, 15px);
+            color: $light-grey;
+        }
+
+        &__rating {
+            width: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                border-radius: 100%;
+                width: 3vw;
+                height: 3vw;
+                background-color: green;
+
+                border: 3px solid green;
+                position: relative;
+                box-sizing: border-box;
+            }
+        }
+
+        &__title {
+            align-self: flex-start;
+            margin-top: 2%;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(12px, 20vw*0.1, 25px);
+            color: $jet-black;
+        }
+
+        &__description {
+            overflow-y: scroll;
+            height: 90%;
+
+            margin-top: 10%;
+
+            align-self: center;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(10px, 20vw*0.1, 20px);
+            color: $light-grey;
+        }
+
+        &__description::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &__description::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &__description::-webkit-scrollbar-thumb {
+            background-color: green;
+            border-radius: 20px;
+        }
+
+        &:last-child .floating-reviews--comment__rating div:last-child {
+            background-color: transparent;
+        }
+
+    }
 
     z-index: 5;
+}
+
+@media only screen and (min-width: 1100px) {
+    .floating-reviews {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+
+        &--comment {
+            &__picture {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    }
 }

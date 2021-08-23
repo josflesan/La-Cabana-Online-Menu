@@ -59,9 +59,12 @@ body::-webkit-scrollbar-thumb {
     background: chartreuse; }
 
 .floating-reviews {
-  height: 85%;
+  height: 100%;
   width: 100%;
-  background-color: greenyellow;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   z-index: 5; }
   .floating-reviews__container {
     display: flex;
@@ -69,8 +72,92 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 35vh;
-    width: clamp(300px, 70vw, 500px); }
+    height: 70vh;
+    width: clamp(300px, 70vw, 650px); }
+  .floating-reviews--comment {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .floating-reviews--comment__id-container {
+      height: 100%;
+      width: 30%;
+      padding: 5% 0 5% 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+    .floating-reviews--comment__content-container {
+      height: 100%;
+      width: 60%;
+      padding: 5% 5% 5% 0;
+      display: grid;
+      align-items: flex-end;
+      grid-template-rows: 25% 25% 50%;
+      grid-template-columns: 1fr;
+      justify-items: flex-start; }
+    .floating-reviews--comment__picture {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100%;
+      background-position: center center;
+      background-size: contain; }
+    .floating-reviews--comment__username {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(15px, 3vw, 20px);
+      color: #414343; }
+    .floating-reviews--comment__date {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(10px, 2vw, 15px);
+      color: #414343; }
+    .floating-reviews--comment__rating {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .floating-reviews--comment__rating div {
+        border-radius: 100%;
+        width: 3vw;
+        height: 3vw;
+        background-color: green;
+        border: 3px solid green;
+        position: relative;
+        box-sizing: border-box; }
+    .floating-reviews--comment__title {
+      align-self: flex-start;
+      margin-top: 2%;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(12px, 2vw, 25px);
+      color: #292929; }
+    .floating-reviews--comment__description {
+      overflow-y: scroll;
+      height: 90%;
+      margin-top: 10%;
+      align-self: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(10px, 2vw, 20px);
+      color: #414343; }
+    .floating-reviews--comment__description::-webkit-scrollbar {
+      width: 4px; }
+    .floating-reviews--comment__description::-webkit-scrollbar-track {
+      background-color: transparent; }
+    .floating-reviews--comment__description::-webkit-scrollbar-thumb {
+      background-color: green;
+      border-radius: 20px; }
+    .floating-reviews--comment:last-child .floating-reviews--comment__rating div:last-child {
+      background-color: transparent; }
+
+@media only screen and (min-width: 1100px) {
+  .floating-reviews {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr); }
+    .floating-reviews--comment__picture {
+      width: 15vw;
+      height: 15vw; } }
 
 .info-btn {
   width: clamp(30px, calc(40vw * 0.2), 60px);

@@ -38,6 +38,7 @@ body.body-bg
         }
 
     script(src=`https://maps.googleapis.com/maps/api/js?v=3&key=${apiKey}&callback=locationMap` async)
+    script(async src="https://www.jscache.com/wejs?wtype=cdsratingsonlywide&amp;uniq=223&amp;locationId=1830181&amp;lang=es&amp;border=true&amp;backgroundColor=white&amp;display_version=2" data-loadtrk onload="this.loadtrk=true")
 
     include mixins 
     +img-bg(
@@ -70,6 +71,10 @@ body.body-bg
         .floating-reviews__container 
             h3.home-section__subtitle="the experience"
             .floating-reviews
+                - for (let i = 0; i < 3; i++) {
+                    include mixins 
+                    +review-card(reviewList[i])
+                - }
 
         section.home-section 
 
