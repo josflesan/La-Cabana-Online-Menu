@@ -1,0 +1,135 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon', href='../public/img/favicon.ico')
+  link(rel='stylesheet' href='css/main.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  script(type='module' src='../script/home.js')
+  script(type='module' src='../packages/swiped-events.min.js')
+  title La Caba&ntilde;a
+
+body.body-bg
+
+    script(src='../packages/flickity.pkgd.min.js')
+
+    #overlay
+
+    script(type="text/javascript").
+        function locationMap() {
+            const restaurantLocation = { lat: 27.7917796, lng: -15.7100691}
+
+            const mapProp = {
+                center: restaurantLocation,
+                zoom: 15,
+            }
+
+            const map = new google.maps.Map(document.getElementById("googleMap"), mapProp)
+
+            const marker = new google.maps.Marker({
+                position: restaurantLocation,
+                map: map,
+            })
+
+        }
+
+    script(src=`https://maps.googleapis.com/maps/api/js?v=3&key=${apiKey}&callback=locationMap` async)
+    script(async src="https://www.jscache.com/wejs?wtype=cdsratingsonlywide&amp;uniq=223&amp;locationId=1830181&amp;lang=es&amp;border=true&amp;backgroundColor=white&amp;display_version=2" data-loadtrk onload="this.loadtrk=true")
+
+    include mixins 
+    +img-bg(
+        "language-selector",
+        flagPath
+    )
+
+    .logo-area
+        .logo-container
+        .logo-title="la cabaña"
+        .logo-subtitle="est. 1986"
+
+    .home-content
+
+        section.home-section
+            
+            .carousel-gallery 
+                .carousel-gallery__img
+                    img(src="../../public/img/carousel/1.jpg", alt="Restaurant Front")
+                .carousel-gallery__img
+                    img(src="../../public/img/carousel/2.jpg", alt="Fish Dish")
+                .carousel-gallery__img
+                    img(src="../../public/img/carousel/3.jpg", alt="Paella Dish")
+            
+        a(href="/main").menu-btn__container 
+            button.menu-btn
+                .menu-btn__icon
+                p.menu-btn__text="see menu"
+
+        section.home-section
+            h3.home-section__subtitle="the experience"
+            .floating-reviews__container
+                
+                - for (let i = 0; i < 3; i++) {
+                    include mixins 
+                    +review-card(reviewList[i])
+                - }
+
+        section.home-section 
+
+            .location-maps__container 
+                h3.home-section__subtitle="the location"
+                #googleMap.location-maps
+
+        section.home-section 
+
+            h3.home-section__subtitle="the bond"
+
+            .social-links__container 
+                a(href="#").social-links__button--small 
+                    .social-links__container--fb
+                a(href="https://www.google.es/search?q=restaurante%20la%20cabana&source=hp&ei=4H4iYar4B6TV1sQP0ZqMsAI&iflsig=AINFCbYAAAAAYSKM8K52j9hGfBgr1xza9o7O63NpYLc7&oq=restaurante+la+cabana&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEIAEEMkDMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOg4ILhCABBDHARDRAxCTAjoLCC4QgAQQxwEQ0QM6BQgAEIAEOgUILhCABDoLCC4QgAQQxwEQowI6BQgAEJIDOgsILhCABBDHARCvAToOCC4QgAQQxwEQrwEQkwJQiwZYzh5gzh9oAXAAeACAAZkCiAGdGJIBBjAuMTkuMpgBAKABAbABAA&sclient=gws-wiz&ved=2ahUKEwiUjsPmicXyAhXC8eAKHZrDDZoQvS4wBXoECA4QMA&uact=5&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9&tbm=lcl&rflfq=1&num=10&rldimm=10952621791191814155&lqi=ChVyZXN0YXVyYW50ZSBsYSBjYWJhbmFaFyIVcmVzdGF1cmFudGUgbGEgY2FiYW5hkgEKcmVzdGF1cmFudKoBDBABKggiBGZvb2QoAA&rlst=f#lrd=0xc4081bf88594f73:0x97ff877d5730d00b,3,,,&rlfi=hd:;si:10952621791191814155,l,ChVyZXN0YXVyYW50ZSBsYSBjYWJhbmFaFyIVcmVzdGF1cmFudGUgbGEgY2FiYW5hkgEKcmVzdGF1cmFudKoBDBABKggiBGZvb2QoAA;mv:[[29.0179212,-13.4807323],[27.717139,-17.338489799999998]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9").social-links__button--small 
+                    .social-links__container--google
+                a(href="https://www.tripadvisor.es/Restaurant_Review-g635887-d1830181-Reviews-La_Cabana-Puerto_Rico_Gran_Canaria_Canary_Islands.html").social-links__button--small 
+                    .social-links__container--tripadvisor
+
+        footer.home-footer="All rights reserved to Benempres S.L."
+
+    .language-pop-up
+        .language-pop-up__header
+            h3 Change Language
+            span.language-pop-up__header--close &#x2716;
+        .language-pop-up__body
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/uk.png')
+                span.language-pop-up__button__text English
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/spain.png')
+                span.language-pop-up__button__text Espa&ntilde;ol
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/norway.png')
+                span.language-pop-up__button__text Norsk
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/germany.png')
+                span.language-pop-up__button__text Deutsch
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/sweden.png')
+                span.language-pop-up__button__text Svenska
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/finland.png')
+                span.language-pop-up__button__text Suomi
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/denmark.png')
+                span.language-pop-up__button__text Dansk
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/netherlands.png')
+                span.language-pop-up__button__text Nederlands
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/italy.png')
+                span.language-pop-up__button__text Italiano
+            .language-pop-up__button
+                img.language-pop-up__button__flag(src='../img/france.png')
+                span.language-pop-up__button__text Fran&ccedil;ais
+        

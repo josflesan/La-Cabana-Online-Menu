@@ -2,6 +2,23 @@
 mixin img-bg(className, src)
   div(class=className, style=`background-image: url('${src}')`)
 
+mixin review-card(reviewData)
+  .floating-reviews--comment
+    .floating-reviews--comment__id-container
+        .floating-reviews--comment__picture(style=`background-image: url('${reviewData.profile_pic}')`)
+        .floating-reviews--comment__username=reviewData.username
+        .floating-reviews--comment__date=reviewData.date
+
+    .floating-reviews--comment__content-container
+        .floating-reviews--comment__rating 
+            div 
+            div 
+            div 
+            div 
+            div 
+        .floating-reviews--comment__title=reviewData.title[lg]
+        .floating-reviews--comment__description=reviewData.description[lg]
+
 mixin menu-content__row-left(dishes, lg)
   ul.menu-content__row-left.full 
     .menu-section-left

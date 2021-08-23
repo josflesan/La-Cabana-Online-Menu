@@ -34,6 +34,11 @@ let mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
   return data
 });
 
+let googleAPICred = fs.readFileSync("backend/mapsAPI.txt", (err, data) => {
+  if (err) throw err
+  return data
+})
+
 let uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 // Set View Engine
@@ -83,6 +88,35 @@ async function getDescriptionData(menu_id) {
 
   }).catch((e) => { console.error(e) })
 
+}
+
+async function getReviewData() {
+  return new Promise((resolve, reject) => {
+
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      async (err, db) => {
+        try {
+
+          let dbo = db.db('lcOnlineMenu')
+          if (err) throw err
+
+          reviewContents = await dbo.collection("reviews").find({}).toArray()
+
+          if (reviewContents) {
+            resolve(reviewContents)
+          } else {
+            reject("No Reviews Found")
+          }
+
+          db.close()
+
+        } catch (e) { console.error(e) }
+      }
+    )
+
+  }).catch((e) => { console.error(e) })
 }
 
 function getMenuData(page_to_load) {
@@ -199,6 +233,13 @@ router.post('/getDesc', async (req, res) => {
 })
 
 // GET Routes
+
+app.get('/', (req, res) => {
+  page = "HOME"
+  getReviewData().then((reviews) => {
+    res.render("home.pug", {reviewList: reviews, apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path})
+  })
+})
 
 app.get('/main', (req, res) => {
   page = "MAIN"

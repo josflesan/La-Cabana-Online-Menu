@@ -1,0 +1,187 @@
+.floating-reviews {
+
+    &__container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        height: clamp(300px, 70vh, 800px);
+        width: clamp(300px, 70vw, 1000px);
+    }
+
+    &--comment {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        background-color: rgba(255, 255, 255, 0.8);
+
+        &__id-container {
+            height: 100%;
+            width: 30%;
+            padding: 5% 0 5% 5%;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        &__content-container {
+            height: 100%;
+            width: 60%;
+            padding: 5% 5% 5% 0;
+
+            display: grid;
+            align-items: flex-end;
+            grid-template-rows: 25% 25% 50%;
+            grid-template-columns: 1fr;
+            justify-items: flex-start;
+        }  
+
+        &__picture {
+            width: clamp(90px, 70%, 200px);
+            border-radius: 70%;
+            
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &:after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+
+        &__username {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(10px, 20vw*0.15, 20px);
+            color: $light-grey;
+        }
+
+        &__date {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(5px, 20vw*0.1, 15px);
+            color: $light-grey;
+        }
+
+        &__rating {
+            width: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                border-radius: 100%;
+                width: clamp(15px, 3vw, 30px);
+                height: clamp(15px, 3vw, 30px);
+                background-color: $tripadvisor-green;
+
+                border: 3px solid $tripadvisor-green;
+                position: relative;
+                box-sizing: border-box;
+            }
+        }
+
+        &__title {
+            align-self: flex-start;
+            margin-top: 2%;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(12px, 20vw*0.1, 30px);
+            color: $jet-black;
+        }
+
+        &__description {
+            overflow-y: scroll;
+            height: 90%;
+
+            margin-top: 10%;
+
+            align-self: center;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(10px, 20vw*0.1, 20px);
+            color: $light-grey;
+        }
+
+        &__description::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &__description::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &__description::-webkit-scrollbar-thumb {
+            background-color: $tripadvisor-green;
+            border-radius: 20px;
+        }
+
+        &:last-child .floating-reviews--comment__rating div:last-child {
+            background-color: transparent;
+        }
+
+    }
+
+    z-index: 5;
+}
+
+@media only screen and (min-width: 1100px) {
+    .floating-reviews {
+
+        &__container {
+            height: clamp(300px, 90vh, 700px);
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &--comment {
+
+            flex-direction: column;
+
+            &__id-container {
+                width: 100%;
+                height: 40%;
+                padding-top: 5%;
+            }
+
+            &__content-container {
+                width: 100%;
+                height: 60%;
+                padding: 0;
+
+                text-align: center;
+                padding-bottom: 5%;
+            }
+
+            &__rating {
+                width: auto;
+                align-self: center;
+                justify-self: center;
+                
+                div {
+                    margin-right: 5px;
+                }
+            }
+
+            &__title {
+                align-self: center;
+                justify-self: center;
+                margin: 0;
+            }
+
+            &__description {
+                padding: 5%;
+            }
+
+        }
+    }
+}

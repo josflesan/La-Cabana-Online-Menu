@@ -3,9 +3,10 @@
 .logo-area {
     position: sticky;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: clamp(50px, 60vw, 500px);
     width: 100vw;
     padding: 10px;
     margin-bottom: 20px;
@@ -13,8 +14,27 @@
 
 .logo-container {
     display: block;
+    position: relative;
     width: 50%;
     height: 80%;
     @include bg-image-center(url('../../public/img/logo.svg'));
     background-size: contain;
+    background-position: 49%;
+}
+
+.logo-title {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    color: $white;
+    text-align: center;
+    font-size: clamp(32px, calc((100vw - 150px)*0.07), 80px);
+}
+
+.logo-subtitle {
+    display: block;
+    justify-self: flex-start;
+    font-family: 'Poppins', sans-serif;
+    color: $cadet-blue;
+    text-align: center;
+    font-size: clamp(15px, calc((100vw - 150px)*0.04), 40px);
 }

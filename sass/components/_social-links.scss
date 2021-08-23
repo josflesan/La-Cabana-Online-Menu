@@ -1,0 +1,55 @@
+.social-links {
+
+    &__button--small {
+        width: 85%;
+        height: 85%;
+        position: relative;
+
+        filter: brightness(0.8);
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+
+    &__container {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 60px;
+        position: relative;
+        width: clamp(300px, 70vw, 500px);
+
+        &--fb {
+            width: 100%;
+            height: 100%;
+            background-image: url('../../public/img/facebook.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        &--google {
+            width: 100%;
+            height: 100%;
+            background-image: url('../../public/img/google.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        &--tripadvisor {
+            width: 100%;
+            height: 100%;
+            background-image: url('../../public/img/tripadvisor.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        z-index: 5;
+
+    }
+
+}
