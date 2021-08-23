@@ -68,9 +68,10 @@ body.body-bg
                     .menu-btn__icon
                     p.menu-btn__text="see menu"
 
-        .floating-reviews__container 
+        section.home-section
             h3.home-section__subtitle="the experience"
-            .floating-reviews
+            .floating-reviews__container
+                
                 - for (let i = 0; i < 3; i++) {
                     include mixins 
                     +review-card(reviewList[i])
