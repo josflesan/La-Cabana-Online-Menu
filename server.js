@@ -25,7 +25,7 @@ const collnames = {
 // Variables
 let language = 'en';  // by default, language is english
 let page = "MAIN"
-let flag_path = 'img/uk.png';
+let flag_path = `${process.env.IMG_DIR}uk.png`;
 let appStrings = {};
 let uri = process.env.MONGO_DB_URI;
 
@@ -52,7 +52,7 @@ async function getAppStrings() {
         app_strings = {}
 
         try {
-          let dbo = db.db('lcOnlineMenu')
+          let dbo = db.db(dbname)
           if (err) throw err
 
           app_strings = await dbo.collection('app_strings').find({}).toArray()
@@ -82,7 +82,7 @@ async function getDescriptionData(menu_id) {
       async (err, db) => {
 
         try {
-          let dbo = db.db('lcOnlineMenu')
+          let dbo = db.db(dbname)
           if (err) throw err
 
           let foundMenuItem = false
@@ -120,7 +120,7 @@ async function getReviewData() {
       async (err, db) => {
         try {
 
-          let dbo = db.db('lcOnlineMenu')
+          let dbo = db.db(dbname)
           if (err) throw err
 
           reviewContents = await dbo.collection("reviews").find({}).toArray()
@@ -157,7 +157,7 @@ function getSectionData(page_to_load, section_to_load) {
       uri,
       { useNewUrlParser: true, useUnifiedTopology: true },
       (err, db) => {
-        let dbo = db.db('lcOnlineMenu')
+        let dbo = db.db(dbname)
         if (err) throw err
 
         let collectionData = []
@@ -188,52 +188,52 @@ router.post('/changeLang', (req, res) => {
 
     case 'ENGLISH':
       language = 'en';
-      flag_path = 'img/uk.png';
+      flag_path = `${process.env.IMG_DIR}/uk.png`;
       break;
 
     case 'ESPAÑOL':
       language = 'es';
-      flag_path = 'img/spain.png';
+      flag_path = `${process.env.IMG_DIR}/spain.png`
       break;
 
     case 'NORSK':
       language = 'nw';
-      flag_path = 'img/norway.png';
+      flag_path = `${process.env.IMG_DIR}/norway.png`;
       break;
 
     case 'DEUTSCH':
       language = 'de';
-      flag_path = 'img/germany.png';
+      flag_path = `${process.env.IMG_DIR}/germany.png`;
       break;
 
     case 'SVENSKA':
       language = 'sw';
-      flag_path = 'img/sweden.png';
+      flag_path = `${process.env.IMG_DIR}/sweden.png`;
       break;
 
     case 'SUOMI':
       language = 'fn';
-      flag_path = 'img/finland.png';
+      flag_path = `${process.env.IMG_DIR}/finland.png`;
       break;
 
     case 'DANSK':
       language = 'dk';
-      flag_path = 'img/denmark.png';
+      flag_path = `${process.env.IMG_DIR}/denmark.png`;
       break;
 
     case 'NEDERLANDS':
       language = 'hl';
-      flag_path = 'img/netherlands.png';
+      flag_path = `${process.env.IMG_DIR}/netherlands.png`;
       break;
 
     case 'ITALIANO':
       language = 'it';
-      flag_path = 'img/italy.png';
+      flag_path = `${process.env.IMG_DIR}/italy.png`;
       break;
 
     case 'FRANÇAIS':
       language = 'fr';
-      flag_path = 'img/france.png';
+      flag_path = `${process.env.IMG_DIR}/france.png`;
       break;
   }
 
