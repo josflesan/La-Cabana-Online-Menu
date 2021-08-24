@@ -23,31 +23,6 @@ export function openDrawer(drawer) {
 
     navDrawerButtonsLeft.forEach(button => {
         button.addEventListener('click', () => {
-            // update current page
-            page = {
-                selected: button.innerText
-            }
-
-            // change page
-            fetch('/changePage', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-                body: JSON.stringify(page)
-            });
-
-            // Go to appropriate page
-            fetch('/' + button.innerText, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                }
-            })
-
-            // update current page
-            //window.location.reload();
-
             // close navigation drawer
             drawer.classList.remove('active');
             overlay.classList.remove('active');
@@ -56,31 +31,6 @@ export function openDrawer(drawer) {
 
     navDrawerButtonsRight.forEach(button => {
         button.addEventListener('click', () => {
-            // update current page
-            page = {
-                selected: button.innerText
-            }
-
-            // change page
-            fetch('/changePage', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-                body: JSON.stringify(page)
-            });
-
-            // Go to appropriate page
-            fetch('/' + button.innerText, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                }
-            })
-
-            // update current page
-            window.location.reload();
-
             // close navigation drawer
             drawer.classList.remove('active');
             overlay.classList.remove('active');

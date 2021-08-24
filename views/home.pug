@@ -63,7 +63,7 @@ body.body-bg
                 .carousel-gallery__img
                     img(src="../../public/img/carousel/3.jpg", alt="Paella Dish")
             
-        a(href="/main").menu-btn__container 
+        a(href=`/main?language=${lg}&fp=${flagPath}`).menu-btn__container 
             button.menu-btn
                 .menu-btn__icon
                 p.menu-btn__text=app_strings['menu-btn-title'][lg]

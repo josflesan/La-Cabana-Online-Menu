@@ -5,7 +5,7 @@ const router = express.Router();
 const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient
 let ObjectId = require('mongodb').ObjectId
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 dotenv.config()
 
 // Constants
@@ -182,7 +182,10 @@ function getSectionData(page_to_load, section_to_load) {
 
 // POST routes
 
-router.post('/changeLang', (req, res) => {
+app.post('/changeLang', (req, res) => {
+
+  let language;
+  let url = req.body.url;
 
   switch (req.body.lang) {
 
@@ -237,13 +240,17 @@ router.post('/changeLang', (req, res) => {
       break;
   }
 
+  let lgString = encodeURIComponent(language)
+  let flagPathString = encodeURIComponent(flag_path)
+  res.redirect(url+"?language=" + lgString + "&fp=" + flagPathString)
+
 });
 
 router.post('/getDesc', async (req, res) => {
   let menuItemId = req.body.id
 
   getDescriptionData(menuItemId).then((description) => {
-    description["active_lang"] = language
+    description["active_lang"] = req.body.active_lang
     description["app_strings"] = appStrings
 
     res.json({
@@ -256,73 +263,93 @@ router.post('/getDesc', async (req, res) => {
 
 // GET Routes
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   page = "HOME"
   getReviewData().then((reviews) => {
-    res.render("home.pug", {reviewList: reviews, apiKey: process.env.MAPS_API_KEY, lg: language, flagPath: flag_path, app_strings: appStrings})
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("home.pug", {reviewList: reviews, apiKey: process.env.MAPS_API_KEY, lg: lang, flagPath: fp, app_strings: appStrings})
   })
 })
 
-app.get('/main', (req, res) => {
+router.get('/main', (req, res) => {
   page = "MAIN"
   getMenuData("MAIN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings });
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings });
   })
 });
 
 app.get('/breakfast', async (req, res) => {
   page = "BREAKFAST"
   getMenuData("BREAKFAST").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/drinks', async (req, res) => {
   page = "DRINKS"
   getMenuData("DRINKS").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/pasta', async (req, res) => {
   page = "PASTA"
   getMenuData("PASTA").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/spanish', async (req, res) => {
   page = "SPANISH"
   getMenuData("SPANISH").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/mexican', async (req, res) => {
   page = "MEXICAN"
   getMenuData("MEXICAN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/pizzas', async (req, res) => {
   page = "PIZZAS"
   getMenuData("PIZZAS").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/children', async (req, res) => {
   page = "CHILDREN"
   getMenuData("CHILDREN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 
 app.get('/desserts', async (req, res) => {
   page = "DESSERTS"
   getMenuData("DESSERTS").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
+    let lang = req.query.language ? req.query.language : 'en'
+    let fp = req.query.fp ? req.query.fp : 'img/uk.png'
+    res.render("skeleton.pug", { dishes: menuData, lg: lang, flagPath: fp, app_strings: appStrings })
   })
 });
 

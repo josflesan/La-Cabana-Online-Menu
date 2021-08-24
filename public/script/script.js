@@ -19,7 +19,7 @@ window.onload = () => {
 
     languageSelector.addEventListener('click', () => {
         const modal = document.querySelector('.language-pop-up');
-        openLangModal(modal);
+        openLangModal(modal)
     });
 
     closeLanguagePopUpBtn.addEventListener('click', () => {
@@ -32,13 +32,18 @@ window.onload = () => {
             const menuID = btn.id
             const modal = document.querySelector('.info-pop-up');
 
+            const queryString = window.location.search
+            const parameters = new URLSearchParams(queryString)
+            const value = parameters.get('language')
+
             const options = {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    id: menuID
+                    id: menuID,
+                    active_lang: value
                 })
             }
 

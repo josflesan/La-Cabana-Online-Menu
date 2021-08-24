@@ -1,7 +1,7 @@
 let languageButtons;
 const pageBody = document.querySelector('.body-bg')
 
-export function openLangModal(modal) {
+export async function openLangModal(modal) {
     if (modal == null) return;
 
     modal.classList.add('active');
@@ -14,8 +14,9 @@ export function openLangModal(modal) {
     languageButtons.forEach(button => {
         button.addEventListener('click', () => {
 
-            let language = {
-                lang: button.innerText.toUpperCase()
+            let data = {
+                lang: button.innerText.toUpperCase(),
+                url: window.location.pathname
             }
 
             fetch('/changeLang', {
@@ -23,10 +24,11 @@ export function openLangModal(modal) {
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 },
-                body: JSON.stringify(language)
-            });
-
-            window.location.reload();
+                body: JSON.stringify(data)
+            }).then((res) => {
+                window.location = res.url
+            })
+            
         });
     });
 
