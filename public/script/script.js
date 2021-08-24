@@ -1,8 +1,9 @@
-let languageSelector, closeLanguagePopUpBtn, closeInfoPopUpButton, navDrawerButton, appBar, logoArea, mainBody, infoBtns;
+let languageSelector, closeLanguagePopUpBtn, closeInfoPopUpButton, navDrawerButton, appBar, logoArea, mainBody, infoBtns, menuRowContainers;
 
 import { openInfoModal, closeInfoModal, loadDescription } from './infoModal.js';
 import { openLangModal, closeLangModal } from './languageModal.js';
 import { openDrawer } from './navDrawer.js';
+import { scrollButtons } from './scrollButtons.js';
 import { parallax, resetDefaultStyling } from './parallax.js';
 
 window.onload = () => {
@@ -14,6 +15,7 @@ window.onload = () => {
     infoBtns = Array.from(document.querySelectorAll('.info-btn'));
     closeInfoPopUpButton = document.querySelector('.info-pop-up__header--close');
     closeLanguagePopUpBtn = document.querySelector('.language-pop-up__header--close');
+    menuRowContainers = Array.from(document.getElementsByClassName('menu-content__row-container'));
 
     languageSelector.addEventListener('click', () => {
         const modal = document.querySelector('.language-pop-up');
@@ -29,7 +31,7 @@ window.onload = () => {
         btn.addEventListener('click', async (_) => {
             const menuID = btn.id
             const modal = document.querySelector('.info-pop-up');
-            
+
             const options = {
                 method: 'POST',
                 headers: {
@@ -44,14 +46,16 @@ window.onload = () => {
             const response = await fetch('/getDesc', options)
             const jsonRes = await response.json()
             loadDescription(jsonRes.body)
-            
+
         })
     })
 
     closeInfoPopUpButton.addEventListener('click', (_) => {
         const modal = document.querySelector('.info-pop-up');
         closeInfoModal(modal);
-    })  
+    })
+
+    scrollButtons(menuRowContainers)
 
     navDrawerButton = document.querySelector('.app-bar__nav-button');
 
@@ -67,12 +71,12 @@ window.onload = () => {
 
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     parallax('.logo-area', window.scrollY, 1);
 
     let mainBodyYPos = mainBody.getBoundingClientRect().top;
 
-    if(mainBodyYPos <= window.innerHeight*0.1) {
+    if (mainBodyYPos <= window.innerHeight * 0.1) {
         logoArea.style.visibility = "hidden";
         this.document.querySelector('.app-bar__logo').style.visibility = "visible";
         appBar.classList.remove('app-bar-inactive');
@@ -82,3 +86,7 @@ window.addEventListener('scroll', function() {
     }
 
 });
+
+window.addEventListener('resize', () => {
+    scrollButtons(menuRowContainers)
+})

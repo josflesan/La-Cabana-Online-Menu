@@ -69,12 +69,13 @@ body.body-bg
 
         for dishGroup in dishes
             include mixins
-            - if (i % 2 == 0) {
-                +menu-content__row-right(dishGroup, lg)
-            - } else {
-                +menu-content__row-left(dishGroup, lg)
-            - }
-            - i+=1
+            .menu-content__row-container
+                - if (i % 2 == 0) {
+                    +menu-content__row-right(dishGroup, lg)
+                - } else {
+                    +menu-content__row-left(dishGroup, lg)
+                - }
+                - i+=1
 
     .language-pop-up
         .language-pop-up__header

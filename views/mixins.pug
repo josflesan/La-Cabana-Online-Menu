@@ -20,6 +20,8 @@ mixin review-card(reviewData)
         .floating-reviews--comment__description=reviewData.description[lg]
 
 mixin menu-content__row-left(dishes, lg)
+  button.menu-content__left-scroll-btn
+  button.menu-content__right-scroll-btn
   ul.menu-content__row-left.full 
     .menu-section-left
       div.menu-section-left__title=dishes[0].section_title[lg].toUpperCase()
@@ -45,6 +47,8 @@ mixin menu-content__row-left(dishes, lg)
 
 
 mixin menu-content__row-right(dishes, lg)
+  button.menu-content__left-scroll-btn
+  button.menu-content__right-scroll-btn
   ul.menu-content__row-right.full
     - for (var i = 1; i < dishes.length; i++) {
       - var dish = (Object.keys(dishes[i]).length > 1) ? true : false;
