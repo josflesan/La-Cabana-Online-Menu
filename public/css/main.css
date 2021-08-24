@@ -205,8 +205,8 @@ body::-webkit-scrollbar-thumb {
   justify-items: center;
   top: 50vh;
   left: 50vw;
-  height: clamp(300px, 45vh, 500px);
-  width: clamp(100px, 85vw, 750px);
+  height: clamp(300px, 45vh, 700px);
+  width: clamp(100px, 85vw, 800px);
   grid-template-rows: 15% 65% 20%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
@@ -228,7 +228,7 @@ body::-webkit-scrollbar-thumb {
       text-transform: uppercase;
       color: #FFFFFF;
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(15px, 4.5vw, 60px);
+      font-size: clamp(15px, 4.5vw, 40px);
       font-weight: 500; }
     .info-pop-up__header--close {
       display: inline-block;
@@ -238,11 +238,12 @@ body::-webkit-scrollbar-thumb {
       font-size: clamp(15px, 2rem, 60px); }
   .info-pop-up__content {
     display: grid;
-    grid-template-rows: 0.5fr 1fr;
+    position: relative;
+    grid-template-rows: 0.2fr 1fr;
     align-items: flex-start;
     justify-items: flex-start;
-    padding: clamp(15px, 4vw, 40px);
-    width: 100%;
+    padding: clamp(15px, 4vw, 30px);
+    width: clamp(90px, 80vw, 750px);
     height: 100%;
     overflow-y: scroll; }
     .info-pop-up__content__ingredients {
@@ -253,7 +254,7 @@ body::-webkit-scrollbar-thumb {
       font-weight: 100;
       color: #FFFFFF; }
       .info-pop-up__content__ingredients::before {
-        content: "Ingredients: ";
+        content: attr(ingredients);
         font-size: clamp(15px, 4.5vw, 40px);
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
@@ -265,7 +266,7 @@ body::-webkit-scrollbar-thumb {
       flex-direction: column;
       justify-content: center; }
       .info-pop-up__content__options-container::before {
-        content: "Options:";
+        content: attr(options);
         font-size: clamp(15px, 4.5vw, 40px);
         display: block;
         color: #5C9EAD;
@@ -278,11 +279,11 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 4vw;
+        padding: clamp(10px, 4vw, 40px);
         background-color: #414343;
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(15px, 3vw, 50px); }
+        font-size: clamp(15px, 3vw, 30px); }
         .info-pop-up__content__options-container--option-name {
           font-weight: 400; }
         .info-pop-up__content__options-container--option-price {
@@ -290,7 +291,7 @@ body::-webkit-scrollbar-thumb {
       .info-pop-up__content__options-container--noOptions {
         color: #FFFFFF;
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(15px, 4.5vw, 40px);
+        font-size: clamp(15px, 4.5vw, 30px);
         font-weight: 100; }
       .info-pop-up__content__options-container:last-child {
         margin-bottom: 0; }
@@ -316,7 +317,7 @@ body::-webkit-scrollbar-thumb {
         background-repeat: no-repeat; }
 
 .info-pop-up__content::-webkit-scrollbar {
-  width: 12px; }
+  width: 8px; }
 
 .info-pop-up__content::-webkit-scrollbar-track {
   background-color: #292929;

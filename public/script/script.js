@@ -47,6 +47,11 @@ window.onload = () => {
             const jsonRes = await response.json()
             loadDescription(jsonRes.body)
 
+            let ingredientsLabel = document.querySelector('.info-pop-up__content__ingredients')
+            ingredientsLabel.setAttribute('ingredients', jsonRes.body['app_strings']['info-ingredients'][jsonRes.body['active_lang']])
+            let optionsLabel = document.querySelector('.info-pop-up__content__options-container')
+            optionsLabel.setAttribute('options', jsonRes.body['app_strings']['info-options'][jsonRes.body['active_lang']])
+
         })
     })
 

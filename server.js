@@ -291,7 +291,6 @@ app.get('/breakfast', async (req, res) => {
 app.get('/drinks', async (req, res) => {
   page = "DRINKS"
   getMenuData("DRINKS").then((menuData) => {
-    console.log(menuData)
     res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
