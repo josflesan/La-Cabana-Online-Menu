@@ -66,10 +66,10 @@ body.body-bg
         a(href="/main").menu-btn__container 
             button.menu-btn
                 .menu-btn__icon
-                p.menu-btn__text="see menu"
+                p.menu-btn__text=app_strings['menu-btn-title'][lg]
 
         section.home-section
-            h3.home-section__subtitle="the experience"
+            h3.home-section__subtitle=app_strings['heading-experience'][lg]
             .floating-reviews__container
                 
                 - for (let i = 0; i < 3; i++) {
@@ -80,12 +80,12 @@ body.body-bg
         section.home-section 
 
             .location-maps__container 
-                h3.home-section__subtitle="the location"
+                h3.home-section__subtitle=app_strings['heading-location'][lg]
                 #googleMap.location-maps
 
         section.home-section 
 
-            h3.home-section__subtitle="the bond"
+            h3.home-section__subtitle=app_strings['heading-bond'][lg]
 
             .social-links__container 
                 a(href="#").social-links__button--small 
@@ -95,7 +95,7 @@ body.body-bg
                 a(href="https://www.tripadvisor.es/Restaurant_Review-g635887-d1830181-Reviews-La_Cabana-Puerto_Rico_Gran_Canaria_Canary_Islands.html").social-links__button--small 
                     .social-links__container--tripadvisor
 
-        footer.home-footer="All rights reserved to Benempres S.L."
+        footer.home-footer=app_strings['copyright'][lg]
 
     .language-pop-up
         .language-pop-up__header

@@ -24,6 +24,7 @@ const collnames = {
 let language = 'en';  // by default, language is english
 let page = "MAIN"
 let flag_path = 'img/uk.png';
+let appStrings = {};
 
 // Init App and Database
 const app = express();
@@ -49,6 +50,37 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, "/public/")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+async function getAppStrings() {
+  return new Promise((resolve, reject) => {
+
+    MongoClient.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      async (err, db) => {
+
+        app_strings = {}
+
+        try {
+          let dbo = db.db('lcOnlineMenu')
+          if (err) throw err
+
+          app_strings = await dbo.collection('app_strings').find({}).toArray()
+
+          if (app_strings) {
+            resolve(app_strings)
+          } else {
+            reject("App String Could Not Be Loaded") 
+          }
+
+          db.close()
+        } catch (e) { console.error(e) }
+      }
+    )
+
+  }).catch((e) => { console.error(e) })
+
+}
 
 
 async function getDescriptionData(menu_id) {
@@ -223,6 +255,7 @@ router.post('/getDesc', async (req, res) => {
 
   getDescriptionData(menuItemId).then((description) => {
     description["active_lang"] = language
+    description["app_strings"] = appStrings
 
     res.json({
       status: "Success",
@@ -237,21 +270,21 @@ router.post('/getDesc', async (req, res) => {
 app.get('/', (req, res) => {
   page = "HOME"
   getReviewData().then((reviews) => {
-    res.render("home.pug", {reviewList: reviews, apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path})
+    res.render("home.pug", {reviewList: reviews, apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path, app_strings: appStrings})
   })
 })
 
 app.get('/main', (req, res) => {
   page = "MAIN"
   getMenuData("MAIN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path });
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings });
   })
 });
 
 app.get('/breakfast', async (req, res) => {
   page = "BREAKFAST"
   getMenuData("BREAKFAST").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
@@ -259,49 +292,49 @@ app.get('/drinks', async (req, res) => {
   page = "DRINKS"
   getMenuData("DRINKS").then((menuData) => {
     console.log(menuData)
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/pasta', async (req, res) => {
   page = "PASTA"
   getMenuData("PASTA").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/spanish', async (req, res) => {
   page = "SPANISH"
   getMenuData("SPANISH").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/mexican', async (req, res) => {
   page = "MEXICAN"
   getMenuData("MEXICAN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/pizzas', async (req, res) => {
   page = "PIZZAS"
   getMenuData("PIZZAS").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/children', async (req, res) => {
   page = "CHILDREN"
   getMenuData("CHILDREN").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
 app.get('/desserts', async (req, res) => {
   page = "DESSERTS"
   getMenuData("DESSERTS").then((menuData) => {
-    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path })
+    res.render("skeleton.pug", { dishes: menuData, lg: language, flagPath: flag_path, app_strings: appStrings })
   })
 });
 
@@ -309,4 +342,7 @@ app.use(express.static(path.join(__dirname, '/')), router)
 
 app.listen(5500, function () {
   console.log('Web app listening on port 5500');
+  getAppStrings().then((app_strings) => {
+    appStrings = app_strings[0]
+  })
 });

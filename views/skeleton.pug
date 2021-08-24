@@ -34,31 +34,31 @@ body.body-bg
         .nav-drawer__body
             a(href="/main").nav-drawer__button-container
                 button.nav-drawer__button--left
-                    span Main
+                    span=app_strings['nav-drawer-main'][lg]
             a(href="/breakfast").nav-drawer__button-container 
                 button.nav-drawer__button--right
-                    span Breakfast
+                    span=app_strings['nav-drawer-breakfast'][lg]
             a(href="/drinks").nav-drawer__button-container 
                 button.nav-drawer__button--left
-                    span Drinks
+                    span=app_strings['nav-drawer-drinks'][lg]
             a(href="/pasta").nav-drawer__button-container 
                 button.nav-drawer__button--right
-                    span Pasta
+                    span=app_strings['nav-drawer-pasta'][lg]
             a(href="/spanish").nav-drawer__button-container 
                 button.nav-drawer__button--left
-                    span Spanish
+                    span=app_strings['nav-drawer-spanish'][lg]
             a(href="/mexican").nav-drawer__button-container 
                 button.nav-drawer__button--right
-                    span Mexican
+                    span=app_strings['nav-drawer-mexican'][lg]
             a(href="/pizzas").nav-drawer__button-container 
                 button.nav-drawer__button--left
-                    span Pizzas
+                    span=app_strings['nav-drawer-pizzas'][lg]
             a(href="/children").nav-drawer__button-container 
                 button.nav-drawer__button--right
-                    span Children
+                    span=app_strings['nav-drawer-children'][lg]
             a(href="/desserts").nav-drawer__button-container 
                 button.nav-drawer__button--left
-                    span Desserts
+                    span=app_strings['nav-drawer-desserts'][lg]
 
     .logo-area
         .logo-container
@@ -114,7 +114,7 @@ body.body-bg
 
     .info-pop-up
         .info-pop-up__header
-            h3 Item Description
+            h3=app_strings['info-title'][lg]
             span.info-pop-up__header--close &#x2716;
         .info-pop-up__content
             .loading-anim 

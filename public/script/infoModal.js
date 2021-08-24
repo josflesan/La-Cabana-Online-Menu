@@ -72,7 +72,7 @@ export function loadDescription(description) {
     if (optionsContainer.children.length == 0) {
         let noOptionsLabel = document.createElement('p')
         noOptionsLabel.classList.add('info-pop-up__content__options-container--noOptions')
-        noOptionsLabel.innerText = "no other options available for this dish" 
+        noOptionsLabel.innerText = description['app_strings']['info-no-other-options'][description.active_lang]
         optionsContainer.appendChild(noOptionsLabel)
     }
 
