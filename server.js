@@ -5,6 +5,8 @@ const router = express.Router();
 const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient
 let ObjectId = require('mongodb').ObjectId
+const dotenv = require('dotenv')
+dotenv.config()
 
 // Constants
 const dbname = 'lcOnlineMenu';
@@ -25,29 +27,17 @@ let language = 'en';  // by default, language is english
 let page = "MAIN"
 let flag_path = 'img/uk.png';
 let appStrings = {};
+let uri = process.env.MONGO_DB_URI;
 
 // Init App and Database
 const app = express();
-let db
-
-let mongoDBCred = fs.readFileSync("backend/mongoDB.txt", (err, data) => {
-  if (err) throw err
-  return data
-});
-
-let googleAPICred = fs.readFileSync("backend/mapsAPI.txt", (err, data) => {
-  if (err) throw err
-  return data
-})
-
-let uri = `mongodb+srv://joflesan:${mongoDBCred.toString()}@lccluster.8z8vl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 // Set View Engine
 app.engine('pug', require('pug').__express);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, "/public/")));
+app.use(express.static(path.join(__dirname, process.env.STATIC_DIR)));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -81,7 +71,6 @@ async function getAppStrings() {
   }).catch((e) => { console.error(e) })
 
 }
-
 
 async function getDescriptionData(menu_id) {
 
@@ -270,7 +259,7 @@ router.post('/getDesc', async (req, res) => {
 app.get('/', (req, res) => {
   page = "HOME"
   getReviewData().then((reviews) => {
-    res.render("home.pug", {reviewList: reviews, apiKey: googleAPICred.toString(), lg: language, flagPath: flag_path, app_strings: appStrings})
+    res.render("home.pug", {reviewList: reviews, apiKey: process.env.MAPS_API_KEY, lg: language, flagPath: flag_path, app_strings: appStrings})
   })
 })
 
@@ -339,8 +328,8 @@ app.get('/desserts', async (req, res) => {
 
 app.use(express.static(path.join(__dirname, '/')), router)
 
-app.listen(5500, function () {
-  console.log('Web app listening on port 5500');
+app.listen(process.env.PORT, function () {
+  console.log(`Web app listening on port ${process.env.PORT}`);
   getAppStrings().then((app_strings) => {
     appStrings = app_strings[0]
   })
