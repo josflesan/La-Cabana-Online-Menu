@@ -250,7 +250,7 @@ router.post('/getDesc', async (req, res) => {
   let menuItemId = req.body.id
 
   getDescriptionData(menuItemId).then((description) => {
-    description["active_lang"] = req.body.active_lang
+    description["active_lang"] = req.body.active_lang ? req.body.active_lang : "en"
     description["app_strings"] = appStrings
 
     res.json({
