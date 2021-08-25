@@ -94,7 +94,6 @@ window.addEventListener('scroll', function () {
     } else if (mainBodyYPos > -20) {
         resetDefaultStyling();
     }
-
 });
 
 window.addEventListener('resize', () => {
