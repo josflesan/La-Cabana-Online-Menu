@@ -14,7 +14,7 @@
 
 .logo-container {
     display: block;
-    position: relative;
+    position: sticky;
     width: 50%;
     height: 80%;
     @include bg-image-center(url('../../public/img/logo.svg'));

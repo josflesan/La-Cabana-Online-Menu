@@ -31,34 +31,43 @@ body.body-bg
             .nav-drawer__header--logo
             .nav-drawer__header--text La Caba&ntilde;a
 
-        .nav-drawer__body
-            a(href=`/main?language=${lg}&fp=${flagPath}`).nav-drawer__button-container
-                button.nav-drawer__button--left
-                    span=app_strings['nav-drawer-main'][lg]
-            a(href=`/breakfast?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--right
-                    span=app_strings['nav-drawer-breakfast'][lg]
-            a(href=`/drinks?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--left
-                    span=app_strings['nav-drawer-drinks'][lg]
-            a(href=`/pasta?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--right
-                    span=app_strings['nav-drawer-pasta'][lg]
-            a(href=`/spanish?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--left
-                    span=app_strings['nav-drawer-spanish'][lg]
-            a(href=`/mexican?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--right
-                    span=app_strings['nav-drawer-mexican'][lg]
-            a(href=`/pizzas?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--left
-                    span=app_strings['nav-drawer-pizzas'][lg]
-            a(href=`/children?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--right
-                    span=app_strings['nav-drawer-children'][lg]
-            a(href=`/desserts?language=${lg}&fp=${flagPath}`).nav-drawer__button-container 
-                button.nav-drawer__button--left
-                    span=app_strings['nav-drawer-desserts'][lg]
+        ul.nav-drawer__body
+            li.nav-drawer__button-container
+                a(href=`/main?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--left
+                        span=app_strings['nav-drawer-main'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/breakfast?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--right
+                        span=app_strings['nav-drawer-breakfast'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/drinks?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--left
+                        span=app_strings['nav-drawer-drinks'][lg]
+            li.nav-drawer__button-container
+                a(href=`/pasta?language=${lg}&fp=${flagPath}`) 
+                    button.nav-drawer__button--right
+                        span=app_strings['nav-drawer-pasta'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/spanish?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--left
+                        span=app_strings['nav-drawer-spanish'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/mexican?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--right
+                        span=app_strings['nav-drawer-mexican'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/pizzas?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--left
+                        span=app_strings['nav-drawer-pizzas'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/children?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--right
+                        span=app_strings['nav-drawer-children'][lg]
+            li.nav-drawer__button-container 
+                a(href=`/desserts?language=${lg}&fp=${flagPath}`)
+                    button.nav-drawer__button--left
+                        span=app_strings['nav-drawer-desserts'][lg]
 
     .logo-area
         .logo-container
