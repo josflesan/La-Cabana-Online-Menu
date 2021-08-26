@@ -242,10 +242,10 @@ app.post('/changeLang', (req, res) => {
   let lgString = encodeURIComponent(language)
   let flagPathString = encodeURIComponent(flag_path)
 
-  let env = process.env.NODE_ENV || 'development'
+  let env = process.env.NODE_ENV || 'production'
   let redirectUrl = [req.protocol, '://', req.get('Host'), url, '?', "language=", lgString, "&fp=", flagPathString].join('')
   
-  if (env == 'production') {
+  if (env === 'production') {
     redirectUrl = 'https:' + redirectUrl.split(':')[1]
   }
 
