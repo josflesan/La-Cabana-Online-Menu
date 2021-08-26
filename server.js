@@ -23,7 +23,6 @@ const collnames = {
 };
 
 // Variables
-let language = 'en';  // by default, language is english
 let page = "MAIN"
 let flag_path = `${process.env.IMG_DIR}uk.png`;
 let appStrings = {};
@@ -242,7 +241,15 @@ app.post('/changeLang', (req, res) => {
 
   let lgString = encodeURIComponent(language)
   let flagPathString = encodeURIComponent(flag_path)
-  res.redirect(url+"?language=" + lgString + "&fp=" + flagPathString)
+
+  let env = process.env.NODE_ENV || 'development'
+  let redirectUrl = [req.protocol, '://', req.get('Host'), url, '?', "language=", lgString, "&fp=", flagPathString].join('')
+  
+  if (env == 'production') {
+    redirectUrl = 'https:' + redirectUrl.split(':')[1]
+  }
+
+  res.redirect(redirectUrl)
 
 });
 
