@@ -249,7 +249,13 @@ app.post('/changeLang', (req, res) => {
     redirectUrl = 'https:' + redirectUrl.split(':')[1]
   }
 
-  res.redirect(redirectUrl)
+  redirectUrl = [url, '?', "language=", lgString, "&fp=", flagPathString].join('')
+
+  // res.redirect(redirectUrl)
+  res.json({
+    status: "Success",
+    body: redirectUrl
+  })
 
 });
 

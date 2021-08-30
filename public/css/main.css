@@ -255,11 +255,13 @@ body::-webkit-scrollbar-thumb {
       color: #FFFFFF; }
       .info-pop-up__content__ingredients::before {
         content: attr(ingredients);
+        display: block;
         font-size: clamp(15px, 4.5vw, 40px);
         color: #5C9EAD;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        margin-right: 4vw; }
+        margin-right: 4vw;
+        margin-bottom: clamp(10px, 3vw, 20px); }
     .info-pop-up__content__options-container {
       display: flex;
       width: 100%;

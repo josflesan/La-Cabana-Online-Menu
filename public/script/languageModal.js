@@ -12,22 +12,23 @@ export async function openLangModal(modal) {
     languageButtons = document.querySelectorAll('.language-pop-up__button');
 
     languageButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', async () => {
 
             let data = {
                 lang: button.innerText.toUpperCase(),
                 url: window.location.pathname
             }
 
-            fetch('/changeLang', {
+            const response = await fetch('/changeLang', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 },
                 body: JSON.stringify(data)
-            }).then((res) => {
-                window.location = res.url
             })
+
+            const jsonRes = await response.json()
+            window.location.assign(jsonRes.body)
             
         });
     });

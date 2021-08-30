@@ -72,11 +72,13 @@
 
             &::before {
                 content: attr(ingredients);
+                display: block;
                 font-size: clamp(15px, 4.5vw, 40px);
                 color: $cadet-blue;
                 font-family: 'Poppins', sans-serif;
                 font-weight: 400;
                 margin-right: 4vw;
+                margin-bottom: clamp(10px, 3vw, 20px);
             }
 
             color: $white;
