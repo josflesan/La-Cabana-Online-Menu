@@ -22,8 +22,9 @@ export async function openLangModal(modal) {
             const response = await fetch('/changeLang', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
+                    'Content-Type': 'application/json'
                 },
+                mode: 'cors',
                 body: JSON.stringify(data)
             })
 
