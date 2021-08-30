@@ -24,11 +24,10 @@ export async function openLangModal(modal) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                mode: 'cors',
                 body: JSON.stringify(data)
             })
 
-            const jsonRes = await response.json()
+            const jsonRes = await response.json()            
             window.location.assign(jsonRes.body)
             
         });
