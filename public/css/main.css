@@ -223,7 +223,7 @@ body::-webkit-scrollbar-thumb {
     padding: 10px 10px 0 10px; }
     .info-pop-up__header h3 {
       display: inline-block;
-      padding-left: 5%;
+      padding: 5% 2% 5% 2%;
       text-align: left;
       text-transform: uppercase;
       color: #FFFFFF;
