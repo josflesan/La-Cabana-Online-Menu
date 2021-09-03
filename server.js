@@ -40,6 +40,8 @@ app.use(express.static(path.join(__dirname, process.env.STATIC_DIR)));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.disable('etag');  // Disable caching to fix 304 issue in Safari
+
 async function getAppStrings() {
   return new Promise((resolve, reject) => {
 
@@ -248,7 +250,7 @@ router.post('/changeLang', (req, res) => {
   if (env === 'production') {
     redirectUrl = 'https:' + redirectUrl.split(':')[1]
   }
-  
+
   res.json({
     status: "Success",
     body: redirectUrl
