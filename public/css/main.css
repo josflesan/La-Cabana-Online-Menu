@@ -410,10 +410,8 @@ body::-webkit-scrollbar-thumb {
     .language-pop-up__button__flag {
       overflow: hidden;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      height: 100% !important;
+      display: block;
+      height: 100%;
       width: 100%; }
     .language-pop-up__button__text {
       display: flex;
