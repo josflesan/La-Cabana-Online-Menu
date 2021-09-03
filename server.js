@@ -256,8 +256,14 @@ router.post('/changeLang', (req, res) => {
       break;
   }
 
+  console.log(`Language: ${language}`)
+  console.log(`Flag Path: ${flag_path}`)
+
   let lgString = encodeURIComponent(language)
   let flagPathString = encodeURIComponent(flag_path)
+
+  console.log(`Language Encoded: ${lgString}`)
+  console.log(`Flag Path Encoded: ${flagPathString}`)
 
   let env = process.env.NODE_ENV || 'development'
   let redirectUrl = [req.protocol, '://', req.get('Host'), url, '?', "language=", lgString, "&fp=", flagPathString].join('')
