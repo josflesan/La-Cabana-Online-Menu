@@ -6,6 +6,7 @@ const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient
 let ObjectId = require('mongodb').ObjectId
 const dotenv = require('dotenv');
+const cors = require('cors')
 dotenv.config()
 
 // Constants
@@ -39,6 +40,20 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, process.env.STATIC_DIR)));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+
+let whitelist = ['http://lacabanapuertorico.com', 'http://www.lacabanapuertorico.com', 'https://lacabanapuertorico.com', 'https://www.lacabanapuertorico.com']
+let corsOptions = {
+  origin: (origin, callback) => {
+    let originIsWhiteListed = whitelist.indexOf(origin) !== -1;
+    callback(null, originIsWhiteListed)
+  },
+  methods: ["GET", "PUT", "POST", "DELETE"],
+  allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
+  maxAge: -1
+}
+
+app.use(cors(corsOptions))
 
 app.disable('etag');  // Disable caching to fix 304 issue in Safari
 
