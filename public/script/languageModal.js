@@ -15,7 +15,7 @@ export async function openLangModal(modal) {
         button.addEventListener('click', async () => {
 
             let data = {
-                lang: button.innerText.toUpperCase(),
+                lang: button.textContent.toUpperCase(),
                 url: window.location.pathname
             }
 

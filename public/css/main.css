@@ -413,7 +413,7 @@ body::-webkit-scrollbar-thumb {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      height: 100%;
+      height: 100% !important;
       width: 100%; }
     .language-pop-up__button__text {
       display: flex;
