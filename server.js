@@ -203,54 +203,68 @@ router.post('/changeLang', (req, res) => {
   let language;
   let url = req.body.url;
 
+  console.log(`URL in Request: ${url}`)
+  console.log(`Language in Request: ${req.body.lang}`)
+  console.log("--------------------------------------")
+
   switch (req.body.lang) {
 
     case 'ENGLISH':
+      console.log("ENGLISH SELECTED")
       language = 'en';
       flag_path = `${process.env.IMG_DIR}/uk.png`;
       break;
 
     case 'ESPAÑOL':
+      console.log("SPANISH SELECTED")
       language = 'es';
       flag_path = `${process.env.IMG_DIR}/spain.png`
       break;
 
     case 'NORSK':
+      console.log("NORWEGIAN SELECTED")
       language = 'nw';
       flag_path = `${process.env.IMG_DIR}/norway.png`;
       break;
 
     case 'DEUTSCH':
+      console.log("GERMAN SELECTED")
       language = 'de';
       flag_path = `${process.env.IMG_DIR}/germany.png`;
       break;
 
     case 'SVENSKA':
+      console.log("SWEDISH SELECTED")
       language = 'sw';
       flag_path = `${process.env.IMG_DIR}/sweden.png`;
       break;
 
     case 'SUOMI':
+      console.log("SUOMI SELECTED")
       language = 'fn';
       flag_path = `${process.env.IMG_DIR}/finland.png`;
       break;
 
     case 'DANSK':
+      console.log("DANISH SELECTED")
       language = 'dk';
       flag_path = `${process.env.IMG_DIR}/denmark.png`;
       break;
 
     case 'NEDERLANDS':
+      console.log("DUTCH SELECTED")
       language = 'hl';
       flag_path = `${process.env.IMG_DIR}/netherlands.png`;
       break;
 
     case 'ITALIANO':
+      console.log("ITALIAN SELECTED")
       language = 'it';
       flag_path = `${process.env.IMG_DIR}/italy.png`;
       break;
 
     case 'FRANÇAIS':
+      console.log("FRENCH SELECTED")
       language = 'fr';
       flag_path = `${process.env.IMG_DIR}/france.png`;
       break;
@@ -271,6 +285,9 @@ router.post('/changeLang', (req, res) => {
   if (env === 'production') {
     redirectUrl = 'https:' + redirectUrl.split(':')[1]
   }
+
+  console.log("--------------------------------")
+  console.log(`FINAL REDIRECT URL: ${redirectUrl}`)
 
   res.json({
     status: "Success",
