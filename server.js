@@ -275,13 +275,16 @@ router.post('/getDesc', async (req, res) => {
 
 // GET Routes
 
-router.get('/', (req, res) => {
-  page = "HOME"
-
+router.get('/*', (req, res, next) => {
   // Disable caching for content files
   res.header("Cache-Control", "no-cache, no-store, must-revalidate");
   res.header("Pragma", "no-cache");
   res.header("Expires", 0);
+  next()
+})
+
+router.get('/', (req, res) => {
+  page = "HOME"
 
   getReviewData().then((reviews) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -293,11 +296,6 @@ router.get('/', (req, res) => {
 router.get('/main', (req, res) => {
   page = "MAIN"
 
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
-
   getMenuData("MAIN").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
     let fp = req.query.fp ? req.query.fp : 'img/uk.png'
@@ -305,13 +303,8 @@ router.get('/main', (req, res) => {
   })
 });
 
-app.get('/breakfast', async (req, res) => {
+router.get('/breakfast', async (req, res) => {
   page = "BREAKFAST"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("BREAKFAST").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -320,13 +313,8 @@ app.get('/breakfast', async (req, res) => {
   })
 });
 
-app.get('/drinks', async (req, res) => {
+router.get('/drinks', async (req, res) => {
   page = "DRINKS"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("DRINKS").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -335,13 +323,8 @@ app.get('/drinks', async (req, res) => {
   })
 });
 
-app.get('/pasta', async (req, res) => {
+router.get('/pasta', async (req, res) => {
   page = "PASTA"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("PASTA").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -350,13 +333,8 @@ app.get('/pasta', async (req, res) => {
   })
 });
 
-app.get('/spanish', async (req, res) => {
+router.get('/spanish', async (req, res) => {
   page = "SPANISH"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
   
   getMenuData("SPANISH").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -365,13 +343,8 @@ app.get('/spanish', async (req, res) => {
   })
 });
 
-app.get('/mexican', async (req, res) => {
+router.get('/mexican', async (req, res) => {
   page = "MEXICAN"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("MEXICAN").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -380,13 +353,8 @@ app.get('/mexican', async (req, res) => {
   })
 });
 
-app.get('/pizzas', async (req, res) => {
+router.get('/pizzas', async (req, res) => {
   page = "PIZZAS"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("PIZZAS").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -395,13 +363,8 @@ app.get('/pizzas', async (req, res) => {
   })
 });
 
-app.get('/children', async (req, res) => {
+router.get('/children', async (req, res) => {
   page = "CHILDREN"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("CHILDREN").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
@@ -410,13 +373,8 @@ app.get('/children', async (req, res) => {
   })
 });
 
-app.get('/desserts', async (req, res) => {
+router.get('/desserts', async (req, res) => {
   page = "DESSERTS"
-
-  // Disable caching for content files
-  res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-  res.header("Pragma", "no-cache");
-  res.header("Expires", 0);
 
   getMenuData("DESSERTS").then((menuData) => {
     let lang = req.query.language ? req.query.language : 'en'
