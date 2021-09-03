@@ -27,8 +27,8 @@ export async function openLangModal(modal) {
                 body: JSON.stringify(data)
             })
 
-            const jsonRes = await response.json()            
-            window.location.assign(jsonRes.body)
+            const jsonRes = await response.json() 
+            setTimeout(function(){document.location.href = jsonRes.body;}, 250)           
             
         });
     });

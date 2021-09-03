@@ -243,15 +243,12 @@ router.post('/changeLang', (req, res) => {
   let flagPathString = encodeURIComponent(flag_path)
 
   let env = process.env.NODE_ENV || 'development'
-  // let redirectUrl = [req.protocol, '://', req.get('Host'), url, '?', "language=", lgString, "&fp=", flagPathString].join('')
+  let redirectUrl = [req.protocol, '://', req.get('Host'), url, '?', "language=", lgString, "&fp=", flagPathString].join('')
 
   if (env === 'production') {
     redirectUrl = 'https:' + redirectUrl.split(':')[1]
   }
-
-  redirectUrl = [url, '?', "language=", lgString, "&fp=", flagPathString].join('')
-
-  // res.redirect(redirectUrl)
+  
   res.json({
     status: "Success",
     body: redirectUrl
