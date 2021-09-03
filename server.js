@@ -207,7 +207,7 @@ router.post('/changeLang', (req, res) => {
   console.log(`Language in Request: ${req.body.lang}`)
   console.log("--------------------------------------")
 
-  switch (req.body.lang) {
+  switch (req.body.lang.trim()) {
 
     case 'ENGLISH':
       console.log("ENGLISH SELECTED")
