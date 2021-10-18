@@ -1,0 +1,10 @@
+Filtered Coffee,1.30,(coffee),[],[],img/dishes/drinks/filtered_coffee.jpg
+Espresso,1.30,(espresso),[],[],img/dishes/drinks/espresso.jpg
+Espresso with Milk,1.30,(espresso/milk),[],[dairy],img/dishes/drinks/espresso_with_milk.jpg
+Latte,1.30,(latte),[],[dairy],img/dishes/drinks/latte.jpg
+Capuccino,2.20,(capuccino),[],[dairy],img/dishes/drinks/capuccino.jpg
+Iced Coffee,3.90,(coffee),[],[dairy],img/dishes/drinks/iced_coffee.jpg
+Espresso with Cognac,1.50,(cognac/espresso),[],[adult|dairy],img/dishes/drinks/espresso_with_cognac.jpg
+Irish Coffee,4.50,(whiskey/coffee),[],[adult|dairy],img/dishes/drinks/irish_coffee.jpg
+Calipso Coffee,4.50,(liqueur/coffee),[],[adult],img/dishes/drinks/calipso_coffee.jpg
+Alcohol Mix,4.50,(alcohol/coffee),[whiskey|rum|vodka|brandy],[adult],img/dishes/drinks/alcohol_mix.jpg

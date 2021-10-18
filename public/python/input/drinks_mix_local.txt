@@ -1,0 +1,5 @@
+Rum,3.50,(rum/mixer),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/rum.jpg
+Brandy,4.20,(brandy/mixer),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/brandy.jpg
+Vodka,3.40,(vodka/mixer),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/vodka.jpg
+Gin,3.50,(gin/mixer),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/gin.jpg
+Whiskey,3.50,(whiskey/mixer),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/whiskey.jpg

@@ -1,0 +1,5 @@
+Margarita,6.80,(tomato/cheese),[],[vegetarian|dairy],img/dishes/pizzas/margarita.jpg
+Napolitana,7.50,(tomato/cheese/mushroom),[],[vegetarian|dairy],img/dishes/pizzas/napolitana.jpg
+Caprichosa,7.90,(tomato/cheese/ham/tuna),[],[dairy],img/dishes/pizzas/caprichosa.jpg
+Sicilia,8.50,(tomato/cheese/tuna/prawn),[],[dairy],img/dishes/pizzas/sicilia.jpg
+Romana,7.50,(tomato/cheese/ham),[],[dairy],img/dishes/pizzas/romana.jpg

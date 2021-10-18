@@ -1,0 +1,5 @@
+Half Grilled Chicken,6.50,(chicken),[],[],img/dishes/main/half_grilled_chicken.jpg
+Chicken Fillet,8.20,(chicken),[],[],img/dishes/main/chicken_fillet.jpg
+Chicken Curry,7.90,(chicken/curry),[],[],img/dishes/main/chicken_curry.jpg
+Chicken Skewers,8.20,(chicken),[],[],img/dishes/main/chicken_skewers.jpg
+Chicken Cordon Bleu,9.60,(chicken/ham/cheese/bread),[],[gluten|dairy],img/dishes/main/chicken_cordon_bleu.jpg

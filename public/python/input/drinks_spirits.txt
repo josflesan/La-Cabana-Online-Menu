@@ -1,0 +1,7 @@
+Brandy,3.90,(brandy),[Veterano:3.90|Magnum:4.20|103 Blanco:3.90|Carlos III:4.50|Carlos I:8.90],[adult],img/dishes/drinks/brandy.jpg
+Cognac,7.90,(cognac),[Remy Martin:11.00|Martel:7.90|Henessy S.O.P:12.00|Henessy V.S.O.P:13.50],[adult],img/dishes/drinks/cognac.jpg
+Rum,3.20,(rum),[Bacardi:4.50|Arehucas:3.20|Habana Club:6.00|Santa Teresa:4.50],[adult],img/dishes/drinks/rum.jpg
+Whiskey,3.60,(whiskey),[Ballantains:3.90|100 Pipers:3.80|Jack Daniels:4.50|John Haig:3.80|JB:3.60|JW Black Label:6.00|JW Red Label:3.80|Chivas:5.90],[adult],img/dishes/drinks/whiskey.jpg
+Vodka,3.80,(vodka),[Smirnoff:3.80],[adult],img/dishes/drinks/vodka.jpg
+Tequila,3.00,(tequila),[],[adult],img/dishes/drinks/tequila.jpg
+Gin,3.60,(gin),[Gordons:3.60],[adult],img/dishes/drinks/gin.jpg

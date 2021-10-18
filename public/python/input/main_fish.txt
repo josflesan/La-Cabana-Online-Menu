@@ -1,0 +1,10 @@
+Grilled Swordfish,13.50,(swordfish),[],[],img/dishes/main/grilled_swordfish.jpg
+Breaded Fish Fillet,8.90,(white fish),[],[],img/dishes/main/breaded_fish_fillet.jpg
+Grilled Sole,14.50,(sole),[],[],img/dishes/main/grilled_sole.jpg
+Sole Meuniere,14.90,(sole),[],[],img/dishes/main/sole_meuniere.jpg
+Super Grilled Sole,16.00,(sole),[],[],img/dishes/main/super_grilled_sole.jpg
+Grilled King Prawns,19.00,(king prawns),[],[],img/dishes/main/grilled_king_prawns.jpg
+Mixed Fish and Shellfish Grill,38.00,(mixed fish/shellfish),[Serving for two],[2p],img/dishes/main/mixed_fish_and_shellfish_grill.jpg
+Grilled Spiny Lobster,10.80,(lobster),[100g],[],img/dishes/main/grilled_spiny_lobster.jpg
+Fish and Chips,7.50,(fish/potato chips),[],[],img/dishes/main/fish_and_chips.jpg
+Grilled Salmon,15.90,(salmon),[],[],img/dishes/main/grilled_salmon.jpg

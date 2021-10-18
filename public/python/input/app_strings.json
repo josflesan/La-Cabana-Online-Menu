@@ -1,0 +1,27 @@
+{
+
+  "home": {
+    "menu-btn-title": "see menu",
+    "heading-experience": "the experience",
+    "heading-location": "the location",
+    "heading-bond": "the bond",
+    "copyright": "All rights reserved to Benempres S.L."
+  },
+
+
+  "menu": {
+    "nav-drawer-main": "main",
+    "nav-drawer-breakfast": "breakfast",
+    "nav-drawer-drinks": "drinks",
+    "nav-drawer-pasta": "pasta",
+    "nav-drawer-spanish": "spanish",
+    "nav-drawer-mexican": "mexican",
+    "nav-drawer-pizzas": "pizzas",
+    "nav-drawer-children": "children",
+    "nav-drawer-desserts": "desserts",
+    "info-title": "item description",
+    "info-ingredients": "Ingredients",
+    "info-options": "Options",
+    "info-no-other-options": "no other options available for this dish"
+  }
+}

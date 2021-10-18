@@ -1,0 +1,2 @@
+Tenderloin Steak,19.00,(steak),[],[],img/dishes/main/tenderloin_steak.jpg
+Sirloin Steak,14.00,(steak),[],[],img/dishes/main/sirloin_steak.jpg

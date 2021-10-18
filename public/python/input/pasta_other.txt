@@ -1,0 +1,4 @@
+Meat Lasagne,7.50,(meat/cheese),[],[dairy|gluten],img/dishes/pasta/meat_lasagne.jpg
+Ravioli Napolitana,7.50,(tomato/vegetables),[],[gluten],img/dishes/pasta/ravioli_napolitana.jpg
+Ravioli Carbonara,8.90,(bacon/onion/cream),[],[dairy|gluten],img/dishes/pasta/ravioli_carbonara.jpg
+Ravioli Bolognaise,8.50,(meat/vegetables),[],[gluten],img/dishes/pasta/ravioli_bolognaise.jpg

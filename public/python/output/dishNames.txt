@@ -1,0 +1,240 @@
+Onion Soup Gratinee
+Homemade Salad
+Mixed Salad
+Garlic Bread
+Fish and Shellfish Soup
+Mussels in Wine Sauce
+Vegetable Soup
+Avocado with Prawns
+Melon with Ham
+Tomato and Onion Salad
+Tomato Soup
+Prawn Cocktail
+Garlic Prawns
+Melon with Port Wine
+Spaghetti Napolitana
+Spaghetti Bolognaise
+Spaghetti Carbonara
+Lasagne
+Grilled Swordfish
+Breaded Fish Fillet
+Grilled Sole
+Sole Meuniere
+Super Grilled Sole
+Grilled King Prawns
+Mixed Fish and Shellfish Grill
+Grilled Spiny Lobster
+Fish and Chips
+Grilled Salmon
+Tenderloin Steak with Pepper
+Tenderloin Steak Diane
+Hawaiian Tenderloin Steak
+Tenderloin Steak of the House
+Rossini Tenderloin Steak
+Roquefort Tenderloin Steak
+Stroganoff Tenderloin Steak
+Chateaubriand 2 Sauces
+Provenzal Tenderloin Steak
+Scallop with Port Wine Sauce
+Fillet Mignon 2 Sauces
+Tenderloin Steak
+Sirloin Steak
+Half Grilled Chicken
+Chicken Fillet
+Chicken Curry
+Chicken Skewers
+Chicken Cordon Bleu
+Grilled Pork Chop
+Viennese Schnitzel
+Milanese Schnitzel
+Lamb Chop
+Lamb Shoulder Roast
+Full English Breakfast
+Mighty Mouth Breakfast
+Scottish Breakfast
+Small Breakfast
+Toasts with Drink
+Beans on Toast
+Egg on Toast
+Scrambled Eggs on Toast
+Fried Eggs Bacon and Chips
+Scrambled Eggs Bacon and Sausages
+Fried Eggs Baked Beans Bacon and Toast
+Fried Eggs Beans on Toast Bacon & Chips
+Hamburger Fried Egg Grilled Tomato & Chips
+Beef Steak Fried Egg Chips & Salad
+Half Chicken Chips & Salad
+Ham & Cheese Omelette
+Lasagne with Chips
+Spaghetti Bolognaise
+Spare Ribs with Chips and Salad
+Ham & Cheese Sandwich with Chips
+Hawaii Sandwich
+Vegetarian Sandwich
+Bacon Butty
+Sausage Butty
+Bacon Sandwich
+Tuna Sandwich
+Sandwich Club
+Double Burger
+Cheese Burger
+Burger with Salad and Chips
+Steak Roll
+Chicken Breast Roll
+Baguette
+Ham Pizza
+Breaded Chicken Breast
+Chicken Salad
+Orange Juice
+Pineapple Juice
+Apple Juice
+Filtered Coffee
+Espresso
+Tea
+Cocktail
+Strawberry Milkshake
+Vanilla Milkshake
+Chocolate Milkshake
+Local Beer
+Draught Beer
+Bottled Beer
+Imported Beer
+Coca-Cola
+Orange Fanta
+Lemon Fanta
+Sprite
+Juice
+Water
+Fizzy Water
+Soda Water
+Filtered Coffee
+Espresso
+Espresso with Milk
+Latte
+Capuccino
+Iced Coffee
+Espresso with Cognac
+Irish Coffee
+Calipso Coffee
+Alcohol Mix
+Rosé Wine
+Dry White Wine
+Medium White Wine
+Red Wine
+Sparkling Wine
+Sweet Wine
+Rum and Coke
+Brandy and Coke
+Vodka and Coke
+Gin Tonic
+Whiskey and Coke
+Bacardi Mix
+Smirnoff Mix
+Gordon Mix
+Jack Daniels Mix
+Ballantains Mix
+Black Label Mix
+Red Label Mix
+John Haig Mix
+Brandy
+Cognac
+Rum
+Whiskey
+Vodka
+Tequila
+Gin
+Baileys
+Tia Maria
+Drambui
+Cointreau
+Grappa
+Licor 43
+Malibu
+Southern Comfort
+Fernet Branca
+Campari
+Archers
+Amaretto
+Akuavit
+Sambuca
+Jägermeister
+Grand Marnier
+Pernod
+Ricard
+Strawberry Milkshake
+Vanilla Milkshake
+Chocolate Milkshake
+Pasta Napolitana
+Pasta Bolognaise
+Pasta Carbonara
+Vegetarian Pasta
+Garlic Pasta
+4 Cheese Pasta
+Pasta Gratin
+Creamy Pasta
+Meat Lasagne
+Ravioli
+Papas Arrugadas
+Queso Semi
+Tacos de Pescado
+Croquetas
+Canarian Soup
+Pimientos de Padrón
+Mixto de Gambas y Champiñones
+Tortilla de Papas
+Tortilla de Papas Cebolla y Pimiento
+Revuelto de Gambas y Champiñones
+Paella de Carne
+Paella Mixta
+Paella de Marisco
+Nachos
+BBQ Chicken Wings
+BBQ Ribs
+Chilli con Carne
+Burritos
+Fajitas
+Enchiladas
+Chimichangas
+Tacos
+Margarita
+Napolitana
+Caprichosa
+Sicilia
+Romana
+Fantasia
+Gambero
+Regina
+Quattro Stagioni
+Hawaii
+Milano
+Pepperoni
+Bolognaise
+Barbecue
+Pescatore
+Vegetarian
+Beef Hamburger with Chips
+Chicken Hamburger with Chips
+Chicken Nuggets with Chips
+Omelette with Chips
+Beef Scallop with Chips
+Pizza Bambino
+Bolognaise Spaghetti
+Beef Steak with Chips
+Sausage with Chips
+Fish Fingers with Chips
+Ice Cream Scoop
+Strawberry with Ice Cream
+Strawberry with Whipped Cream
+Banana Split
+Bambino Cup
+Jumbo Cup
+Oasis Cup
+Fiesta Cup
+Calipso Ice Cream
+Banana Cup
+Strawberry Milkshake
+Vanilla Milkshake
+Chocolate Milkshake
+Bananas Flambe
+Strawberry Flambe
+Crêpes Suzette

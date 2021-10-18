@@ -1,0 +1,3 @@
+Paella de Carne,26.00,(meat/rice/vegetables),[],[2p],img/dishes/spanish/paella_de_carne.jpg
+Paella Mixta,29.00,(meat/fish/vegetables/rice),[],[2p],img/dishes/spanish/paella_mixta.jpg
+Paella de Marisco,32.00,(shellfish/fish/vegetables/rice),[],[2p],img/dishes/spanish/paella_de_marisco.jpg

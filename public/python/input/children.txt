@@ -1,0 +1,10 @@
+Beef Hamburger with Chips,4.50,(beef/chips),[],[],img/dishes/children/beef_hamburger_with_chips.jpg
+Chicken Hamburger with Chips,4.50,(chicken/chips),[],[],img/dishes/children/chicken_hamburger_with_chips.jpg
+Chicken Nuggets with Chips,4.50,(chicken/chips),[],[],img/dishes/children/chicken_nuggets_with_chips.jpg
+Omelette with Chips,4.50,(egg/chips),[],[],img/dishes/children/omelette_with_chips.jpg
+Beef Scallop with Chips,4.50,(beef/chips),[],[],img/dishes/children/beef_scallop_with_chips.jpg
+Pizza Bambino,4.50,(ham/cheese),[],[gluten|dairy],img/dishes/children/pizza_bambino.jpg
+Bolognaise Spaghetti,4.50,(meat),[],[],img/dishes/children/bolognaise_spaghetti.jpg
+Beef Steak with Chips,4.50,(beef/chips),[],[],img/dishes/children/beef_steak_with_chips.jpg
+Sausage with Chips,4.50,(sausage/chips),[],[],img/dishes/children/sausage_with_chips.jpg
+Fish Fingers with Chips,4.50,(fish/chips),[],[],img/dishes/children/fish_fingers_with_chips.jpg

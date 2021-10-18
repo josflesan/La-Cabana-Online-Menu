@@ -1,0 +1,12 @@
+Full English Breakfast,4.90,(eggs/bacon/beans/sausage/toast),[],[gluten],img/dishes/breakfast/full_english_breakfast.jpg
+Mighty Mouth Breakfast,5.90,(eggs/bacon/beans/sausages/toast/black pudding/mushrooms/grilled tomato),[],[gluten],img/dishes/breakfast/mighty_mouth_breakfast.jpg
+Scottish Breakfast,4.90,(bacon/eggs/beans/grilled tomato/mushrooms/black pudding/scottish square sausage/potato scones),[],[],img/dishes/breakfast/scottish_breakfast.jpg
+Small Breakfast,3.50,(eggs/bacon/beans/sausage/toast/mushrooms),[],[gluten],img/dishes/breakfast/small_breakfast.jpg
+Toasts with Drink,2.90,(toast),[],[vegetarian|gluten],img/dishes/breakfast/toasts_with_drink.jpg
+Beans on Toast,2.90,(beans/toast),[],[vegetarian|gluten],img/dishes/breakfast/beans_on_toast.jpg
+Egg on Toast,2.90,(egg/toast),[],[vegetarian|gluten],img/dishes/breakfast/egg_on_toast.jpg
+Scrambled Eggs on Toast,2.90,(eggs/toast),[],[vegetarian|gluten],img/dishes/breakfast/scrambled_eggs_on_toast.jpg
+Fried Eggs Bacon and Chips,3.90,(egg/bacon/chips),[],[],img/dishes/breakfast/fried_eggs_bacon_and_chips.jpg
+Scrambled Eggs Bacon and Sausages,4.90,(eggs/toast/bacon/sausage),[],[gluten],img/dishes/breakfast/scrambled_eggs_bacon_and_sausages.jpg
+Fried Eggs Baked Beans Bacon and Toast,3.90,(eggs/toast/beans/bacon),[],[gluten],img/dishes/breakfast/fried_eggs_baked_beans_bacon_and_toast.jpg
+Fried Eggs Beans on Toast Bacon & Chips,4.80,(eggs/beans/toast/bacon/chips),[],[gluten],img/dishes/breakfast/fried_eggs_beans_on_toast_bacon_&_chips.jpg

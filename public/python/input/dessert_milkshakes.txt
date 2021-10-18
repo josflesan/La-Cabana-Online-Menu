@@ -1,0 +1,3 @@
+Strawberry Milkshake,4.50,(strawberry/milk),[],[dairy],img/dishes/desserts/strawberry_milkshake.jpg
+Vanilla Milkshake,4.50,(vanilla/milk),[],[dairy],img/dishes/desserts/vanilla_milkshake.jpg
+Chocolate Milkshake,4.50,(chocolate/milk),[],[dairy],img/dishes/desserts/chocolate_milkshake.jpg

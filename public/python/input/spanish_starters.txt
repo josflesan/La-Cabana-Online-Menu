@@ -1,0 +1,7 @@
+Papas Arrugadas,3.20,(potato/mojo),[],[vegetarian],img/dishes/spanish/papas_arrugadas.jpg
+Queso Semi,4.50,(cheese),[],[vegetarian, dairy],img/dishes/spanish/queso_semi.jpg
+Tacos de Pescado,5.50,(fish/mojo verde),[],[],img/dishes/spanish/tacos_de_pescado.jpg
+Croquetas,5.50,(bread/meat/fish),[fish|meat],[gluten],img/dishes/spanish/croquetas.jpg
+Canarian Soup,4.50,(mixed vegetables),[],[vegetarian],img/dishes/spanish/canarian_soup.jpg
+Pimientos de Padrón,6.50,(peppers),[],[vegetarian],img/dishes/spanish/pimientos_de_padron.jpg
+Mixto de Gambas y Champiñones,8.90,(prawn/mushrooms),[],[],img/dishes/spanish/mixto_de_gambas_y_champinones.jpg

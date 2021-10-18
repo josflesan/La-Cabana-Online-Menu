@@ -1,0 +1,14 @@
+Onion Soup Gratinee,4.20,(onion/cheese),[],[vegetarian|dairy],img/dishes/main/onion_soup_gratinee.jpg
+Homemade Salad,6.50,(tomato/lettuce/cucumber/onion/sweetcorn/ham/cheese/pineapple),[],[dairy],img/dishes/main/homemade_salad.jpg
+Mixed Salad,5.50,(tomato/lettuce/cucumber/onion/sweetcorn),[],[vegetarian],img/dishes/main/mixed_salad.jpg
+Garlic Bread,2.80,(garlic/bread),[],[vegetarian|gluten],img/dishes/main/garlic_bread.jpg
+Fish and Shellfish Soup,6.90,(fish/shellfish),[],[],img/dishes/main/fish_and_shellfish_soup.jpg
+Mussels in Wine Sauce,9.50,(mussels/wine),[],[],img/dishes/main/mussels_in_wine_sauce.jpg
+Vegetable Soup,4.50,(mixed vegetables),[],[vegetarian],img/dishes/main/vegetable_soup.jpg
+Avocado with Prawns,9.20,(avocado/prawns),[],[],img/dishes/main/avocado_with_prawns.jpg
+Melon with Ham,8.50,(melon/jamón serrano),[],[],img/dishes/main/melon_with_ham.jpg
+Tomato and Onion Salad,4.20,(tomato/onion),[],[vegetarian],img/dishes/main/tomato_and_onion_salad.jpg
+Tomato Soup,4.20,(tomato),[],[vegetarian],img/dishes/main/tomato_soup.jpg
+Prawn Cocktail,9.20,(prawn/no alcohol),[],[],img/dishes/main/prawn_cocktail.jpg
+Garlic Prawns,9.50,(garlic/prawn),[],[],img/dishes/main/garlic_prawns.jpg
+Melon with Port Wine,9.00,(melon/wine),[],[vegetarian],img/dishes/main/melon_with_port_wine.jpg

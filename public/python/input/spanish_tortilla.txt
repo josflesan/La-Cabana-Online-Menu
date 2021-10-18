@@ -1,0 +1,3 @@
+Tortilla de Papas,6.50,(potatoes/egg),[],[vegetarian],img/dishes/spanish/tortilla_de_papas.jpg
+Tortilla de Papas Cebolla y Pimiento,6.50,(potatoes/onion/bell pepper/egg),[],[vegetarian],img/dishes/spanish/tortilla_de_papas_cebolla_y_pimiento.jpg
+Revuelto de Gambas y Champiñones,8.50,(egg/prawn/mushroom),[],[],img/dishes/spanish/revuelto_de_gambas_y_champinones.jpg

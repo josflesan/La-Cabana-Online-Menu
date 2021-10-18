@@ -1,0 +1,2 @@
+Lamb Chop,17.00,(lamb),[],[],img/dishes/main/lamb_chop.jpg
+Lamb Shoulder Roast,17.00,(lamb),[],[],img/dishes/main/lamb_shoulder_roast.jpg

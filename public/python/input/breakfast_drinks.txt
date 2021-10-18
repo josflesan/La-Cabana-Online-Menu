@@ -1,0 +1,10 @@
+Orange Juice,1.80,(orange juice),[],[],img/dishes/breakfast/orange_juice.jpg
+Pineapple Juice,1.80,(pineapple juice),[],[],img/dishes/breakfast/pineapple_juice.jpg
+Apple Juice,1.80,(apple juice),[],[],img/dishes/breakfast/apple_juice.jpg
+Filtered Coffee,1.30,(coffee),[],[],img/dishes/breakfast/filtered_coffee.jpg
+Espresso,1.30,(espresso),[],[],img/dishes/breakfast/espresso.jpg
+Tea,1.20,(tea),[],[],img/dishes/breakfast/tea.jpg
+Cocktail,4.50,(cocktail),[],[],img/dishes/breakfast/cocktail.jpg
+Strawberry Milkshake,4.50,(strawberry/milk),[],[dairy],img/dishes/breakfast/strawberry_milkshake.jpg
+Vanilla Milkshake,4.50,(vanilla/milk),[],[dairy],img/dishes/breakfast/vanilla_milkshake.jpg
+Chocolate Milkshake,4.50,(chocolate/milk),[],[dairy],img/dishes/breakfast/chocolate_milkshake.jpg

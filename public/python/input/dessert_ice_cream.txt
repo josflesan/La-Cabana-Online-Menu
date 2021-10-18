@@ -1,0 +1,10 @@
+Ice Cream Scoops,4.00,(ice cream),[vanilla, strawberry, chocolate],[dairy],img/dishes/desserts/ice_cream_scoops.jpg
+Strawberry with Ice Cream,4.90,(strawberry/ice cream),[vanilla],[dairy],img/dishes/desserts/strawberry_with_ice_cream.jpg
+Strawberry with Whipped Cream,4.60,(strawberry/whipped cream),[],[dairy],img/dishes/desserts/strawberry_with_whipped_cream.jpg
+Banana Split,4.40,(banana/cream/chocolate/ice cream),[],[dairy],img/dishes/desserts/banana_split.jpg
+Bambino Cup,3.90,(ice cream),[],[dairy],img/dishes/desserts/bambino_cup.jpg
+Jumbo Cup,4.60,(ice cream),[],[dairy],img/dishes/desserts/jumbo_cup.jpg
+Oasis Cup,4.60,(peach/strawberry syrup/cream/ice cream),[],[dairy],img/dishes/desserts/oasis_cup.jpg
+Fiesta Cup,4.60,(ice cream/alcohol),[],[adult|dairy],img/dishes/desserts/fiesta_cup.jpg
+Calipso Ice Cream,4.90,(liquor/coffee/cream),[],[adult|dairy],img/dishes/desserts/calipso_ice_cream.jpg
+Banana Cup,4.60,(banana/banana liquor/ice cream),[],[adult|dairy],img/dishes/desserts/banana_cup.jpg

@@ -1,0 +1,4 @@
+Spaghetti Napolitana,5.90,(vegetables),[],[vegetarian],img/dishes/main/spaghetti_napolitana.jpg
+Spaghetti Bolognaise,6.90,(meat/vegetables),[],[],img/dishes/main/spaghetti_bolognaise.jpg
+Spaghetti Carbonara,7.20,(bacon/cream/eggs),[],[dairy],img/dishes/main/spaghetti_carbonara.jpg
+Lasagne,7.50,(cheese/flour/meat),[],[gluten|dairy],img/dishes/main/lasagne.jpg

@@ -1,0 +1,11 @@
+Fantasia,7.80,(tomato/cheese/tuna),[],[dairy],img/dishes/pizzas/fantasia.jpg
+Gambero,9.50,(tomato/cheese/ham/prawn),[],[dairy],img/dishes/pizzas/gambero.jpg
+Regina,8.00,(tomato/cheese/ham/mushroom),[],[dairy],img/dishes/pizzas/regina.jpg
+Quattro Stagioni,9.50,(tomato/cheese/ham/mushroom/prawn/tuna),[],[dairy],img/dishes/pizzas/quattro_stagioni.jpg
+Hawaii,8.95,(ham/pineapple),[],[dairy],img/dishes/pizzas/hawaii.jpg
+Milano,7.95,(salami),[],[dairy],img/dishes/pizzas/milano.jpg
+Peperoni,8.50,(pepperoni),[],[dairy],img/dishes/pizzas/peperoni.jpg
+Bolognaise,7.50,(meat),[],[dairy],img/dishes/pizzas/bolognaise.jpg
+Barbecue,8.50,(meat),[],[dairy],img/dishes/pizzas/barbecue.jpg
+Pescatore,8.95,(mixed shellfish),[],[dairy],img/dishes/pizzas/pescatore.jpg
+Vegetarian,7.20,(mixed vegetables),[],[vegetarian|dairy],img/dishes/pizzas/vegetarian.jpg

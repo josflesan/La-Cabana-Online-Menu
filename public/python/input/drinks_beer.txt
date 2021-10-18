@@ -1,0 +1,2 @@
+Draught Beer,2.80,(beer),[0.25l:2.80|0.40l:3.90],[adult],img/dishes/drinks/draught_beer.jpg
+Bottled Beer,3.50,(beer),[San Miguel:3.50|Heineken:3.50|Budweiser:3.50|Corona:4.00|John Smith:4.90|Guinness:4.90],[adult],img/dishes/drinks/bottled_beer.jpg

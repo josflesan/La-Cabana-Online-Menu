@@ -1,0 +1,24 @@
+Hamburger Fried Egg Grilled Tomato & Chips,3.50,(hamburger/egg/tomato/chips),[],[gluten],img/dishes/breakfast/hamburger_fried_egg_grilled_tomato_&_chips.jpg
+Beef Steak Fried Egg Chips & Salad,6.50,(beef/egg/chips/salad),[],[],img/dishes/breakfast/beef_steak_fried_egg_chips_&_salad.jpg
+Half Chicken Chips & Salad,5.50,(chicken/chips/salad),[],[],img/dishes/breakfast/half_chicken_chips_&_salad.jpg
+Ham & Cheese Omelette,4.90,(ham/cheese/egg),[],[dairy],img/dishes/breakfast/ham_&_cheese_omelette.jpg
+Lasagne with Chips,5.90,(meat/cheese/chips),[],[dairy],img/dishes/breakfast/lasagne_with_chips.jpg
+Spaghetti Bolognaise,4.90,(spaghetti/meat),[],[],img/dishes/breakfast/spaghetti_bolognaise.jpg
+Spare Ribs with Chips and Salad,7.30,(ribs/chips/salad),[],[],img/dishes/breakfast/spare_ribs_with_chips_and_salad.jpg
+Ham & Cheese Sandwich with Chips,2.90,(ham/cheese/chips),[],[gluten|dairy],img/dishes/breakfast/ham_&_cheese_sandwich_with_chips.jpg
+Hawaii Sandwich,3.50,(cheese/ham/pineapple/sandwich/chips),[],[gluten|dairy],img/dishes/breakfast/hawaii_sandwich.jpg
+Vegetarian Sandwich,3.60,(lettuce/tomato/cucumber/asparagus/mayonnaise/hard-boiled egg),[],[vegetarian|dairy],img/dishes/breakfast/vegetarian_sandwich.jpg
+Bacon Butty,2.80,(bacon/chips),[],[],img/dishes/breakfast/bacon_butty.jpg
+Sausage Butty,3.20,(sausage/chips),[],[],img/dishes/breakfast/sausage_butty.jpg
+Bacon Sandwich,3.20,(bacon/tomato/lettuce/egg),[],[],img/dishes/breakfast/bacon_sandwich.jpg
+Tuna Sandwich,3.50,(lettuce/hard-boiled egg/mayonnaise),[],[vegetarian|dairy],img/dishes/breakfast/tuna_sandwich.jpg
+Sandwich Club,3.90,(lettuce/tomato/chicken breast/egg/bacon/mayonnaise),[],[vegetarian|gluten|dairy],img/dishes/breakfast/sandwich_club.jpg
+Double Burger,3.90,(burger/cheese/tomato),[],[gluten|dairy],img/dishes/breakfast/double_burger.jpg
+Cheese Burger,2.80,(burger/cheese/chips/tomato),[],[gluten|dairy],img/dishes/breakfast/cheese_burger.jpg
+Burger with Salad and Chips,3.20,(burger/salad/chips),[],[gluten],img/dishes/breakfast/burger_with_salad_and_chips.jpg
+Steak Roll,3.90,(steak/lettuce/tomato),[],[],img/dishes/breakfast/steak_roll.jpg
+Chicken Breast Roll,3.75,(chicken/lettuce/tomato),[],[],img/dishes/breakfast/chicken_breast_roll.jpg
+Baguette,2.60,(various),[plain omelette:3.60|chicken breast:3.60|ham & cheese:2.60|fish:3.90|steak:3.90|tuna:3.90],[gluten|dairy],img/dishes/breakfast/baguette.jpg
+Ham Pizza,4.50,(ham),[],[gluten|dairy],img/dishes/breakfast/ham_pizza.jpg
+Breaded Chicken Breast,4.50,(bread/chicken),[],[gluten],img/dishes/breakfast/breaded_chicken_breast.jpg
+Chicken Salad,4.50,(chicken/lettuce/tomato/onion/cucumber),[],[],img/dishes/breakfast/chicken_salad.jpg

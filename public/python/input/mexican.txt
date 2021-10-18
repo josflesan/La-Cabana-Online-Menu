@@ -1,0 +1,9 @@
+Nachos,5.95,(nachos),[cheese:5.95|guacamole:7.25|chicken and cheese:8.95|tex mex:9.95|jalapeños:7.20],[vegetarian|dairy],img/dishes/mexican/nachos.jpg
+BBQ Chicken Wings,8.00,(chicken wings),[],[],img/dishes/mexican/bbq_chicken_wings.jpg
+BBQ Ribs,8.00,(pork ribs),[],[],img/dishes/mexican/bbq_ribs.jpg
+Chilli con Carne,12.00,(chilli/meat),[],[],img/dishes/mexican/chilli_con_carne.jpg
+Burritos,8.95,(burrito),[chicken:9.95|meat:10.95|prawns:12.50|mix:12.50|vegetarian:8.95|tex mex:12.50],[gluten|vegetarian],img/dishes/mexican/burritos.jpg
+Fajitas,8.95,(fajita),[beef:14.50|chicken:11.50|prawn:13.50|tex mex:13.95|mix:13.95|vegetarian:8.95],[gluten|vegetarian],img/dishes/mexican/fajitas.jpg
+Enchiladas,8.95,(enchilada),[beef:11.95|chicken:10.95|prawns:10.95|vegetarian:8.95|tex mex:13.95],[gluten|vegetarian],img/dishes/mexican/enchiladas.jpg
+Chimichangas,8.95,(chimichanga),[beef:11.95|chicken:8.95|prawn:12.95|tex mex:12.95],[gluten],img/dishes/mexican/chimichangas.jpg
+Tacos,7.95,(taco),[meat:12.95|chicken:10.50|prawn:12.95|mix:12.95|tex mex:12.95|vegetarian:7.95],[gluten|vegetarian],img/dishes/mexican/tacos.jpg

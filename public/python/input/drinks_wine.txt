@@ -1,0 +1,6 @@
+Rosé Wine,,(rosé wine),[],[adult],img/dishes/drinks/rose_wine.jpg
+Dry White Wine,,(dry white wine),[],[adult],img/dishes/drinks/dry_white_wine.jpg
+Medium White Wine,,(medium white wine),[],[adult],img/dishes/drinks/medium_white_wine.jpg
+Red Wine,,(red wine),[],[adult],img/dishes/drinks/red_wine.jpg
+Sparkling Wine,,(sparkling wine),[],[adult],img/dishes/drinks/sparkling_wine.jpg
+Sweet Wine,,(sweet wine),[],[adult],img/dishes/drinks/sweet_wine.jpg

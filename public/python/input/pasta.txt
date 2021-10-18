@@ -1,0 +1,8 @@
+Pasta Napolitana,5.50,(tomato/vegetables),[macaroni:5.90|spaghetti:5.50|tortellini:6.50],[vegetarian|gluten],img/dishes/pasta/pasta_napolitana.jpg
+Pasta Bolognaise,5.90,(meat/vegetables),[macaroni:5.90|spaghetti:6.90|tortellini:7.90],[gluten],img/dishes/pasta/pasta_bolognaise.jpg
+Pasta Carbonara,6.50,(bacon/onion/cream),[macaroni:7.50|spaghetti:6.50|tortellini:7.90],[dairy|gluten],img/dishes/pasta/pasta_carbonara.jpg
+Vegetarian Pasta,6.50,(vegetables),[macaroni:7.50|spaghetti:6.50|tortellini:7.90],[vegetarian|gluten],img/dishes/pasta/vegetarian_pasta.jpg
+Garlic Pasta,5.50,(garlic),[macaroni:6.50|spaghetti:5.50|tortellini:6.90],[vegetarian|gluten],img/dishes/pasta/garlic_pasta.jpg
+4 Cheese Pasta,6.90,(mixed cheese),[macaroni:7.90|spaghetti:6.90|tortellini:8.50],[vegetarian|dairy|gluten],img/dishes/pasta/4_cheese_pasta.jpg
+Pasta Gratin,6.50,(cheese/cream),[macaroni:7.50|spaghetti:6.50|tortellini:8.20],[vegetarian|dairy|gluten],img/dishes/pasta/pasta_gratin.jpg
+Creamy Pasta,6.50,(cream),[macaroni:7.50|spaghetti:6.50|tortellini:8.20],[vegetarian|dairy|gluten],img/dishes/pasta/creamy_pasta.jpg

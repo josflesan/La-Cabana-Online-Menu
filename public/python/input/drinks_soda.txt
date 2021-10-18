@@ -1,0 +1,5 @@
+Coca-Cola,2.20,(coca cola),[0.25l:2.20|0.4l:3.50],[],img/dishes/drinks/coca-cola.jpg
+Orange Fanta,2.20,(orange fanta),[0.25l:2.20|0.4l:3.50],[],img/dishes/drinks/orange_fanta.jpg
+Lemon Fanta,2.20,(lemon fanta),[0.25l:2.20|0.4l:3.50],[],img/dishes/drinks/lemon_fanta.jpg
+Sprite,2.20,(sprite),[0.25l:2.20|0.4l:3.50],[],img/dishes/drinks/sprite.jpg
+Juice,2.00,(various),[orange|pineapple|apple],[],img/dishes/drinks/juice.jpg

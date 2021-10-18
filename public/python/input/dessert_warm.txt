@@ -1,0 +1,3 @@
+Bananas Flambe,10.00,(banana/liquor),[],[adult|2p],img/dishes/desserts/bananas_flambe.jpg
+Strawberry Flambe,12.00,(strawberry/liquor),[],[adult|2p],img/dishes/desserts/strawberry_flambe.jpg
+Crêpes Suzette,12.00,(liquor),[],[adult|2p],img/dishes/desserts/crepes_suzette.jpg

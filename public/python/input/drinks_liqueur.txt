@@ -1,0 +1,18 @@
+Baileys,4.80,(baileys),[],[adult],img/dishes/drinks/baileys.jpg
+Tia Maria,4.60,(tia maria),[],[adult],img/dishes/drinks/tia_maria.jpg
+Drambui,5.75,(drambui),[],[adult],img/dishes/drinks/drambui.jpg
+Cointreau,6.20,(cointreau),[],[adult],img/dishes/drinks/cointreau.jpg
+Grappa,3.50,(grappa),[],[adult],img/dishes/drinks/grappa.jpg
+Licor 43,4.10,(licor),[],[adult],img/dishes/drinks/licor_43.jpg
+Malibu,3.70,(malibu),[],[adult],img/dishes/drinks/malibu.jpg
+Southern Comfort,4.10,(southern comfort),[],[adult],img/dishes/drinks/southern_comfort.jpg
+Fernet Branca,2.50,(fernet branca),[],[adult],img/dishes/drinks/fernet_branca.jpg
+Campari,3.80,(campari),[],[adult],img/dishes/drinks/campari.jpg
+Archers,3.50,(archers),[],[adult],img/dishes/drinks/archers.jpg
+Amaretto,4.25,(amaretto),[],[adult],img/dishes/drinks/amaretto.jpg
+Akuavit,2.40,(akuavit),[],[adult],img/dishes/drinks/akuavit.jpg
+Sambuca,2.60,(sambuca),[],[adult],img/dishes/drinks/sambuca.jpg
+Jägermeister,4.20,(jägermeister),[],[adult],img/dishes/drinks/jagermeister.jpg
+Grand Marnier,8.20,(grand marnier),[],[adult],img/dishes/drinks/grand_marnier.jpg
+Pernod,3.30,(pernod),[],[adult],img/dishes/drinks/pernod.jpg
+Ricard,3.70,(ricard),[],[adult],img/dishes/drinks/ricard.jpg

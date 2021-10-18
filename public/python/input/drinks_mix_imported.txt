@@ -1,0 +1,8 @@
+Bacardi Mix,4.95,(bacardi),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/bacardi_mix.jpg
+Smirnoff Mix,4.20,(smirnoff),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/smirnoff_mix.jpg
+Gordon Mix,4.50,(gordon),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/gordon_mix.jpg
+Jack Daniels Mix,4.80,(jack daniels),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/jack_daniels_mix.jpg
+Ballantains Mix,3.70,(ballantains),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/ballantains_mix.jpg
+Black Label Mix,6.20,(black label),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/black_label_mix.jpg
+Red Label Mix,3.70,(red label),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/red_label_mix.jpg
+John Haig Mix,3.70,(john haig),[Coca Cola|Sprite|Orange Fanta|Lemon Fanta|Tonic],[adult],img/dishes/drinks/john_haig_mix.jpg

@@ -1,0 +1,3 @@
+Water,1.90,(water),[],[],img/dishes/drinks/water.jpg
+Fizzy Water,1.90,(fizzy water),[],[],img/dishes/drinks/fizzy_water.jpg
+Soda Water,2.20,(soda water),[],[],img/dishes/drinks/soda_water.jpg

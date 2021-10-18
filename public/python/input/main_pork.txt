@@ -1,0 +1,3 @@
+Grilled Pork Chop,8.00,(pork),[],[],img/dishes/main/grilled_pork_chop.jpg
+Viennese Schnitzel,7.90,(schnitzel/bread),[],[gluten],img/dishes/main/viennese_schnitzel.jpg
+Milanese Schnitzel,8.50,(schnitzel/spaghetti),[],[],img/dishes/main/milanese_schnitzel.jpg

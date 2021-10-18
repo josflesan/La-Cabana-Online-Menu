@@ -1,0 +1,11 @@
+Tenderloin Steak with Pepper,19.50,(steak/pepper),[],[],img/dishes/main/tenderloin_steak_with_pepper.jpg
+Tenderloin Steak Diane,19.50,(steak/mushrooms/eggs),[],[],img/dishes/main/tenderloin_steak_diane.jpg
+Hawaiian Tenderloin Steak,19.80,(steak/pineapple/mushrooms),[],[],img/dishes/main/hawaiian_tenderloin_steak.jpg
+Tenderloin Steak of the House,21.00,(steak/mushrooms/onion/prawns),[],[],img/dishes/main/tenderloin_steak_of_the_house.jpg
+Rossini Tenderloin Steak,21.00,(steak/foie gras/bread/mushrooms/cheese),[],[dairy],img/dishes/main/rossini_tenderloin_steak.jpg
+Roquefort Tenderloin Steak,22.00,(roquefort/cream/steak),[],[dairy],img/dishes/main/roquefort_tenderloin_steak.jpg
+Stroganoff Tenderloin Steak,19.50,(vegetables/steak),[],[],img/dishes/main/stroganoff_tenderloin_steak.jpg
+Chateaubriand 2 Sauces,44.00,(chateaubriand),[],[2p],img/dishes/main/chateaubriand_2_sauces.jpg
+Provenzal Tenderloin Steak,44.00,(steak/potatoes),[],[2p],img/dishes/main/provenzal_tenderloin_steak.jpg
+Scallop with Port Wine Sauce,16.50,(scallop/wine),[],[],img/dishes/main/scallop_with_port_wine_sauce.jpg
+Fillet Mignon 2 Sauces,21.00,(beef/bacon),[],[],img/dishes/main/fillet_mignon_2_sauces.jpg
