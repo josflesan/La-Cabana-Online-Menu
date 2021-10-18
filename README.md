@@ -66,6 +66,7 @@ Room for improvement:
 
 To do:
 - UI improvements
+- Code refactoring
 
 
 ## Contact
