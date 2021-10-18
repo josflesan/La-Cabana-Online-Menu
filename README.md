@@ -2,7 +2,7 @@
 > Full-stack website developed for local restaurant using JavaScript, Node.JS, and Python
 > Live demo [_here_](https://lacabanapuertorico.com). (optimized for mobile)
 
-![Product Mockup 1](./public/img/screenshots/screenshot 1.jpg)
+![Product Mockup 1](https://github.com/josflesan/La-Cabana-Online-Menu/blob/master/public/img/screenshots/screenshot%201.jpg)
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -41,8 +41,8 @@ The website consists mainly of the online menu (main deliverable) and a home pag
 
 
 ## Screenshots
-![Product Mockup 2](./public/img/screenshots/screenshot 2.jpg)
-![Product Mockup 3](./public/img/screenshots/screenshot 3.jpg)
+![Product Mockup 2](https://github.com/josflesan/La-Cabana-Online-Menu/blob/master/public/img/screenshots/screenshot%202.jpg)
+![Product Mockup 3](https://github.com/josflesan/La-Cabana-Online-Menu/blob/master/public/img/screenshots/screenshot%203.jpg)
 
 
 ## Setup
