@@ -13,7 +13,7 @@
   "author": "joflesan",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
