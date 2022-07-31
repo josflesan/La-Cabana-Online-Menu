@@ -1,6 +1,7 @@
 .menu-section-left {
     position: sticky;
-    width: clamp(150px, 100%, 400px);
+    min-width: 150px;
+    max-width: 300px;
     background-color: $cadet-blue;
     z-index: -1;
     
@@ -23,7 +24,9 @@
 }
 
 .menu-section-right {
-    position: relative;
+    position: sticky;
+    min-width: 150px;
+    max-width: 300px;
     padding: 10px;
     background-color: $cadet-blue;
 

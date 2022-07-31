@@ -177,8 +177,8 @@ body::-webkit-scrollbar-thumb {
       padding: 5%; } }
 
 .info-btn {
-  width: clamp(30px, calc(40vw * 0.2), 60px);
-  height: clamp(30px, calc(40vw * 0.2), 60px);
+  width: fit-content;
+  padding: 10px 15px;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -542,12 +542,13 @@ body::-webkit-scrollbar-thumb {
 .menu-option {
   display: grid;
   align-items: end;
-  position: relative; }
+  position: relative;
+  width: 215px; }
   .menu-option__card {
     display: grid;
     grid-template-rows: 50% 25% 25%;
     position: relative;
-    width: clamp(150px, 100%, 400px);
+    width: 215px;
     height: 90%;
     background-color: #292929; }
     .menu-option__card::before {
@@ -560,7 +561,7 @@ body::-webkit-scrollbar-thumb {
       left: 50%;
       transform: translateX(-50%);
       overflow: visible;
-      width: 90%;
+      width: 195px;
       height: 60%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -568,38 +569,38 @@ body::-webkit-scrollbar-thumb {
     .menu-option__card__title {
       display: flex;
       align-items: flex-start;
+      justify-content: flex-start;
       line-height: 100%;
-      padding: 10px 0 15px 20px;
-      width: 100%;
+      text-align: start;
+      width: 195px;
+      margin: 10px;
+      padding-left: 5px;
       overflow: hidden;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
-      font-size: clamp(15px, calc((60vh - 150px)*0.07), 35px);
-      color: #5C9EAD; }
+      font-size: clamp(15px, calc((55vh - 175px)*0.07), 35px);
+      color: #5C9EAD;
+      direction: ltr; }
     .menu-option__card__footer {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
       height: 100%;
-      width: 100%; }
+      width: 215px;
+      direction: ltr; }
     .menu-option__card__price {
       padding: 15px 15px 15px 15px;
       display: flex;
+      max-width: 160px;
       line-height: 100%;
       align-items: flex-end;
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
-      font-size: clamp(48px, calc((60vh - 150px)*0.25), 150px);
+      font-size: clamp(48px, calc((55vh - 175px)*0.25), 150px);
       color: #FFFFFF; }
       .menu-option__card__price-cents {
         font-size: clamp(20px, calc((60vh - 150px)*0.05), 50px);
         line-height: 150%; }
-
-@media only screen and (max-width: 700px) {
-  .menu-option__card__title {
-    padding: 5px 10px 10px 10px; }
-  .menu-option__card__price {
-    padding: 10px 10px 0 10px; } }
 
 @media only screen and (min-height: 800px) {
   .menu-option__card__price-cents {
@@ -611,7 +612,8 @@ body::-webkit-scrollbar-thumb {
 
 .menu-section-left {
   position: sticky;
-  width: clamp(150px, 100%, 400px);
+  min-width: 150px;
+  max-width: 300px;
   background-color: #5C9EAD;
   z-index: -1; }
   .menu-section-left__title {
@@ -628,7 +630,9 @@ body::-webkit-scrollbar-thumb {
     color: #FFFFFF; }
 
 .menu-section-right {
-  position: relative;
+  position: sticky;
+  min-width: 150px;
+  max-width: 300px;
   padding: 10px;
   background-color: #5C9EAD; }
   .menu-section-right__title {
@@ -848,7 +852,7 @@ body::-webkit-scrollbar-thumb {
 
 .menu-content {
   --gutter: 10px;
-  --top: 150px;
+  --top: 200px;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -856,7 +860,7 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-row-gap: 50px;
   grid-auto-flow: row;
-  grid-auto-rows: calc(60vh - var(--top));
+  grid-auto-rows: calc(65vh - var(--top));
   grid-template-columns: minmax(300px, 1fr); }
   .menu-content__row-container {
     position: relative;
@@ -917,18 +921,14 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     grid-gap: 10px;
-    grid-template-columns: clamp(150px, 40vw, 400px);
     grid-auto-flow: column;
-    grid-auto-columns: clamp(150px, calc(50% - var(--gutter)*2), 400px);
+    grid-auto-columns: 215px;
     grid-template-rows: minmax(150px, 1fr);
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none; }
     .menu-content__row-left::-webkit-scrollbar {
       display: none; }
-    .menu-content__row-left::after {
-      content: '';
-      width: 5px; }
     .menu-content__row-left-title {
       display: inline-block;
       width: 100%;
@@ -939,17 +939,15 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     grid-gap: 10px;
-    grid-template-columns: 1fr;
     grid-auto-flow: column;
-    grid-auto-columns: clamp(150px, calc(50% - var(--gutter) * 2), 400px);
+    grid-auto-columns: 215px;
     grid-template-rows: minmax(150px, 1fr);
+    direction: rtl;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none; }
     .menu-content__row-right::-webkit-scrollbar {
       display: none; }
-    .menu-content__row-right::before {
-      content: ''; }
     .menu-content__row-right-title {
       display: inline-block;
       width: 100%;

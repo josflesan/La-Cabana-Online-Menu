@@ -6,13 +6,15 @@
     align-items: end;
     position: relative;
 
+    width: 215px;
+
     &__card {
         display: grid;
         grid-template-rows: 50% 25% 25%;
 
         position: relative;
 
-        width: clamp(150px, 100%, 400px);
+        width: $card-width;
         height: 90%;
 
         background-color: $jet-black;
@@ -29,7 +31,7 @@
             left: 50%;
             transform: translateX(-50%);
             overflow: visible;
-            width: 90%;
+            width: 195px;
             height: 60%;
             background-size: cover;
             background-repeat: no-repeat;
@@ -39,14 +41,18 @@
         &__title {
             display: flex;
             align-items: flex-start;
+            justify-content: flex-start;
             line-height: 100%;
-            padding: 10px 0 15px 20px;
-            width: 100%;
+            text-align: start;
+            width: $card-width - 20px;
+            margin: 10px;
+            padding-left: 5px;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            font-size: clamp(15px, calc((60vh - 150px)*0.07), 35px);
+            font-size: clamp(15px, calc((55vh - 175px)*0.07), 35px);
             color: $cadet-blue;
+            direction: ltr;
         }
 
         &__footer {
@@ -54,17 +60,19 @@
             align-items: flex-end;
             justify-content: space-between;
             height: 100%;
-            width: 100%;
+            width: $card-width;
+            direction: ltr;
         }
 
         &__price {
             padding: 15px 15px 15px 15px;
             display: flex;
+            max-width: 160px;
             line-height: 100%;
             align-items: flex-end;
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            font-size: clamp(48px, calc((60vh - 150px)*0.25), 150px);
+            font-size: clamp(48px, calc((55vh - 175px)*0.25), 150px);
             color: $white;
 
             &-cents {
@@ -76,24 +84,6 @@
 
     }
 
-}
-
-
-@media only screen and (max-width: 700px) {
-
-    .menu-option {
-        &__card {
-            &__title {
-                padding: 5px 10px 10px 10px;
-            }
-
-            &__price {
-                padding: 10px 10px 0 10px;
-            }
-        }
-    }
-
-    
 }
 
 @media only screen and (min-height: 800px) {

@@ -1,6 +1,6 @@
 .info-btn {
-    width: clamp(30px, calc(40vw * 0.2), 60px);
-    height: clamp(30px, calc(40vw * 0.2), 60px);
+    width: fit-content;
+    padding: 10px 15px;
     display: grid;
     align-items: center;
     justify-items: center;
